@@ -1,0 +1,13 @@
+*
+!/core
+!/core/elements
+!/core/elements/**
+
+!/src
+!/src/**
+
+!/package.json
+!/webpack.config.js
+
+!/README.md
+!/.gitignore
