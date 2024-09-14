@@ -1,0 +1,110 @@
+/**
+ * Тут хранятся вспомогалтельные классы
+ */
+
+// Размеры шрифта
+
+.fs-caption,
+.fs-caption * {
+  font-size: 12px;
+  line-height: 16px;
+}
+.fs-body-2,
+.fs-body-2 * {
+  font-size: 14px;
+  line-height: 18px;
+}
+.fs-body-1,
+.fs-body-1 * {
+  font-size: 16px;
+  line-height: 22px;
+}
+.fs-title-2,
+.fs-title-2 * {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.fs-title-1,
+.fs-title-1 * {
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.fs-large,
+.fs-large * {
+  font-size: 24px;
+  line-height: auto;
+}
+.fs-h3,
+.fs-h3 * {
+  font-size: 28px;
+  line-height: 34px;
+}
+.fs-h2,
+.fs-h2 * {
+  font-size: 40px;
+  line-height: 52px;
+}
+.fs-h1,
+.fs-h1 * {
+  font-size: 56px;
+  line-height: 68px;
+}
+
+@media (max-width: $screen-sm) {
+  .fs-h1,
+  .fs-h1 * {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .fs-h2,
+  .fs-h2 * {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .fs-title-1,
+  .fs-title-1 * {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .fs-title-2,
+  .fs-title-2 * {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.main-color {
+  color: $main-color;
+}
+.neutral-color {
+  color: $neutral-color;
+}
+.neutral-light-color {
+  color: $neutral-light-color;
+}
+.neutral-light-color {
+  color: $neutral-light-color;
+}
+.light-color {
+  color: $light-color;
+}
+.lightest-color {
+  color: $lightest-color;
+}
+.stroke-color {
+  color: $stroke-color;
+}
+.muted-color {
+  color: $muted-color;
+}
+.dark-color {
+  color: $dark-color;
+}
+.error-color {
+  color: $error-color;
+}
+.success-color {
+  color: $success-color;
+}

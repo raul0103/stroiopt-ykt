@@ -1,0 +1,29 @@
+.header {
+  margin-top: 12px;
+  &__inform {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 346px;
+    }
+    &-logo {
+      width: 160px;
+      height: 32px;
+      background-color: aliceblue;
+    }
+
+    &-contact-items {
+      max-width: 385px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      column-gap: 32px;
+      row-gap: 8px;
+    }
+  }
+}
