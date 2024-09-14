@@ -1,7 +1,6 @@
 export default class Modals {
   constructor() {
     this.selectors = {
-      modal: "[data-modal]",
       open: "[data-modal-open]",
       close: "[data-modal-close]",
     };

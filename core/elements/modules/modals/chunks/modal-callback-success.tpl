@@ -1,8 +1,4 @@
-<div
-  data-modal
-  class="modal modal-callback-success"
-  id="modal-callback-success"
->
+<div class="modal modal-callback-success" id="modal-callback-success">
   <div class="modal-overlay" data-modal-close></div>
 
   <div class="modal-container">

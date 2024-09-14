@@ -1,4 +1,4 @@
-<div data-modal class="modal modal-callback" id="modal-callback">
+<div class="modal modal-callback" id="modal-callback">
   <div class="modal-overlay" data-modal-close></div>
 
   <div class="modal-container">
