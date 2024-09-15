@@ -6,6 +6,11 @@
 !/src
 !/src/**
 
+!/assets
+!/assets/template
+!/assets/template/icons
+!/assets/template/icons/**
+
 !/package.json
 !/webpack.config.js
 
