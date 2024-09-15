@@ -2,14 +2,14 @@
 @import "./partials/variables.scss";
 @import "./partials/classes.scss";
 
+// elements
+@import "./elements/all.scss";
+
 // base
 @import "./partials/base.scss";
 
 // sections
-@import "./sections/header.scss";
-
-// elements
-@import "./elements/buttons.scss";
+@import "./sections/all.scss";
 
 // modules
 @import "../../core/elements/modules/modals/scss/main.scss";
