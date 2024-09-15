@@ -1,3 +1,5 @@
+{'@FILE modules/catalog/snippets/ajax.php' | snippet}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
