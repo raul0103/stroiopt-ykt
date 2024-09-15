@@ -26,4 +26,10 @@
       row-gap: 8px;
     }
   }
+
+  &-navigation {
+    display: flex;
+    align-items: center;
+    margin-top: 14px;
+  }
 }
