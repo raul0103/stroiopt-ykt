@@ -8,5 +8,6 @@
   - npm run dev - Запустит devServer
   - В webpack.config.js указать
     - devServer.proxy.target - домен проекта
+    - devServer.host - домен проекта
 - Прод
   - npm run build
