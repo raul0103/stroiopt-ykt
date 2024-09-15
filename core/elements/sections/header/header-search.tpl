@@ -6,7 +6,7 @@
     method="{$method}"
   >
     <img
-      src="assets/template/icons/search.svg"
+      src="/assets/template/icons/search.svg"
       class="header-search__form-icon"
     />
     <input
