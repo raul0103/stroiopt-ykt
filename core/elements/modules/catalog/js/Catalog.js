@@ -60,6 +60,8 @@ export default class Catalog {
     );
     if (catalog_coontainer.innerHTML) return;
 
+    catalog_coontainer.innerHTML = '<div class="loader"></div>';
+
     let catalog_menu = await this.ajax();
     if (!catalog_menu) return;
 
