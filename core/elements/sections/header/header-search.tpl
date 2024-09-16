@@ -1,17 +1,17 @@
-<div class="header-search">
+<div class="header__search">
   {'SimpleSearchForm' | snippet : [ 'landing' => 2, 'tpl' => '@INLINE
   <form
-    class="header-search__form form fs-body-2,"
+    class="header__search-form form fs-body-2,"
     action="{$landing | url}"
     method="{$method}"
   >
     <img
       src="/assets/template/icons/search.svg"
-      class="header-search__form-icon"
+      class="header__search-form-icon"
     />
     <input
       type="text"
-      class="header-search__form-input"
+      class="header__search-form-input"
       name="{$searchIndex}"
       id="{$searchIndex}"
       value="{$searchValue}"

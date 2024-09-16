@@ -27,9 +27,34 @@
     }
   }
 
-  &-navigation {
+  &__navigation {
     display: flex;
     align-items: center;
     margin-top: 14px;
+  }
+
+  &__search {
+    display: flex;
+    gap: 32px;
+    align-items: end;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    &-form {
+      width: calc(100% - 32px - 152px);
+      position: relative;
+
+      &-icon {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        margin: auto;
+        left: 12px;
+      }
+      &-input {
+        padding-left: 36px !important;
+        height: 40px;
+      }
+    }
   }
 }
