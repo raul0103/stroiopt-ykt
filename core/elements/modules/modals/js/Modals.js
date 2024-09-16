@@ -5,6 +5,7 @@ export default class Modals {
       close: "[data-modal-close]",
     };
     this.events = this.events();
+    this.events_init = []; // События которые уже определены
   }
   init() {
     this.events.open();
@@ -28,6 +29,9 @@ export default class Modals {
         });
       },
       close: (modal) => {
+        if (this.events_init.indexOf("close") > -1) return;
+        this.events_init.push("close");
+
         let modal_close_btns = modal.querySelectorAll(this.selectors.close);
         modal_close_btns.forEach((modal_close_btn) => {
           modal_close_btn.addEventListener("click", () => {

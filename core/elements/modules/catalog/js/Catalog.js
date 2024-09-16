@@ -12,6 +12,7 @@ export default class Catalog {
       catalog_container: "[data-catalog-container]",
     };
     this.events = this.events();
+    this.events_init = [];
   }
   init() {
     this.events.open();
@@ -41,6 +42,9 @@ export default class Catalog {
         });
       },
       close: (catalog) => {
+        if (this.events_init.indexOf("close") > -1) return;
+        this.events_init.push("close");
+
         let catalog_close_btns = catalog.querySelectorAll(this.selectors.close);
         catalog_close_btns.forEach((catalog_close_btn) => {
           catalog_close_btn.addEventListener("click", () => {
