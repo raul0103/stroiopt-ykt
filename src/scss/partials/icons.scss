@@ -36,3 +36,25 @@
     content: url("/assets/template/icons/arrow-right.svg");
   }
 }
+
+// after/before
+.pseudo-arrow {
+  &:after {
+    content: "";
+    position: absolute;
+    top: 44%;
+    right: 15px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transition: 0.2s;
+  }
+
+  &__down:after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &__right:after {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}

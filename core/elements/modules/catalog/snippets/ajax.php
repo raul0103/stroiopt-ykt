@@ -45,7 +45,7 @@ if ($action === 'get-catalog-menu') {
             $subcat_html .= "</ul>";
 
             $cat_html .= "<li class='catalog-header__nav-item has-submenu' data-subcategories-open='catalog-subcat-$catalog_item->id'>
-                              <a href='$catalog_item->link'>$catalog_item->menutitle</a>
+                              <a href='$catalog_item->link' class='pseudo-arrow pseudo-arrow__right'>$catalog_item->menutitle</a>
                           </li>";
         } else {
             $cat_html .= "<li class='catalog-header__nav-item' data-subcategories-open>

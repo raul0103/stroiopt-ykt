@@ -87,16 +87,8 @@
 
     &-item {
       &.has-submenu > a:after {
-        content: "";
-        position: absolute;
         top: 50%;
         right: 10px;
-        transform: translateY(-50%) rotate(-45deg);
-        width: 6px;
-        height: 6px;
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-        transition: 0.2s;
       }
 
       a {

@@ -15,7 +15,7 @@
             </ul>'
         'tplParentRow' => '@INLINE
             <li class="menu-header__nav-item has-submenu">
-                <a href="{$link}">{$menutitle}</a> 
+                <a href="{$link}" class="pseudo-arrow pseudo-arrow__down">{$menutitle}</a> 
                 {$wrapper}
             </li>'
     ]}
