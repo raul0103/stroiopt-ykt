@@ -11,3 +11,14 @@
     - devServer.host - домен проекта
 - Прод
   - npm run build
+
+## Опции контекста
+
+Основные опции контекста которые используются в проекте
+
+- address
+- catalog_id
+- email
+- phone
+- whatsapp-link
+- telegram-link

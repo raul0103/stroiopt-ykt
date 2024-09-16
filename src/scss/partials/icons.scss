@@ -1,0 +1,25 @@
+.has-icon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  &:before {
+    content: "";
+    display: inline-block;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &-geo:before {
+    content: url("/assets/template/icons/geo.svg");
+  }
+  &-clock:before {
+    content: url("/assets/template/icons/clock.svg");
+  }
+  &-whatsapp:before {
+    content: url("/assets/template/icons/whatsapp.svg");
+  }
+  &-telegram:before {
+    content: url("/assets/template/icons/telegram.svg");
+  }
+}
