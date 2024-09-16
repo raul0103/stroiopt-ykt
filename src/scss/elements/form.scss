@@ -1,4 +1,21 @@
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  &__footer {
+    margin-top: 8px;
+  }
+
+  button {
+    width: max-content;
+  }
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],
@@ -11,6 +28,77 @@
 
     &::placeholder {
       color: $muted-color;
+    }
+  }
+
+  select {
+    display: block;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: $lightest-color;
+    border-radius: 4px;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 44%;
+      right: 15px;
+      transform: translateY(-50%) rotate(45deg);
+      width: 6px;
+      height: 6px;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      transition: 0.2s;
+    }
+  }
+
+  .custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    user-select: none;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 16px;
+      width: 16px;
+      background-color: #eee;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        display: none;
+        width: 3px;
+        height: 8px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+        position: relative;
+        top: -1px;
+      }
+    }
+
+    input:checked + .checkmark {
+      background-color: $main-color;
+    }
+    input:checked + .checkmark::after {
+      display: block;
     }
   }
 }
