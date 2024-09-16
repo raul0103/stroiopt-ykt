@@ -3,6 +3,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @include section-margin;
 
   &__title {
     margin-top: 16px;
