@@ -8,7 +8,7 @@
       <span></span>
       <span></span>
     </div>
-    Каталог
+    <span class="catalog-header__btn-title">Каталог</span>
   </button>
 
   <div id="catalog-modal" class="catalog-header__nav">

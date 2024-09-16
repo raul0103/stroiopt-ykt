@@ -30,14 +30,27 @@
     &-contact-phone {
       display: flex;
       align-items: center;
+      justify-content: end;
       gap: 8px;
     }
   }
 
   &__navigation {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin-top: 14px;
+
+    &-controls {
+      display: flex;
+      margin-right: 0;
+      margin-left: auto;
+      gap: 8px;
+      button {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
   }
 
   &__search {

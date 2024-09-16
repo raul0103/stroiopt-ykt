@@ -6,6 +6,12 @@
     <div class="header__navigation">
       {include 'file:modules/catalog/chunks/wrapper.tpl'}
       {include 'file:modules/menu-header/chunks/wrapper.tpl'}
+
+      <div class="header__navigation-controls">
+        <button class="btn btn-basic has-icon has-icon-delivery-car">Рассчитать доставку</button>
+        <a class="btn btn-basic has-icon has-icon-favorite" href="favorites/"></a>
+        <a class="btn btn-basic has-icon has-icon-cart" href="cart/"></a>
+      </div>
     </div>
   </div>
 </header>
