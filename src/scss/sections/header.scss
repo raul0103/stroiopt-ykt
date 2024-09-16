@@ -49,6 +49,10 @@
       margin-right: 0;
       margin-left: auto;
       gap: 8px;
+
+      .has-icon {
+        gap: 8px;
+      }
     }
     &-btn {
       font-size: 14px;
