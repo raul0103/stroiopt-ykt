@@ -1,5 +1,8 @@
 .header {
-  margin-top: 12px;
+  position: relative;
+  padding: 12px 0;
+  box-shadow: 0px 4px 20px 0px #0000001a;
+
   &__inform {
     display: flex;
     justify-content: space-between;

@@ -1,0 +1,43 @@
+.main-banner {
+  background-image: url("/assets/template/images/sections/main-banner/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__title {
+    margin-top: 16px;
+    color: $dark-color;
+    font-weight: 600px;
+    margin-bottom: 44px;
+  }
+
+  &__list {
+    li:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    li.has-icon {
+      gap: 8px;
+    }
+  }
+
+  &__container {
+    max-width: 1440px;
+    padding: 60px 135px 100px 56px;
+    margin: auto;
+    display: flex;
+  }
+
+  &__form {
+    width: 370px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 40px 32px -12px #0000001c;
+
+    &-title {
+      max-width: 95%;
+      margin: auto;
+      margin-bottom: 8px;
+    }
+  }
+}
