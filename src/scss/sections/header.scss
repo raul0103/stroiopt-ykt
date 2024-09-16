@@ -46,9 +46,26 @@
       margin-right: 0;
       margin-left: auto;
       gap: 8px;
-      button {
-        font-size: 14px;
-        font-weight: 600;
+    }
+    &-btn {
+      font-size: 14px;
+      font-weight: 600;
+      position: relative;
+      &-counters {
+        position: absolute;
+        right: -7px;
+        top: -7px;
+        width: 22px;
+        height: 22px;
+        padding: 4px;
+        background: #fff;
+        box-shadow: 0px 4px 4px 0px #00000040;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 500;
       }
     }
   }

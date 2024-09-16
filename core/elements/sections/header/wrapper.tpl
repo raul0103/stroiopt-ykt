@@ -9,8 +9,12 @@
 
       <div class="header__navigation-controls">
         <button class="btn btn-basic has-icon has-icon-delivery-car">Рассчитать доставку</button>
-        <a class="btn btn-basic has-icon has-icon-favorite" href="favorites/"></a>
-        <a class="btn btn-basic has-icon has-icon-cart" href="cart/"></a>
+        <a class="header__navigation-btn btn btn-basic has-icon has-icon-favorite" href="favorites/">
+          <span class="header__navigation-btn-counters">12</span>
+        </a>
+        <a class="header__navigation-btn btn btn-basic has-icon has-icon-cart" href="cart/">
+          <span class="header__navigation-btn-counters">8</span>
+        </a>
       </div>
     </div>
   </div>
