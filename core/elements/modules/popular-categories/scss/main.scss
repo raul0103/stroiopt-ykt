@@ -5,6 +5,12 @@
     gap: 24px;
   }
 
+  .section-title {
+    @media (max-width: $screen-xs) {
+      text-align: start;
+    }
+  }
+
   &__item {
     border: 1px solid $light-color;
     border-radius: 4px;

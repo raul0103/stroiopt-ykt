@@ -3,12 +3,23 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media (max-width: $screen-sm) {
+    height: 376px;
+    margin-bottom: 435px;
+  }
+  @media (max-width: $screen-xs) {
+    margin-bottom: 410px;
+  }
 
   &__title {
     margin-top: 16px;
     color: $dark-color;
     font-weight: 600px;
     margin-bottom: 44px;
+
+    @media (max-width: $screen-sm) {
+      margin-bottom: 12px;
+    }
   }
 
   &__list {
@@ -20,11 +31,29 @@
     }
   }
 
+  &__right {
+    @media (max-width: $screen-sm) {
+      position: absolute;
+      top: 340px;
+    }
+  }
+
   &__container {
     max-width: 1440px;
     padding: 60px 135px 100px 56px;
     margin: auto;
     display: flex;
+    gap: 32px;
+    position: relative;
+
+    @media (max-width: $screen-md) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 56px;
+    }
+    @media (max-width: $screen-xs) {
+      padding: 16px;
+    }
   }
 
   &__form {
@@ -33,6 +62,12 @@
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0px 40px 32px -12px #0000001c;
+    @media (max-width: $screen-xs) {
+      width: calc(100% - 32px);
+      max-width: 370px;
+      margin: auto;
+      padding: 12px;
+    }
 
     &-title {
       max-width: 95%;
