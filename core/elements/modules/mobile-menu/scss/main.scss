@@ -1,0 +1,27 @@
+.mobile-menu {
+  padding: 0 16px;
+
+  .header__search {
+    &-form {
+      width: 100%;
+    }
+  }
+
+  &__items {
+    margin-top: 16px;
+  }
+
+  &__submenu {
+    display: none;
+  }
+
+  &__catalog-btn {
+    width: 100%;
+    text-align: start;
+
+    &.pseudo-arrow:after {
+      border-color: #fff;
+      top: 50%;
+    }
+  }
+}

@@ -1,4 +1,0 @@
-{
-  "link" : "{$link}",
-  "menutitle" : "{$menutitle}"
-}

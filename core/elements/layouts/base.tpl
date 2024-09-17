@@ -1,4 +1,4 @@
-{'@FILE modules/catalog/snippets/ajax.php' | snippet}
+{set $placeholders = '@FILE snippets/placeholders/index.php' | snippet}
 
 <!DOCTYPE html>
 <html lang="en">

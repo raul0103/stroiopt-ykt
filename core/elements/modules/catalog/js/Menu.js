@@ -1,8 +1,8 @@
 /**
- * Действия с элементами меню
+ * Работа с меню каталога
  */
 
-export default class Events {
+export default class Menu {
   /**
    * @param {DOMElement} catalog
    */

@@ -11,7 +11,7 @@
     />
     <input
       type="text"
-      class="header__search-form-input"
+      class="header__search-form-input fw-600"
       name="{$searchIndex}"
       id="{$searchIndex}"
       value="{$searchValue}"
@@ -21,7 +21,10 @@
     <input type="hidden" name="id" value="{$landing}" />
   </form>
   ' ]}
-  <button data-modal-open="modal-callback" class="btn btn-primary">
-    Заказать звонок
-  </button>
+
+  {if !$mobile}
+    <button data-modal-open="modal-callback" class="btn btn-primary">
+      Заказать звонок
+    </button>
+  {/if}
 </div>

@@ -2,7 +2,7 @@
  * Подгрузка по AJAX каталога
  * Открытие модалки каталога
  */
-import Events from "./Events.js";
+import Menu from "./Menu.js";
 
 export default class Catalog {
   constructor() {
@@ -12,7 +12,7 @@ export default class Catalog {
       catalog_container: "[data-catalog-container]",
     };
     this.events = this.events();
-    this.events_init = [];
+    this.events_init = {};
   }
   init() {
     this.events.open();
@@ -29,7 +29,8 @@ export default class Catalog {
             let catalog = document.getElementById(catalog_id);
             if (!catalog) return;
 
-            this.getCatalogMenu(catalog);
+            let menu = new Menu(catalog);
+            menu.init();
 
             if (catalog.classList.contains("opened")) {
               catalog.classList.remove("opened");
@@ -37,14 +38,15 @@ export default class Catalog {
               catalog.classList.add("opened");
             }
 
-            this.events.close(catalog);
+            // Записали для каких каталогов уже была инициализация события
+            if (!this.events_init[catalog_id]) {
+              this.events_init[catalog_id] = true;
+              this.events.close(catalog);
+            }
           });
         });
       },
       close: (catalog) => {
-        if (this.events_init.indexOf("close") > -1) return;
-        this.events_init.push("close");
-
         let catalog_close_btns = catalog.querySelectorAll(this.selectors.close);
         catalog_close_btns.forEach((catalog_close_btn) => {
           catalog_close_btn.addEventListener("click", () => {
@@ -53,37 +55,5 @@ export default class Catalog {
         });
       },
     };
-  }
-  async getCatalogMenu(catalog) {
-    let catalog_coontainer = catalog.querySelector(
-      this.selectors.catalog_container
-    );
-    if (catalog_coontainer.innerHTML) return;
-
-    catalog_coontainer.innerHTML = '<div class="loader"></div>';
-
-    let catalog_menu = await this.ajax();
-    if (!catalog_menu) return;
-
-    catalog_coontainer.innerHTML = catalog_menu;
-
-    let events = new Events(catalog_coontainer);
-    events.init();
-  }
-  async ajax() {
-    const response = await fetch("/", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: "action=get-catalog-menu",
-    });
-
-    const data = await response.json();
-    if (data.status == "success") {
-      return data.message;
-    } else if (data.status == "error") {
-      console.error(data.message);
-    }
   }
 }

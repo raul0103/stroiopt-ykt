@@ -35,10 +35,14 @@
   &-arrow-right:before {
     content: url("/assets/template/icons/arrow-right.svg");
   }
+  &-phone:before {
+    content: url("/assets/template/icons/phone.svg");
+  }
 }
 
 // after/before
 .pseudo-arrow {
+  position: relative;
   &:after {
     content: "";
     position: absolute;

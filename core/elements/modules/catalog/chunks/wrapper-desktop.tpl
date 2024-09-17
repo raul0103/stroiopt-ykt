@@ -1,6 +1,6 @@
 <div class="catalog-header">
   <button
-    data-catalog-open="catalog-modal"
+    data-catalog-open="catalog-modal-desktop"
     class="btn btn-primary catalog-header__btn"
   >
     <div class="catalog-header__btn-icon">
@@ -11,8 +11,10 @@
     <span class="catalog-header__btn-title">Каталог</span>
   </button>
 
-  <div id="catalog-modal" class="catalog-header__nav">
+  <div id="catalog-modal-desktop" class="catalog-header__nav">
     <div class="catalog-header__nav-overlay" data-catalog-close></div>
-    <div data-catalog-container class="catalog-header__nav-container"></div>
+    <div class="catalog-header__nav-container">
+      {"@FILE modules/catalog/snippets/html-desktop.php" | snippet}
+    </div>
   </div>
 </div>
