@@ -12,7 +12,7 @@
 
     <link
       rel="stylesheet"
-      href="/assets/template/css/style.css?{'file_version' | config}"
+      href="/assets/template/css/main.css?{'file_version' | config}"
     />
   </head>
   <body>

@@ -1,10 +1,10 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
     main: "./src/js/index.js",
-    style: "./src/scss/index.scss",
   },
   output: {
     filename: "assets/template/js/[name].js",
@@ -28,7 +28,18 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+            },
+          },
+          "postcss-loader",
+          "group-css-media-queries-loader",
+          "sass-loader",
+        ],
       },
     ],
   },
@@ -37,6 +48,19 @@ module.exports = {
       filename: "assets/template/css/[name].css",
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+          mangle: true,
+        },
+      }),
+    ],
+  },
 
   devServer: {
     proxy: [
@@ -55,7 +79,7 @@ module.exports = {
     liveReload: true,
   },
 
-  mode: "development",
+  mode: "production",
   watchOptions: {
     ignored: /node_modules/,
   },

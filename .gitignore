@@ -13,6 +13,7 @@
 
 !/package.json
 !/webpack.config.js
+!/postcss.config.js
 
 !/README.md
 !/.gitignore
