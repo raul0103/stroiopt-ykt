@@ -37,7 +37,7 @@ module.exports = {
             },
           },
           "postcss-loader",
-          "group-css-media-queries-loader",
+          // "group-css-media-queries-loader", Не правильно сортирует, надо бы сначала крупные размеры max-width
           "sass-loader",
         ],
       },

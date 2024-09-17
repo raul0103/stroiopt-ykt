@@ -24,6 +24,7 @@
 
 - address
 - catalog_id
+- related-services-id
 - email
 - phone
 - whatsapp-link

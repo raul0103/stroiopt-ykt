@@ -125,3 +125,11 @@
 .ta-center {
   text-align: center;
 }
+
+// margins
+.section-margin {
+  margin-bottom: 64px;
+  @media (max-width: $screen-sm) {
+    margin-bottom: 32px;
+  }
+}
