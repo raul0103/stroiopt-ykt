@@ -10,6 +10,9 @@
   @media (max-width: $screen-xs) {
     margin-bottom: 410px;
   }
+  @media (max-width: 334px) {
+    margin-bottom: 440px;
+  }
 
   &__title {
     margin-top: 16px;
