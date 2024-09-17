@@ -13,7 +13,6 @@
       type="text"
       class="header__search-form-input fw-600"
       name="{$searchIndex}"
-      id="{$searchIndex}"
       value="{$searchValue}"
       placeholder="Поиск по каталогу"
     />
