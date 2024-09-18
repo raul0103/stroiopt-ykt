@@ -7,7 +7,8 @@
 
 $path = MODX_CORE_PATH . "/elements/snippets/placeholders/";
 $placeholders = [
-    'counters' => include $path . "_counters.php"
+    'counters' => include $path . "_counters.php",
+    'content' => include $path . "_content.php"
 ];
 
 return $placeholders;

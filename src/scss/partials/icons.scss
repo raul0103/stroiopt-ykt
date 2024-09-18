@@ -40,7 +40,7 @@
   }
 }
 
-// after/before
+// after
 .pseudo-arrow {
   position: relative;
   &:after {
@@ -60,5 +60,34 @@
   }
   &__right:after {
     transform: translateY(-50%) rotate(-45deg);
+  }
+  &__left:before {
+    transform: translateY(-50%) rotate(134deg);
+  }
+}
+
+// before
+.pseudo-arrow-before {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    width: 6px;
+    height: 6px;
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    transition: 0.2s;
+  }
+
+  &__down:before {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  &__right:before {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  &__left:before {
+    transform: translateY(-50%) rotate(134deg);
   }
 }

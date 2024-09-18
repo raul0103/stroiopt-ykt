@@ -1,32 +1,73 @@
-<div class="mobile-menu" id="mobile-menu">
-  
-    {include 'file:sections/header/common/header-search.tpl' mobile=true}
+{set $menu_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
+    "parent_id" => 0,
+    "level" => 2 
+ ]} 
+{set $menu_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+    'data' => $menu_data
+]}
+
+{set $catalog_id = "catalog_id" | option}
+{if $catalog_id}
+  {set $catalog_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
+      "parent_id" => $catalog_id,
+      "level" => 5 
+  ]} 
+
+  {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+      'data' => $catalog_data
+  ]}
+{else}
+  Не найдена опция catalog_id
+{/if}
+
+<div class="mobile-menu fs-body-2 fw-600" id="mobile-menu">
+  {include 'file:sections/header/common/header-search.tpl' mobile=true}
+
+  <div class="mobile-menu__modal opened" data-mobile-modal="mobile-modal-main">
   
     <div class="mobile-menu__items">
-      
-      {include 'file:modules/catalog/chunks/wrapper-mobile.tpl'}
+      <div class="mobile-menu__item">
+        <button
+          data-mobile-modal-open="mobile-modal-catalog"
+          class="btn btn-primary pseudo-arrow pseudo-arrow__right mobile-menu__catalog-btn"
+        >
+          Каталог
+        </button>
+      </div>
   
-      {'pdoMenu' | snippet : [ 
-        'parents' => 0 
-        'tplOuter' => '@INLINE{$wrapper}'
-        'tpl' => '@INLINE
-          <div class="mobile-menu__item">
-              <a href="{$link}">{$menutitle}</a>
-          </div>' 
-        'tplInner' => '@INLINE {$wrapper}'
-        'tplParentRow' => '@INLINE
-          <div class="mobile-menu__item has-submenu">
-            <a
-              href="{$link}"
-              class="pseudo-arrow pseudo-arrow__right"
-              data-mobile-submenu-open="mobile-submenu-{$id}"
-              >{$menutitle}</a
-            >
-            <div class="mobile-menu__submenu" id="mobile-submenu-{$id}">
-              <div class="mobile-menu__item" data-mobile-submenu-back>Назад</div>
-              {$wrapper}
-            </div>
-          </div>' 
-      ]}
+      {$menu_html["menu-items"]}
     </div>
   </div>
+  
+  <div class="mobile-menu__modal" data-mobile-modal="mobile-modal-catalog">
+    <div class="mobile-menu__items">
+      <div class="mobile-menu__back  pseudo-arrow-before pseudo-arrow-before__left" data-mobile-modal-back>Назад</div>
+      {$catalog_html["menu-items"]}
+    </div>
+  </div>
+  
+  <div class="mobile-menu__footer">
+    <div class="mobile-menu__footer-contacts">
+      <div class="mobile-menu__footer-left">
+        <a href="tel:{'phone'|config}" class="main-color fs-body-1 fw-600">{'phone'|config}</a>
+        <a
+          href="{'whatsapp-link'|config}"
+          class="has-icon has-icon-whatsapp"
+        ></a>
+        <a
+          href="{'telegram-link'|config}"
+          class="has-icon has-icon-telegram"
+        ></a>
+      </div>
+      <div class="mobile-menu__footer-right">
+        <a href="mailto:{'email'|config}" class="fw-400">{'email'|config}</a>
+      </div>
+    </div>
+    <div class="fw-500 mobile-menu__footer-topo">
+      {$placeholders["content"]["toponim"]}
+    </div>
+  </div>
+
+  {$menu_html["menu-modals"]}
+  {$catalog_html["menu-modals"]}
+</div>

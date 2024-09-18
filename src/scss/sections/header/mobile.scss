@@ -47,6 +47,7 @@
       background-repeat: no-repeat;
       line-height: normal;
       content: url("/assets/template/icons/mobile-menu.svg");
+      transition: 0.3s;
     }
     &.active:before {
       content: url("/assets/template/icons/mobile-menu-close.svg");
