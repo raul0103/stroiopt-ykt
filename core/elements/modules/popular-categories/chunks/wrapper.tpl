@@ -1,4 +1,4 @@
-<div class="pop-cat section-margin">
+<div class="pop-cat section-margin" id="pop-cat">
     <div class="container">
         <h2 class="fs-h2 section-title">Популярные категории ЖБИ изделий</h2>
         <div class="pop-cat__row">
@@ -21,11 +21,11 @@
                                     ></span>
                                     {$menutitle}
                                 </a>
-                                <div class="pop-cat__item-childs fs-body-1">
+                                <div data-pop-cat="pop-cat-{$id}" class="pop-cat__item-childs fs-body-1">
                                     {$wrapper}
                                 </div>
                             </div>
-                            <a href="" class="pop-cat__show-more btn-link fw-600 pseudo-arrow pseudo-arrow__down">Показать еще</a>
+                            <div data-active-text="Скрыть" data-default-text="Показать еще" data-pop-cat-more="pop-cat-{$id}" class="pop-cat__show-more btn-link fw-600 pseudo-arrow pseudo-arrow__down">Показать еще</div>
                         </div>
                         <div
                         class="pop-cat__item-image"
