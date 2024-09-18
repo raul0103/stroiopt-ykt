@@ -9,7 +9,7 @@ $cache_options = [
 ];
 
 if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
-    if (!$catalog_id = $modx->getOption(key: 'catalog_id')) die(json_encode([
+    if (!$catalog_id = $modx->getOption('catalog_id')) die(json_encode([
         "status" => "error",
         "message" => "Не найдена опция modx: catalog_id. Добавьте в настройках контекста"
     ]));
