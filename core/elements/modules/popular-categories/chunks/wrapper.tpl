@@ -3,6 +3,7 @@
         <h2 class="fs-h2 section-title">Популярные категории ЖБИ изделий</h2>
         <div class="pop-cat__row">
             {'pdoMenu' | snippet : [
+            'level' => 2
             'parents' => 'catalog_id' | option
             'includeTVs' => 'main_image'
             'tvPrefix' => ''
