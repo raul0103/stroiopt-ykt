@@ -3,7 +3,7 @@
     <a href="/" class="header__inform-logo">
       <img src="" />
     </a>
-    <div class="fs-caption">{$placeholders["content"]["toponim"]}</div>
+    <div class="fs-caption">{$placeholders["content"]["descriptor"]}</div>
   </div>
   <div class="header__inform-right">
     <ul class="header__inform-contact-items">

@@ -63,8 +63,8 @@
         <a href="mailto:{'email'|config}" class="fw-400">{'email'|config}</a>
       </div>
     </div>
-    <div class="fw-500 mobile-menu__footer-topo">
-      {$placeholders["content"]["toponim"]}
+    <div class="fw-500 mobile-menu__footer-descriptor">
+      {$placeholders["content"]["descriptor"]}
     </div>
   </div>
 
