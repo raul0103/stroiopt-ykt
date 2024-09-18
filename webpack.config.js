@@ -41,6 +41,10 @@ module.exports = {
           "sass-loader",
         ],
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
   plugins: [

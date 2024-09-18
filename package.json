@@ -29,6 +29,8 @@
     "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
-    "group-css-media-queries-loader": "^4.3.0"
+    "glightbox": "^3.3.0",
+    "group-css-media-queries-loader": "^4.3.0",
+    "swiper": "^11.1.14"
   }
 }

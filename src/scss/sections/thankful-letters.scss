@@ -1,0 +1,12 @@
+.thankful-letters {
+  &__item {
+    min-height: 370px;
+    background-color: $light-color;
+    border-radius: 8px;
+    background: center / cover no-repeat;
+
+    @media (max-width: $screen-sm) {
+      min-height: 300px;
+    }
+  }
+}

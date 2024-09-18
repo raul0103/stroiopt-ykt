@@ -1,0 +1,8 @@
+.sertificates-section {
+  &__item {
+    min-height: 300px;
+    background-color: $light-color;
+    border-radius: 8px;
+    background: center / cover no-repeat;
+  }
+}
