@@ -1,0 +1,10 @@
+.works-slider {
+  &__row {
+    display: flex;
+  }
+  &__item {
+    width: 250px;
+    min-height: 120px;
+    background: center / cover no-repeat;
+  }
+}

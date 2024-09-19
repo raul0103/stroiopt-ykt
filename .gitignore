@@ -15,6 +15,9 @@
 !/assets/template/fonts
 !/assets/template/fonts/**
 
+!/assets/template/json
+!/assets/template/json/**
+
 !/package.json
 !/webpack.config.js
 !/postcss.config.js

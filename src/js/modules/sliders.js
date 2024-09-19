@@ -73,4 +73,34 @@ export default function iniSliders() {
     },
     direction: "horizontal",
   });
+
+  new Swiper('[data-slider="works-slider"]', {
+    modules: [Autoplay],
+    slidesPerView: "auto",
+    loop: false,
+    slidesPerView: 6,
+    spaceBetween: 24,
+    lazy: { loadPrevNext: true },
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 6,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+    },
+    direction: "horizontal",
+  });
 }
