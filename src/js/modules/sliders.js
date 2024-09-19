@@ -22,9 +22,11 @@ export default function iniSliders() {
       },
       576: {
         slidesPerView: 3,
+        spaceBetween: 8,
       },
       320: {
-        slidesPerView: 2,
+        slidesPerView: 3,
+        spaceBetween: 8,
       },
     },
     navigation: {
@@ -50,9 +52,11 @@ export default function iniSliders() {
       },
       576: {
         slidesPerView: 3,
+        spaceBetween: 8,
       },
       320: {
-        slidesPerView: 2,
+        slidesPerView: 3,
+        spaceBetween: 8,
       },
     },
     navigation: {
