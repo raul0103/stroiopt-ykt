@@ -70,6 +70,10 @@
       margin-left: auto;
       gap: 8px;
 
+      button {
+        font-size: 14px;
+      }
+
       .has-icon {
         gap: 8px;
       }
@@ -89,7 +93,7 @@
     margin-top: 12px;
 
     &-form {
-      width: calc(100% - 32px - 152px);
+      width: calc(100% - 32px - 162px);
       position: relative;
 
       &-icon {

@@ -66,6 +66,10 @@
 }
 
 .modal-review {
+  .modal-container {
+    max-width: 370px;
+  }
+
   .rating-stars {
     display: flex;
     flex-direction: row !important;
