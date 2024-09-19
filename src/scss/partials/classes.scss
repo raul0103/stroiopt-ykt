@@ -45,11 +45,13 @@
 .fs-h2 * {
   font-size: 40px;
   line-height: 52px;
+  font-weight: 700;
 }
 .fs-h1,
 .fs-h1 * {
   font-size: 56px;
   line-height: 68px;
+  font-weight: 600;
 }
 
 @media (max-width: $screen-sm) {
@@ -57,16 +59,19 @@
   .fs-h1 * {
     font-size: 24px;
     line-height: 28px;
+    font-weight: 700;
   }
   .fs-h2,
   .fs-h2 * {
     font-size: 20px;
     line-height: 24px;
+    font-weight: 600;
   }
   .fs-title-1,
   .fs-title-1 * {
     font-size: 18px;
     line-height: 22px;
+    font-weight: 600;
   }
   .fs-title-2,
   .fs-title-2 *,
@@ -74,6 +79,10 @@
   .fs-large * {
     font-size: 16px;
     line-height: 18px;
+  }
+  .fs-title-2,
+  .fs-title-2 * {
+    font-weight: 600;
   }
 }
 

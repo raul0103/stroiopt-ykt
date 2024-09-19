@@ -3,15 +3,22 @@
   padding: 6px 16px;
   align-items: center;
   justify-content: space-between;
+
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1019607843);
+  position: sticky;
+  top: -1px;
+  background: #fff;
+  z-index: 999;
+
   @media (max-width: $screen-sm) {
     display: flex;
   }
 
   .header-counters {
-    width: 13px;
-    height: 13px;
-    font-size: 7px;
-    top: -4px;
+    width: 16px;
+    height: 16px;
+    font-size: 9px;
+    // top: -4px;
   }
 
   &__logo a {
@@ -33,8 +40,8 @@
     gap: 24px;
 
     .has-icon.has-icon-cart {
-      transform: scale(1.5);
-      height: 16px;
+      // transform: scale(1.5);
+      // height: 16px;
       margin-right: 10px;
       position: relative;
       top: 1px;
@@ -42,15 +49,23 @@
   }
   &__catalog-btn {
     &:before {
+      content: "";
       display: inline-block;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: center / cover no-repeat;
+      width: 26px;
+      height: 28px;
       line-height: normal;
-      content: url("/assets/template/icons/mobile-menu.svg");
+      background-image: url("/assets/template/icons/mobile-menu.svg");
       transition: 0.3s;
     }
     &.active:before {
-      content: url("/assets/template/icons/mobile-menu-close.svg");
+      background-image: url("/assets/template/icons/mobile-menu-close.svg");
     }
+  }
+
+  .has-icon-phone:before,
+  .has-icon-cart:before {
+    width: 26px;
+    height: 26px;
   }
 }

@@ -6,37 +6,44 @@
   &:before {
     content: "";
     display: inline-block;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: center / cover no-repeat;
+    width: 16px;
+    height: 16px;
     line-height: normal;
   }
 
   &-geo:before {
-    content: url("/assets/template/icons/geo.svg");
+    background-image: url("/assets/template/icons/geo.svg");
   }
   &-clock:before {
-    content: url("/assets/template/icons/clock.svg");
+    background-image: url("/assets/template/icons/clock.svg");
   }
   &-whatsapp:before {
-    content: url("/assets/template/icons/whatsapp.svg");
+    background-image: url("/assets/template/icons/whatsapp.svg");
+    width: 20px;
+    height: 20px;
   }
   &-telegram:before {
-    content: url("/assets/template/icons/telegram.svg");
+    background-image: url("/assets/template/icons/telegram.svg");
+    width: 20px;
+    height: 20px;
   }
   &-favorite:before {
-    content: url("/assets/template/icons/favorite.svg");
+    background-image: url("/assets/template/icons/favorite.svg");
   }
   &-cart:before {
-    content: url("/assets/template/icons/cart.svg");
+    background-image: url("/assets/template/icons/cart.svg");
   }
   &-delivery-car:before {
-    content: url("/assets/template/icons/delivery-car.svg");
+    background-image: url("/assets/template/icons/delivery-car.svg");
   }
   &-arrow-right:before {
-    content: url("/assets/template/icons/arrow-right.svg");
+    background-image: url("/assets/template/icons/arrow-right.svg");
+    width: 21px;
+    height: 15px;
   }
   &-phone:before {
-    content: url("/assets/template/icons/phone.svg");
+    background-image: url("/assets/template/icons/phone.svg");
   }
 }
 

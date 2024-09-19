@@ -22,10 +22,15 @@
     }
   }
 
-  @media (max-width: $screen-sm) {
-    .swiper-button-next,
-    .swiper-button-prev {
-      display: none;
-    }
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
   }
+
+  // @media (max-width: $screen-sm) {
+  //   .swiper-button-next,
+  //   .swiper-button-prev {
+  //     display: none;
+  //   }
+  // }
 }
