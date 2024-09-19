@@ -6,7 +6,7 @@
       <div class="swiper-wrapper">
         {foreach 1..10}
         <a
-          data-gallery="cerificates"
+          data-gallery="thankful-letters"
           href="https://marketplace.canva.com/EAFk8iBK-3k/1/0/1131w/canva-brown-elegant-minimalist-thank-you-letter-U_irqxCUvPA.jpg"
           class="glightbox swiper-slide thankful-letters__item"
           style="
