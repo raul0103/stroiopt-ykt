@@ -3,6 +3,12 @@
   flex-direction: column;
   gap: 12px;
 
+  &__error {
+    &-message {
+      color: $error-color;
+    }
+  }
+
   &__group {
     display: flex;
     flex-direction: column;
@@ -19,7 +25,9 @@
   input[type="text"],
   input[type="email"],
   input[type="tel"],
-  input[type="password"] {
+  input[type="password"],
+  textarea {
+    resize: none;
     width: 100%;
     padding: 8px 12px;
     border: none;
@@ -91,6 +99,33 @@
     }
     input:checked + .checkmark::after {
       display: block;
+    }
+  }
+
+  .custom-file-loader {
+    input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+    label {
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px 20px;
+      color: #9f9f9f;
+      border-radius: 5px;
+      border: 1px dashed;
+      transition: 0.2s;
+      background: #f9f9f9;
+      width: 100%;
+      text-align: center;
+      &:hover {
+        background: #ababab;
+        color: #fff;
+      }
     }
   }
 }

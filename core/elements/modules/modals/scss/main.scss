@@ -11,15 +11,28 @@
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+
+  [data-modal-body-before] {
+    &.hide {
+      display: none;
+    }
+  }
+  [data-modal-body-after] {
+    display: none;
+    &.show {
+      display: block;
+    }
+  }
+
   &.opened {
     opacity: 1;
     visibility: visible;
   }
+  &-title {
+    margin-bottom: 20px;
+  }
 
   &-callback {
-    .modal-title {
-      margin-bottom: 20px;
-    }
     .modal-container {
       max-width: 370px;
     }
