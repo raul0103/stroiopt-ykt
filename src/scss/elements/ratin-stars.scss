@@ -31,7 +31,7 @@
   rating
   input[type="radio"]:checked
   ~ input[type="radio"]:not(:checked)::after {
-  color: #ccc;
+  background-image: url("/assets/template/icons/rating-star-empty.svg");
 }
 
 .rating-stars rating input[type="radio"]:hover {
@@ -48,8 +48,12 @@
   }
 
   input[type="radio"]::after {
-    content: "\2605";
-    font-size: 32px;
+    content: "";
+    background: center / cover no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url("/assets/template/icons/rating-star-full.svg");
   }
   input[type="radio"]:invalid::after {
     color: #ddd;
