@@ -8,8 +8,12 @@
 
 !/assets
 !/assets/template
+
 !/assets/template/icons
 !/assets/template/icons/**
+
+!/assets/template/fonts
+!/assets/template/fonts/**
 
 !/package.json
 !/webpack.config.js
