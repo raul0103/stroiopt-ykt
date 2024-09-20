@@ -45,6 +45,36 @@
   &-phone:before {
     background-image: url("/assets/template/icons/phone.svg");
   }
+  &-clock-v2:before {
+    background-image: url("/assets/template/icons/clock-v2.svg");
+    width: 27px;
+    height: 27px;
+  }
+  &-truck:before {
+    background-image: url("/assets/template/icons/truck.svg");
+    width: 22px;
+    height: 27px;
+  }
+  &-search-v2:before {
+    background-image: url("/assets/template/icons/search-v2.svg");
+    width: 26px;
+    height: 26px;
+  }
+  &-payment:before {
+    background-image: url("/assets/template/icons/payment.svg");
+    width: 27px;
+    height: 21px;
+  }
+  &-settings:before {
+    background-image: url("/assets/template/icons/settings.svg");
+    width: 25px;
+    height: 27px;
+  }
+  &-magic:before {
+    background-image: url("/assets/template/icons/magic.svg");
+    width: 23px;
+    height: 23px;
+  }
 }
 
 // after

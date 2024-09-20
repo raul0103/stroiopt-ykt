@@ -9,4 +9,5 @@
     {include "file:sections/thankful-letters/wrapper.tpl"}
     {include "file:modules/reviews/chunks/wrapper.tpl"}
     {include "file:sections/works-slider/wrapper.tpl"}
+    {include "file:sections/advantages/wrapper.tpl"}
 {/block}
