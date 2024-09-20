@@ -26,5 +26,9 @@
       src="/assets/template/js/main.js?{'file_version' | config}"
       defer
     ></script>
+
+    {if $_modx->user.id}
+      <!-- {$_modx->getInfo('', true, '@INLINE {$key} => {$value} <br>')} -->
+    {/if}
   </body>
 </html>
