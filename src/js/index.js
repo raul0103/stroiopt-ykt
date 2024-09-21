@@ -6,6 +6,7 @@ import "glightbox/dist/css/glightbox.min.css";
 
 // Модули JS
 import initSliders from "./modules/sliders.js";
+import initOpened from "./modules/opened.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -15,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: initSliders,
       name: "initSliders",
+    },
+    {
+      init: initOpened,
+      name: "initOpened",
     },
   ];
 

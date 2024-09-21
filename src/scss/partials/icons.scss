@@ -75,6 +75,26 @@
     width: 23px;
     height: 23px;
   }
+  &-payment-visa:before {
+    background-image: url("/assets/template/icons/payment-visa.svg");
+    width: 40px;
+    height: 26px;
+  }
+  &-payment-mir:before {
+    background-image: url("/assets/template/icons/payment-mir.svg");
+    width: 40px;
+    height: 26px;
+  }
+  &-payment-mastercard:before {
+    background-image: url("/assets/template/icons/payment-mastercard.svg");
+    width: 40px;
+    height: 26px;
+  }
+  &-devcompany:before {
+    background-image: url("/assets/template/icons/devcompany.svg");
+    width: 43px;
+    height: 36px;
+  }
 }
 
 // after
@@ -87,13 +107,16 @@
     right: 15px;
     width: 6px;
     height: 6px;
-    border-right: 1px solid #000;
-    border-bottom: 1px solid #000;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
     transition: 0.2s;
   }
 
   &__down:after {
     transform: translateY(-50%) rotate(45deg);
+  }
+  &__down.active:after{
+    transform: rotate(225deg);
   }
   &__right:after {
     transform: translateY(-50%) rotate(-45deg);

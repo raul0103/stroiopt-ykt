@@ -18,6 +18,7 @@
   <body>
     {include 'file:sections/header/wrapper.tpl'}
     {block 'content'}{/block}
+    {include 'file:sections/footer/wrapper.tpl'}
 
     {include "file:modules/modals/chunks/modal-callback.tpl"}
     {include "file:modules/modals/chunks/modal-callback-success.tpl"}

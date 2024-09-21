@@ -41,15 +41,16 @@
     }
 
     &-contact-items {
-      max-width: 385px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: calc(50% + 16px) calc(50%);
       grid-template-rows: 1fr 1fr;
       column-gap: 16px;
       row-gap: 8px;
       text-align: end;
     }
-
+    &-contact-item {
+      width: max-content;
+    }
     &-contact-phone {
       display: flex;
       align-items: center;

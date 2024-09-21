@@ -1,0 +1,143 @@
+.footer {
+  background-color: $neutral-color;
+  &__container {
+  }
+  &__top {
+    padding: 46px 0;
+    display: flex;
+    gap: 46px;
+    @media (max-width: $screen-md) {
+      gap: 32px;
+    }
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      gap: 12px;
+      padding: 12px 0;
+    }
+
+    &-logo {
+      display: block;
+      width: 160px;
+      height: 32px;
+      background-color: #fff;
+      text-align: center;
+    }
+    &-information {
+      display: grid;
+      gap: 12px;
+      max-width: 160px;
+      height: max-content;
+    }
+    &-payments {
+      &__title {
+        margin-bottom: 8px;
+        font-weight: 600;
+      }
+      &__row {
+        display: flex;
+        gap: 16px;
+      }
+    }
+    &-contacts {
+      display: grid;
+      gap: 12px;
+      height: max-content;
+
+      &__title {
+        font-size: 18px;
+        font-weight: 600;
+      }
+      &__phone {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 46px;
+    padding: 16px 0;
+    align-items: end;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      gap: 24px;
+      align-items: baseline;
+      padding: 12px 0;
+
+      &-information {
+        order: 2;
+      }
+      &-devcompany {
+        order: 1;
+      }
+    }
+
+    &-devcompany {
+      display: flex;
+      gap: 8px;
+
+      a {
+        font-weight: 600;
+        color: #6d3df0;
+      }
+    }
+  }
+
+  &__top-menu {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 16px;
+    @media (max-width: $screen-sm) {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__convert {
+      &-container {
+        display: flex;
+
+        flex-wrap: wrap;
+        column-gap: 32px;
+        row-gap: 16px;
+        transition: opacity 0.3s;
+
+        @media (max-width: $screen-sm) {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+
+        &.opened {
+          display: flex;
+          opacity: 1;
+          visibility: visible;
+          margin-top: 12px;
+        }
+      }
+
+      &-title {
+        width: max-content;
+        padding-right: 35px;
+        color: $main-color;
+        font-weight: 600;
+
+        @media (min-width: $screen-sm) {
+          display: none;
+        }
+      }
+    }
+
+    &__list {
+      li {
+        width: max-content;
+      }
+      li:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
