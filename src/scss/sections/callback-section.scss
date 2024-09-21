@@ -1,0 +1,59 @@
+.callback-section {
+  &__container {
+    max-width: 1200px;
+    padding: 23px 105px 48px;
+    background-image: url("/assets/template/images/sections/callback-section/form-grid.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 495px;
+    border: 1px solid $neutral-color;
+    margin: auto;
+    border-radius: 8px;
+
+    @media (max-width: $screen-md) {
+      padding: 48px;
+      background-position: end;
+    }
+    @media (max-width: $screen-sm) {
+      padding: 12px;
+      background-image: url("/assets/template/images/sections/callback-section/form-grid-mobile.jpg");
+      .section-title {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+    }
+  }
+
+  .form {
+    width: 100%;
+    max-width: 290px;
+    background-color: #fff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 1px solid $light-color;
+    @media (max-width: $screen-md) {
+      max-width: 400px;
+    }
+
+    .custom-checkbox {
+      max-width: 200px;
+    }
+  }
+
+  &__inform {
+    max-width: 500px;
+    text-align: center;
+    display: grid;
+    gap: 8px;
+  }
+}
