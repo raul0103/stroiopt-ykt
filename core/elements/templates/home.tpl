@@ -12,4 +12,5 @@
     {include "file:sections/advantages/wrapper.tpl"}
     {include "file:sections/partners-logo/wrapper.tpl"}
     {include "file:sections/callback-section/wrapper.tpl"}
+    {include "file:sections/delivery-map/wrapper.tpl"}
 {/block}

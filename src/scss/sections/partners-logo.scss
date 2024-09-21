@@ -1,4 +1,7 @@
 .partners-logo {
+  .container {
+    padding: 0;
+  }
   &__row {
     display: grid;
     row-gap: 20px;
