@@ -103,4 +103,38 @@ export default function iniSliders() {
     },
     direction: "horizontal",
   });
+
+  ["left", "right"].forEach((rtl) => {
+    new Swiper(`[data-slider="partners-logo-${rtl}"]`, {
+      modules: [Autoplay],
+      slidesPerView: "auto",
+      loop: true,
+      slidesPerView: 9,
+      spaceBetween: 20,
+      rtl: rtl == "right" ? true : false,
+      lazy: { loadPrevNext: true },
+      freeMode: true,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+      },
+      speed: 15000,
+      breakpoints: {
+        1200: {
+          slidesPerView: 9,
+        },
+        992: {
+          slidesPerView: 6,
+        },
+        576: {
+          slidesPerView: 6,
+          spaceBetween: 8,
+        },
+        320: {
+          slidesPerView: 3,
+          spaceBetween: 8,
+        },
+      },
+    });
+  });
 }

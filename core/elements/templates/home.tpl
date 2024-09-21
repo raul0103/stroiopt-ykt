@@ -10,4 +10,5 @@
     {include "file:modules/reviews/chunks/wrapper.tpl"}
     {include "file:sections/works-slider/wrapper.tpl"}
     {include "file:sections/advantages/wrapper.tpl"}
+    {include "file:sections/partners-logo/wrapper.tpl"}
 {/block}
