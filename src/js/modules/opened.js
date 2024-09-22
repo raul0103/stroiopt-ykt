@@ -8,7 +8,8 @@
 
 export default function initOpened() {
   document.querySelectorAll("[data-opened-btn]").forEach((open_btn) => {
-    let button_text = open_btn.textContent; // Соханяем для дальнейших манипуляций
+    let open_btn_text = open_btn.textContent; // Соханяем для дальнейших манипуляций
+
     open_btn.addEventListener("click", () => {
       let elem_id = open_btn.dataset.openedBtn;
       if (!elem_id) return;
@@ -26,7 +27,7 @@ export default function initOpened() {
         if (open_btn.classList.contains("active")) {
           open_btn.textContent = open_btn.dataset.activeText;
         } else {
-          open_btn.textContent = button_text;
+          open_btn.textContent = open_btn_text;
         }
       }
     });

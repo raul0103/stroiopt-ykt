@@ -25,7 +25,7 @@
                                     {$wrapper}
                                 </div>
                             </div>
-                            <div data-active-text="Скрыть" data-default-text="Показать еще" data-pop-cat-more="pop-cat-{$id}" class="pop-cat__show-more btn-link fw-600 pseudo-arrow pseudo-arrow__down">Показать еще</div>
+                            <div data-active-text="Скрыть" data-pop-cat-more="pop-cat-{$id}" class="pop-cat__show-more btn-link fw-600 pseudo-arrow pseudo-arrow__down">Показать еще</div>
                         </div>
                         <div
                         class="pop-cat__item-image"

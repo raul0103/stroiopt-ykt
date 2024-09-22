@@ -25,6 +25,8 @@ export default function popCatInit() {
   let show_more_btns = pop_cat_section.querySelectorAll("[data-pop-cat-more]");
 
   show_more_btns.forEach((show_more_btn) => {
+    let show_more_btn_text = show_more_btn.textContent; // Сохраняем для дальнейших манипуляций
+
     show_more_btn.addEventListener("click", () => {
       let pop_cat_id = show_more_btn.dataset.popCatMore;
       if (!pop_cat_id) return;
@@ -39,7 +41,7 @@ export default function popCatInit() {
       if (show_more_btn.classList.contains("active")) {
         show_more_btn.textContent = show_more_btn.dataset.activeText;
       } else {
-        show_more_btn.textContent = show_more_btn.dataset.defaultText;
+        show_more_btn.textContent = show_more_btn_text;
       }
     });
   });
