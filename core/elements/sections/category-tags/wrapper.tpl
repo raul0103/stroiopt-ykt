@@ -2,7 +2,7 @@
   <div class="container">
     <h2 class="fs-h2 category-tags__title">Плиты перекрытия</h2>
 
-    <div class="category-tags__row">
+    <div class="category-tags__row" data-opened-element="category-tags">
         {'pdoResources' | snippet :[
             'tpl' => '@FILE sections/category-tags/tag-item.tpl'
             'includeTVs' => 'main_image'
@@ -11,10 +11,16 @@
             'depth' => 0
         ]}
 
-        <a class="category-tags__item" href="xxx">
-            <div class="category-tags__item-image"></div>
-            <div class="category-tags__item-title fs-body-2">Безопалубочные плиты перекрытия ПБ</div>
-        </a>
+        {* Плейсхолдер записывается в чанке sections/category-tags/tag-item.tpl*}
+        {if $_modx->getPlaceholder('category-tags-show-btn-more')}
+          <div
+            class="category-tags__item show-more"
+            data-opened-btn="category-tags"
+            data-active-text="Скрыть"
+          >
+            Показать еще
+          </div>
+        {/if}
     </div>
   </div>
 </div>
