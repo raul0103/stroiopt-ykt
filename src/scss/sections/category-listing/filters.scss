@@ -1,0 +1,90 @@
+.category-listing {
+  fieldset {
+    border: none;
+  }
+
+  &__filters {
+    min-width: 224px;
+    width: 224px;
+    border-right: 1px solid $stroke-color;
+    padding-right: 16px;
+    height: max-content;
+    padding-bottom: 24px;
+
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-row {
+      gap: 24px;
+    }
+  }
+
+  &__filter {
+    &-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    &-value {
+      line-height: 1;
+    }
+
+    &-title {
+      margin-bottom: 4px;
+    }
+
+    &-price-inputs {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        background-color: $muted-color;
+        bottom: 0;
+        top: 0;
+        margin: auto;
+        left: 0;
+        right: 0;
+      }
+      input {
+        max-width: 80px;
+      }
+    }
+
+    .ui-slider-horizontal {
+      height: 2px;
+      border: none !important;
+      background: $stroke-color;
+      margin-bottom: 0 !important;
+      margin-top: 11px;
+
+      cursor: pointer;
+
+      .ui-slider-range {
+        background-color: $main-color;
+      }
+      .ui-slider-handle {
+        width: 16px;
+        height: 16px;
+        border-radius: 80px;
+        cursor: pointer;
+        top: -6px;
+
+        &:first-of-type {
+          background-color: $main-color;
+          border: none;
+        }
+        &:last-of-type {
+          border: 2px solid $main-color;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}

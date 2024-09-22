@@ -1,0 +1,39 @@
+@import "./filters.scss";
+@import "./other.scss";
+
+.category-listing {
+  fieldset {
+    border: none;
+  }
+
+  &__row {
+    display: flex;
+    gap: 32px;
+  }
+
+  &__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-bottom: 16px;
+
+    .product-card {
+      width: calc(25% - 32px);
+    }
+  }
+
+  &__btn-more {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $stroke-color;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+    &:hover {
+      color: $main-color;
+      border-color: $main-color;
+    }
+  }
+}
