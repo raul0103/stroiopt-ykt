@@ -1,0 +1,17 @@
+.breadcrumb {
+  margin: 12px 0;
+  display: flex;
+  gap: 5px;
+  @media (max-width: $screen-sm) {
+    height: 0;
+    opacity: 0;
+  }
+
+  .breadcrumb-item {
+    color: $muted-color;
+
+    a {
+      color: $muted-color;
+    }
+  }
+}
