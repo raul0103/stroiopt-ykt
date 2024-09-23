@@ -29,3 +29,7 @@
 - phone
 - whatsapp-link
 - telegram-link
+
+## Хранение глобальных данных
+
+Плейсхолдеры с глобальными данными хранятся в core\elements\snippets\placeholders\index.php

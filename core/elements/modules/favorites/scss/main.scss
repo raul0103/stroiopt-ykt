@@ -1,0 +1,16 @@
+.favorite-product {
+  &__btn {
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      &:before {
+        background-image: url("/assets/template/icons/favorite-v4.svg");
+      }
+    }
+    &.active {
+      &:before {
+        background-image: url("/assets/template/icons/favorite-v2.svg");
+      }
+    }
+  }
+}

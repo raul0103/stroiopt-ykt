@@ -5,6 +5,11 @@
   &:hover {
     box-shadow: 0px 40px 32px -12px #0000001c;
   }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__image {
     height: 173px;
     display: flex;

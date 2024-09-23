@@ -10,7 +10,7 @@
       <div class="header__navigation-controls">
         <button class="btn btn-basic has-icon has-icon-delivery-car">Рассчитать доставку</button>
         <a class="header__navigation-btn btn btn-basic has-icon has-icon-favorite" href="favorites/">
-          <span class="header-counters">{$_modx->getPlaceholder('custom-placeholders')['counters']['favorites']}</span>
+          {include "file:modules/favorites/chunks/products/header-counters.tpl"}
         </a>
         <a class="header__navigation-btn btn btn-basic has-icon has-icon-cart" href="cart/">
           <span class="header-counters">{$_modx->getPlaceholder('custom-placeholders')['counters']['cart']}</span>

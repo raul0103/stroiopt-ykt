@@ -31,6 +31,18 @@
   &-favorite:before {
     background-image: url("/assets/template/icons/favorite.svg");
   }
+  &-favorite-v2:before {
+    background-image: url("/assets/template/icons/favorite-v2.svg");
+    width: 18px;
+  }
+  &-favorite-v3:before {
+    background-image: url("/assets/template/icons/favorite-v3.svg");
+    width: 18px;
+  }
+  &-favorite-v4:before {
+    background-image: url("/assets/template/icons/favorite-v4.svg");
+    width: 18px;
+  }
   &-cart:before {
     background-image: url("/assets/template/icons/cart.svg");
   }
@@ -115,7 +127,7 @@
   &__down:after {
     transform: translateY(-50%) rotate(45deg);
   }
-  &__down.active:after{
+  &__down.active:after {
     transform: rotate(225deg);
   }
   &__right:after {

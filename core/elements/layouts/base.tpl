@@ -1,4 +1,5 @@
 {$_modx->setPlaceholder('custom-placeholders', '@FILE snippets/placeholders/index.php' | snippet)}
+{'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
 
 <!DOCTYPE html>
 <html lang="en">
