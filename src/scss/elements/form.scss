@@ -66,7 +66,9 @@
     input {
       position: absolute;
       opacity: 0;
-      cursor: pointer;
+      left: 0;
+      width: 16px;
+      height: 16px;
     }
     .checkmark {
       position: absolute;
@@ -74,7 +76,7 @@
       left: 0;
       height: 16px;
       width: 16px;
-      background-color: #eee;
+      border: 2px solid $stroke-color;
       border-radius: 4px;
       transition: background-color 0.3s;
       display: flex;
@@ -96,6 +98,7 @@
 
     input:checked + .checkmark {
       background-color: $main-color;
+      border-color: $main-color;
     }
     input:checked + .checkmark::after {
       display: block;

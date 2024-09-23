@@ -1,8 +1,10 @@
 <div class="footer__top-information">
-  <a href="/" class="footer__top-logo">LOGO</a>
+  <a href="/" class="footer__top-logo">
+    <img src="/assets/template/images/other/logo.png">
+  </a>
 
   <div class="footer__top-descriptor dark-color fs-caption">
-    {$placeholders["content"]["descriptor"]}
+    {$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}
   </div>
   <div class="footer__top-payments">
     <div class="footer__top-payments__title fs-body-2">Принимаем к оплате:</div>

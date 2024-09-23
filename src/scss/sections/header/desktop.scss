@@ -35,9 +35,9 @@
       max-width: 346px;
     }
     &-logo {
-      width: 160px;
-      height: 32px;
-      background-color: aliceblue;
+      img {
+        width: 100%;
+      }
     }
 
     &-contact-items {

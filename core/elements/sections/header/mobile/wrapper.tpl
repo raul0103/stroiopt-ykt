@@ -7,15 +7,14 @@
 
     <div class="header-mobile__logo">
       <a href="/">
-        logo
-        <img src="" />
+        <img src="/assets/template/images/other/logo.png" />
       </a>
     </div>
   </div>
   <div class="header-mobile__right">
     <a class="has-icon has-icon-phone" href="tel:{'phone'|config}"></a>
     <a class="has-icon has-icon-cart" href="cart/">
-      <span class="header-counters">{$placeholders['counters']['cart']}</span>
+      <span class="header-counters">{$_modx->getPlaceholder('custom-placeholders')['counters']['cart']}</span>
     </a>
   </div>
 </header>

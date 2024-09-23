@@ -64,7 +64,7 @@
       </div>
     </div>
     <div class="fw-500 mobile-menu__footer-descriptor">
-      {$placeholders["content"]["descriptor"]}
+      {$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}
     </div>
   </div>
 

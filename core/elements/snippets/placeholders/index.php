@@ -6,9 +6,10 @@
  */
 
 $path = MODX_CORE_PATH . "/elements/snippets/placeholders/";
-$placeholders = [
-    'counters' => include $path . "_counters.php",
-    'content' => include $path . "_content.php"
-];
+$files = ["counters", "content", "limits"];
+
+foreach ($files as $file) {
+    $placeholders[$file] = include $path . "_{$file}.php";
+}
 
 return $placeholders;

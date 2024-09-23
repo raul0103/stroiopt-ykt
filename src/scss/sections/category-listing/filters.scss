@@ -21,13 +21,28 @@
   }
 
   &__filter {
+    &-more-btn {
+      width: max-content;
+      padding-right: 35px;
+      margin-top: 13px;
+      cursor: pointer;
+    }
+
     &-row {
       display: grid;
       gap: 8px;
+      &.opened {
+        .category-listing__filter-value.hidden {
+          display: block;
+        }
+      }
     }
 
     &-value {
       line-height: 1;
+      &.hidden {
+        display: none;
+      }
     }
 
     &-title {

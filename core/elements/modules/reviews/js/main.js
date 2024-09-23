@@ -11,7 +11,7 @@ const MltReviewAjaxForm = {
       MltReviewAjaxForm.elem_attr.form_id
     );
     if (!MltReviewAjaxForm.elems.form) {
-      console.error("Форма для отзыва не найдена");
+      console.warn("Форма для отзыва не найдена");
       return;
     }
     MltReviewAjaxForm.formListener();

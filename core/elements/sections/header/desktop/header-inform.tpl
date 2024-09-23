@@ -1,9 +1,9 @@
 <div class="header__inform">
   <div class="header__inform-left">
     <a href="/" class="header__inform-logo">
-      <img src="" />
+      <img src="/assets/template/images/other/logo.png" />
     </a>
-    <div class="fs-caption">{$placeholders["content"]["descriptor"]}</div>
+    <div class="fs-caption">{$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}</div>
   </div>
   <div class="header__inform-right">
     <ul class="header__inform-contact-items">

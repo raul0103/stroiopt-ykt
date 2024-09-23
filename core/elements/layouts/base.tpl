@@ -1,4 +1,4 @@
-{set $placeholders = '@FILE snippets/placeholders/index.php' | snippet}
+{$_modx->setPlaceholder('custom-placeholders', '@FILE snippets/placeholders/index.php' | snippet)}
 
 <!DOCTYPE html>
 <html lang="en">

@@ -5,7 +5,7 @@
     {"@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
       'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',
       'tplOuter' => '@FILE modules/reviews/chunks/review-outer.tpl',
-      'limit' => 12
+      'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['section-reviews']
       'ratingRowClass' => 'rating-stars-static'
     ]}
 

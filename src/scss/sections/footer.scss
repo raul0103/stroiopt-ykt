@@ -16,11 +16,10 @@
     }
 
     &-logo {
-      display: block;
-      width: 160px;
-      height: 32px;
-      background-color: #fff;
-      text-align: center;
+      img {
+        width: 100%;
+        max-width: 160px;
+      }
     }
     &-information {
       display: grid;
