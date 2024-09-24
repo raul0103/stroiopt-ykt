@@ -1,46 +1,42 @@
 
 
 <div class="product-card">
-  <div class="product-card__top">
-    {include "file:modules/product-cards/chunks/remains.tpl"}
-    {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$id}
-  </div>
+  <div class="product-card__content">
+    <div class="product-card__top">
+      {include "file:modules/product-cards/chunks/remains.tpl"}
+      {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$id}
+    </div>
 
-  <div class="product-card__image">
-    <a href="{$id | url}">
-      {if $thumb?}
-      <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}" />
-      {else}
-      <div class="product-card__image-empty"></div>
+    <div class="product-card__image">
+      <a href="{$id | url}">
+        {if $thumb?}
+        <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}" />
+        {else}
+        <div class="product-card__image-empty"></div>
+        {/if}
+      </a>
+    </div>
+    
+    <div class="rating-stars-static">
+      <span class=" full"></span>
+      <span class=" full"></span>
+      <span class=" full"></span>
+      <span class=" full"></span>
+      <span class=" full"></span>
+    </div>
+
+    <div class="product-card__title">
+      <a class="fw-600" href="{$id | url}">{$pagetitle}</a>
+    </div>
+
+    {include "file:modules/product-cards/chunks/options.tpl"}
+
+    <div class="product-card__price">
+      <span class="product-card__price-current fs-title-2">{$price} руб.</span>
+      {if $old_price?}
+        <span class="product-card__price-old fs-caption error-color">{$old_price} руб.</span>
       {/if}
-    </a>
-  </div>
-  <div class="product-card__rating">тут рейтинг</div>
-
-  <div class="product-card__title">
-    <a href="{$id | url}">{$pagetitle}</a>
-  </div>
-
-  <div class="product-card__options">
-    <div class="product-card__option-item">
-      <span>Объем</span>
-      <span>0,91 м3</span>
     </div>
-    <div class="product-card__option-item">
-      <span>Вес</span>
-      <span>1,380 т</span>
-    </div>
-    <div class="product-card__option-item">
-      <span>Длина</span>
-      <span>2 780 мм</span>
-    </div>
-  </div>
-
-  <div class="product-card__price">
-    <span>{$price} руб.</span>
-    {if $old_price?}
-    <span>{$old_price} руб.</span>
-    {/if}
   </div>
 
   <form class="product-card__controls ms2_form" method="post">

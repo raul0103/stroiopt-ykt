@@ -2,6 +2,11 @@
   padding: 8px 12px;
   box-shadow: 0px 1px 6px 0px #919eab33;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+
   &:hover {
     box-shadow: 0px 40px 32px -12px #0000001c;
   }
@@ -18,6 +23,7 @@
     overflow: hidden;
     position: relative;
     border-radius: 4px;
+    margin-bottom: 4px;
 
     img {
       width: 100%;
@@ -50,6 +56,50 @@
 
     &.empty:before {
       background-color: $error-color;
+    }
+  }
+
+  .rating-stars-static {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    transition: 0.2s;
+    margin-bottom: 8px;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__options {
+    margin-bottom: 8px;
+  }
+  &__option-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    span:not(.delimiter) {
+      background-color: #fff;
+      z-index: 1;
+    }
+    .delimiter {
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px dashed $stroke-color;
+      bottom: 3px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+
+    &-current {
+      font-weight: 600;
+    }
+    &-old {
+      font-weight: 500;
+      text-decoration: line-through;
     }
   }
 }
