@@ -1,4 +1,8 @@
 {if $product_id}
+    {if !$_modx->getPlaceholder("favorite-products")}
+        {'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
+    {/if}
+
     {if $product_id in list $_modx->getPlaceholder("favorite-products")} 
         {set $favorite_active = "active"}
     {/if}
