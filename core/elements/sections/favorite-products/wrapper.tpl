@@ -8,6 +8,7 @@
                   'parents' => 0
                   'resources' => $favorite_product_ids | join : ','
                   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
+                  'includeTVs' => 'remains'
               ]}
           {else}
               Пусто

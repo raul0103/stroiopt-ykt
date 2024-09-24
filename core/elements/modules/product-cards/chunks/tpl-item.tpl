@@ -2,8 +2,7 @@
 
 <div class="product-card">
   <div class="product-card__top">
-    В наличии 1 шт.
-
+    {include "file:modules/product-cards/chunks/remains.tpl"}
     {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$id}
   </div>
 
