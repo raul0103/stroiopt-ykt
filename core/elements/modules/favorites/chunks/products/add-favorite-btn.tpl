@@ -1,4 +1,5 @@
 {if $product_id}
+    {* При AJAX подгрузке товаров не видно данного плейсхолдера. Сработает 1 раз на первом товаре, дальше уже будет подтягивать данные из плейсхолдера *}
     {if !$_modx->getPlaceholder("favorite-products")}
         {'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
     {/if}

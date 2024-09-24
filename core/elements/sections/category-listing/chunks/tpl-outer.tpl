@@ -73,12 +73,14 @@
           {/if}
         </div>
 
+
+        *}
+
         <div id="mse2_selected_wrapper">
-          <div id="mse2_selected">
+          <div id="mse2_selected" style="display: none;">
             {'mse2_selected' | lexicon}:<span></span>
           </div>
         </div>
-        *}
 
         <div class="category-listing__products" id="mse2_results">
           {$results}
