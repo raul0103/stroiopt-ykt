@@ -31,6 +31,13 @@
     }
   }
 
+  &-bordered {
+    border: 1px solid $stroke-color;
+    &:hover {
+      background-color: $stroke-color;
+    }
+  }
+
   @media (max-width: $screen-sm) {
     font-size: 14px;
     line-height: 18px;

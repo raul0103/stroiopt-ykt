@@ -18,11 +18,11 @@
     </div>
     
     <div class="rating-stars-static">
-      <span class=" full"></span>
-      <span class=" full"></span>
-      <span class=" full"></span>
-      <span class=" full"></span>
-      <span class=" full"></span>
+      <span class="full"></span>
+      <span class="full"></span>
+      <span class="full"></span>
+      <span class="full"></span>
+      <span class="full"></span>
     </div>
 
     <div class="product-card__title">
@@ -39,20 +39,9 @@
     </div>
   </div>
 
-  <form class="product-card__controls ms2_form" method="post">
-    <input type="hidden" name="id" value="{$id}" />
-    <input type="hidden" name="count" value="1" />
-    <input type="hidden" name="options" value="[]" />
+  <div class="product-card__controls">
+    {include "file:modules/cart/chunks/cart-product-controls.tpl"}
+    <button class="btn btn-bordered" data-modal-open="modal-callback">Купить в 1 клик</button>
+  </div>
 
-    <div class="product-card__controls-row">
-      <button
-        type="submit"
-        class="btn btn-basic"
-        name="ms2_action"
-        value="cart/add"
-      >
-        В корзину
-      </button>
-    </div>
-  </form>
 </div>

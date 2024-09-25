@@ -10,6 +10,9 @@
     padding-right: 16px;
     height: max-content;
     padding-bottom: 24px;
+    @media (max-width: $screen-sm) {
+      display: none;
+    }
 
     &-title {
       margin-bottom: 24px;

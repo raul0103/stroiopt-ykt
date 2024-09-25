@@ -20,9 +20,18 @@
     flex-wrap: wrap;
     gap: 32px;
     margin-bottom: 16px;
+    @media (max-width: $screen-md) {
+      gap: 8px;
+    }
 
     .product-card {
       width: calc(25% - 24px);
+      @media (max-width: $screen-lg) {
+        width: calc(33% - 19px);
+      }
+      @media (max-width: $screen-md) {
+        width: calc(50% - 19px);
+      }
     }
   }
 
