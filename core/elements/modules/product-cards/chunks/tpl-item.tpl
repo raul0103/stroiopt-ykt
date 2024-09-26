@@ -40,7 +40,24 @@
   </div>
 
   <div class="product-card__controls">
-    {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"}
+    <div class="product-card__controls-cart active">
+      <div class="hide-active w-100">
+        <button class="btn btn-basic w-100">В корзину</button>
+      </div>
+    
+      <div class="show-active w-100">
+        <div class="product-card__controls-cart__row">
+          <button class="btn btn-basic product-card__controls-cart__main-btn">
+            <span class="product-card__controls-cart__main-btn-checkmark"></span>
+            <a class="product-card__controls-cart__main-btn-text" href="cart/">В корзинe</a>
+          </button>
+    
+          {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"}
+        </div>
+      </div>
+    </div>
+    
+
     <button class="btn btn-bordered" data-modal-open="modal-callback">Купить в 1 клик</button>
   </div>
 

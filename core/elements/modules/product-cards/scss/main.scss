@@ -23,6 +23,56 @@
         min-width: auto;
       }
     }
+
+    &-cart {
+      &__row {
+        display: flex;
+        gap: 8px;
+      }
+
+      .show-active {
+        display: none;
+      }
+      &.active {
+        .hide-active {
+          display: none;
+        }
+        .show-active {
+          display: block;
+        }
+      }
+
+      &__main-btn {
+        min-width: max-content;
+        width: calc(50% - 8px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        @media (max-width: $screen-xs) {
+          width: calc(30% - 8px);
+        }
+
+        &-checkmark {
+          display: block;
+          &:after {
+            content: "";
+            display: block;
+            width: 3px;
+            height: 8px;
+            border: solid #000;
+            border-width: 0 1px 1px 0;
+            transform: rotate(45deg);
+            position: relative;
+          }
+        }
+        &-text {
+          @media (max-width: $screen-xs) {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   &__top {
