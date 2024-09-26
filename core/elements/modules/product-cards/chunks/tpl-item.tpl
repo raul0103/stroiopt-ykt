@@ -40,7 +40,7 @@
   </div>
 
   <div class="product-card__controls">
-    {include "file:modules/cart/chunks/cart-product-controls.tpl"}
+    {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"}
     <button class="btn btn-bordered" data-modal-open="modal-callback">Купить в 1 клик</button>
   </div>
 

@@ -5,6 +5,7 @@ import MobileMenuInit from "./mobile-menu/js/main.js";
 import popCatInit from "./popular-categories/js/main.js";
 import MltReviewAjaxForm from "./reviews/js/main.js";
 import Favorites from "./favorites/js/main.js";
+import Cart from "./cart/frontend/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
@@ -56,4 +57,11 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error(`Ошибка в классе ${_class.name}: ${e}`);
     }
   });
+
+  // Подключение корзины
+  try {
+    window.cart = new Cart();
+  } catch (e) {
+    console.error(`Ошибка в классе Cart: ${e}`);
+  }
 });
