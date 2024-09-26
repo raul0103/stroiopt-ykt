@@ -41,11 +41,22 @@ export default class Cart {
 
       this.updateProductCount(product_id, response.data && response.data.count);
     },
-    change: () => {},
+    change: async (e, product_id) => {
+      let valid_params = helpers.checkParams("events.minus", {
+        product_id,
+      });
+      if (!valid_params) return;
+
+      let data = this.getProductFormData(e, product_id);
+      data.count = e.value;
+
+      let response = await api.response("change", data);
+      if (!response && !response?.success) return;
+    },
   };
 
   /**
-   * Обновит товару его кол-во в корзине
+   * Обновит товару его кол-во на странице в input
    * data-cart-product-count="PRODUCT_ID" - Обязательный аттрибут на input кол-ва товара. Будет обновляться по AJAX
    *
    * @param {*} product_id
