@@ -23,6 +23,8 @@ cart.event("plus", null, PRODUCT_ID);
 cart.event("plus", this, PRODUCT_ID);
 cart.event("minus", this, PRODUCT_ID);
 cart.event("change", this, PRODUCT_ID);
+
+cart.second_events.clear(); // Полностью очистит корзину
 ```
 
 - Для кнопки кол-ва указать аттрибу. Необходим для изменения кол-ва при кликах на + -
@@ -38,6 +40,7 @@ cart.event("change", this, PRODUCT_ID);
     ```
 - Для обновления на фронте общего кол-ва в корзине использовать элемент с аттрибутом `data-cart-product-total`
 - С бэка данные о текущем кол-ве товаров можно получить сниппетом `backend/snippets/getProductTotal.php`
+- Для вывода суммы по товару установить аттрибут data-cart-product-summ="PRODUCT_ID"
 
 ## BACKEND
 
@@ -45,7 +48,7 @@ cart.event("change", this, PRODUCT_ID);
 - `backend/console` - Скрипты для запуска в консоли. Пока там установка нужных опций
 - `backend/processors` - Основные процессоры для работы с изменением кол-ва товаров в корзине
 - `backend/snippets` - Сниппеты
-- `snippets/getProductCount.php` - Отдает на страницу по PRODUCT_ID кол-во товара в корзине
+- `snippets/getProductData.php` - Отдает на страницу по PRODUCT_ID Данные по товару в корзине
 - `snippets/getProductTotal.php` - Отдает на страницу общее кол-во позиций в корзине
 
 ## Установка

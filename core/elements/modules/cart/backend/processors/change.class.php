@@ -1,17 +1,9 @@
 <?php
 
-require_once dirname(__DIR__) . '/classes/session.class.php';
 require_once dirname(__DIR__) . '/classes/main.class.php';
 
 class change extends Main
 {
-    public $session;
-
-    public function __construct()
-    {
-        $this->session = new Session();
-    }
-
     /**
      * @param mixed $product_data
      * @return mixed $product_data - Обновленный массив данных
@@ -37,6 +29,7 @@ class change extends Main
                     $cart_item = array_replace($cart_item, $product_data);
 
                     $product_data['count'] = $cart_item['count'];
+
                     $item_exist = true;
                     break;
                 }
@@ -47,6 +40,8 @@ class change extends Main
                 $cart_items[] = $product_data;
             }
         }
+
+        $product_data["summ"] =  $this->calcSumm($product_data['count'], $product_data['price']);
 
         $this->session->set($cart_items);
 

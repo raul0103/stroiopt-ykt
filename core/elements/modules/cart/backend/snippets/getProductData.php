@@ -12,6 +12,6 @@ if (!class_exists("Main")) {
 
 $main_cart_class = new Main();
 
-$product_count = $main_cart_class->getProductCount($product_id);
+$product_count = $main_cart_class->getProductData($product_id);
 
 return $product_count;

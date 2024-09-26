@@ -1,6 +1,7 @@
 <?php
 
 require_once  "session.class.php";
+require_once  "helpers.class.php";
 
 /**
  * Класс с основными методами используемыми во всех процессорах
@@ -8,18 +9,19 @@ require_once  "session.class.php";
 class Main
 {
     public $session;
+    public $helpers;
     public function __construct()
     {
         $this->session = new Session();
+        $this->helpers = new Helpers();
     }
     /**
      * Возвращает кол-во товара в корзине по product_id
      * @param mixed $product_id
      * @return mixed
      */
-    public function getProductCount($product_id)
+    public function getProductData($product_id)
     {
-
         $cart_items = $this->session->get();
 
         if (empty($cart_items)) return 0;
@@ -32,11 +34,15 @@ class Main
             }
         }
 
-        return $product_count;
+        // $summ = (int)$product_count['count'] * $this->helpers->parseNumber($product_count['price']);
+
+        return [
+            "count" => $product_count,
+            // "summ" => $summ
+        ];
     }
     /**
      * возвращает общее число товаров в корзине
-     * @param mixed $product_id
      * @return mixed
      */
     public function getProductTotal()
@@ -47,5 +53,60 @@ class Main
         if (empty($cart_items)) return 0;
 
         return count($cart_items);
+    }
+
+    /**
+     * Отдает массив товаров в корзине
+     * @return array $products
+     */
+    public function getProducts()
+    {
+        global $modx;
+
+        $cart_items = $this->session->get();
+
+        if (empty($cart_items)) return [];
+
+        $cart_items_by_id = [];
+        foreach ($cart_items as $cart_item) {
+            $cart_items_by_id[$cart_item['id']] = $cart_item;
+        }
+
+        // Товары с базы для получения необходимых полей
+        $ms_products = $modx->getIterator('msProduct', [
+            'id:in' => array_keys($cart_items_by_id)
+        ]);
+
+        $output = [];
+
+        foreach ($ms_products as $ms_product) {
+            $product_id = $ms_product->get("id");
+
+            // Товар из корзины для получения необходимых полей 
+            $cart_item = $cart_items_by_id[$product_id];
+
+            $summ = $this->calcSumm($cart_item['count'], $cart_item['price']);
+
+            $output[] = [
+                "id" => $product_id,
+                "pagetitle" => $ms_product->get("pagetitle"),
+                "uri" => $ms_product->get("uri"),
+                "thumb" =>  $ms_product->get("thumb"),
+                "unit" => $cart_item['unit'] ?: $ms_product->get("unit")[0], // Получаем из корзины, вдруг была подмена 
+                "price" => $cart_item['price'] ?: $ms_product->get("price"), // Получаем из корзины, вдруг была подмена 
+                "count" =>  $cart_item['count'],
+                "summ" => $summ
+            ];
+        }
+
+        return $output;
+    }
+
+
+    public function calcSumm($count, $price)
+    {
+        $summ = (int)$count * $this->helpers->parseNumber($price);
+
+        return $this->helpers->formattedNumber($summ);
     }
 }

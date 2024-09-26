@@ -1,7 +1,7 @@
 /**
  * Отправка запросов на бэк
  */
-import helpers from "./helpers";
+import helpers from "../utils/helpers";
 
 const api = {
   response: async (processor, product_data) => {

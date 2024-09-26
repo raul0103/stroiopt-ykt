@@ -1,4 +1,4 @@
-{set $product_count = '@FILE modules/cart/backend/snippets/getProductCount.php' | snippet : [
+{set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' | snippet : [
   'product_id' => $id
 ]}
 
@@ -42,7 +42,7 @@
   </div>
 
   <div class="product-card__controls">
-    <div class="product-card__controls-cart {if $product_count > 0}active{/if}" data-product-cart-controls="{$id}">
+    <div class="product-card__controls-cart {if $product_data['count'] > 0}active{/if}" data-product-cart-controls="{$id}">
       <div class="hide-active w-100">
         <button class="btn btn-basic w-100" onclick="product_card.events.addFirstProductToCart({$id})">В корзину</button>
       </div>
