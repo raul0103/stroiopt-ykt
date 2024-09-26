@@ -141,8 +141,6 @@ export default class Cart {
   updateProductTotal(product_total_value) {
     let product_totals = this.find_elements.product_totals;
     if (!product_totals.length) {
-      console.log("find");
-
       product_totals = document.querySelectorAll("[data-cart-product-total]");
     }
 

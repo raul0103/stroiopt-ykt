@@ -6,6 +6,7 @@ import popCatInit from "./popular-categories/js/main.js";
 import MltReviewAjaxForm from "./reviews/js/main.js";
 import Favorites from "./favorites/js/main.js";
 import Cart from "./cart/frontend/js/main.js";
+import initProductCart from "./product-cards/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
@@ -32,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: ModalsInit,
       name: "ModalsInit",
+    },
+    {
+      init: initProductCart,
+      name: "initProductCart",
     },
   ];
 

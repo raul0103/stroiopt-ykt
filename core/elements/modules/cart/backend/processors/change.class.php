@@ -36,7 +36,7 @@ class change extends Main
                 if ($cart_item['id'] == $product_data['id']) {
                     $cart_item = array_replace($cart_item, $product_data);
 
-                    $product_data['count'] = $cart_item;
+                    $product_data['count'] = $cart_item['count'];
                     $item_exist = true;
                     break;
                 }

@@ -42,9 +42,9 @@
   </div>
 
   <div class="product-card__controls">
-    <div class="product-card__controls-cart {if $product_count > 0}active{/if}">
+    <div class="product-card__controls-cart {if $product_count > 0}active{/if}" data-product-cart-controls="{$id}">
       <div class="hide-active w-100">
-        <button class="btn btn-basic w-100">В корзину</button>
+        <button class="btn btn-basic w-100" onclick="product_card.events.addFirstProductToCart({$id})">В корзину</button>
       </div>
     
       <div class="show-active w-100">
