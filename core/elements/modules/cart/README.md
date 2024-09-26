@@ -8,7 +8,7 @@
 - Так как JS корзины глобален, можно из любой точки сайта вызвать функцию
 
 ```js
-cart.events.plus(null, PRODUCT_ID);
+cart.event("plus", null, PRODUCT_ID);
 ```
 
 и добавить или удалить товар из корзины
@@ -20,9 +20,9 @@ cart.events.plus(null, PRODUCT_ID);
   - Тут необходимо указать кнопкам глобальные события на onclick и onchange
 
 ```js
-cart.events.plus(this, PRODUCT_ID);
-cart.events.minus(this, PRODUCT_ID);
-cart.events.change(this, PRODUCT_ID);
+cart.event("plus", this, PRODUCT_ID);
+cart.event("minus", this, PRODUCT_ID);
+cart.event("change", this, PRODUCT_ID);
 ```
 
 - Для кнопки кол-ва указать аттрибу. Необходим для изменения кол-ва при кликах на + -

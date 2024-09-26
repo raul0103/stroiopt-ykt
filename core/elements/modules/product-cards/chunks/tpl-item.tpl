@@ -1,4 +1,6 @@
-
+{set $product_count = '@FILE modules/cart/backend/snippets/getProductCount.php' | snippet : [
+  'product_id' => $id
+]}
 
 <div class="product-card">
   <div class="product-card__content">
@@ -40,7 +42,7 @@
   </div>
 
   <div class="product-card__controls">
-    <div class="product-card__controls-cart active">
+    <div class="product-card__controls-cart {if $product_count > 0}active{/if}">
       <div class="hide-active w-100">
         <button class="btn btn-basic w-100">В корзину</button>
       </div>

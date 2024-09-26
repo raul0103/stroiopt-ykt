@@ -15,58 +15,55 @@ export default class Cart {
   // Обязательные поля которые должны быть получены с формы товара
   required_data_fields = ["id", "price", "unit"];
 
-  events = {
-    plus: async (e, product_id) => {
-      let valid_params = helpers.checkParams("events.plus", {
-        product_id,
-      });
-      if (!valid_params) return;
+  /**
+   * @param {*} action [minus,plus,change]
+   * @param {*} e - Кнопка по которой был клик
+   * @param {*} product_id
+   * @returns
+   */
+  event = async (action, e, product_id) => {
+    let valid_params = helpers.checkParams(`events.${action}`, {
+      product_id,
+    });
+    if (!valid_params) return;
 
-      let data = this.getProductFormData(e, product_id);
+    // Получаем данные товара из html формы
+    let data = this.getProductFormData(e, product_id);
 
-      let response = await api.response("plus", data);
-      if (!response && !response?.success) return;
-
-      this.updateProductTotal(response.data && response.data.product_total);
-
-      this.updateProductCount(
-        product_id,
-        response.data && response.data.product_data.count
-      );
-    },
-    minus: async (e, product_id) => {
-      let valid_params = helpers.checkParams("events.minus", {
-        product_id,
-      });
-      if (!valid_params) return;
-
-      let data = this.getProductFormData(e, product_id);
-
-      let response = await api.response("minus", data);
-      if (!response && !response?.success) return;
-
-      this.updateProductTotal(response.data && response.data.product_total);
-
-      this.updateProductCount(
-        product_id,
-        response.data && response.data.product_data.count
-      );
-    },
-    change: async (e, product_id) => {
-      let valid_params = helpers.checkParams("events.minus", {
-        product_id,
-      });
-      if (!valid_params) return;
-
-      let data = this.getProductFormData(e, product_id);
+    // Если это input с кол-вом тогда устанавливаем кол-во его значение
+    if (action == "change") {
       data.count = e.value;
+    }
 
-      let response = await api.response("change", data);
-      if (!response && !response?.success) return;
+    let response = await api.response(action, data);
+    if (!response && !response?.success) return;
 
-      this.updateProductTotal(response.data && response.data.producT_total);
-    },
+    this.updateProductTotal(response.data && response.data.product_total);
+
+    // Если событие было по input с кол-ом, то не зачем менять в нем же кол-во
+    if (action !== "change") {
+      this.updateProductCount(
+        product_id,
+        response.data && response.data.product_data.count
+      );
+    }
+
+    // Событие что корзина сработала
+    this.dispacth({
+      detail: {
+        product_data: response.data.product_data,
+      },
+    });
   };
+
+  /**
+   * Запускает событие при действиях с корзиной
+   * @param {*} detail - Параметры
+   */
+  dispacth(detail) {
+    let cart_event = new CustomEvent("CartEvent", detail);
+    document.dispatchEvent(cart_event);
+  }
 
   /**
    * Обновит товару его кол-во на странице в input
