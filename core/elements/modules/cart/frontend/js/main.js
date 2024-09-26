@@ -9,6 +9,7 @@ export default class Cart {
   find_elements = {
     product_form: {},
     input_counts: {},
+    product_totals: [],
   };
 
   // Обязательные поля которые должны быть получены с формы товара
@@ -26,7 +27,12 @@ export default class Cart {
       let response = await api.response("plus", data);
       if (!response && !response?.success) return;
 
-      this.updateProductCount(product_id, response.data.count);
+      this.updateProductTotal(response.data && response.data.product_total);
+
+      this.updateProductCount(
+        product_id,
+        response.data && response.data.product_data.count
+      );
     },
     minus: async (e, product_id) => {
       let valid_params = helpers.checkParams("events.minus", {
@@ -39,7 +45,12 @@ export default class Cart {
       let response = await api.response("minus", data);
       if (!response && !response?.success) return;
 
-      this.updateProductCount(product_id, response.data && response.data.count);
+      this.updateProductTotal(response.data && response.data.product_total);
+
+      this.updateProductCount(
+        product_id,
+        response.data && response.data.product_data.count
+      );
     },
     change: async (e, product_id) => {
       let valid_params = helpers.checkParams("events.minus", {
@@ -52,6 +63,8 @@ export default class Cart {
 
       let response = await api.response("change", data);
       if (!response && !response?.success) return;
+
+      this.updateProductTotal(response.data && response.data.producT_total);
     },
   };
 
@@ -95,9 +108,9 @@ export default class Cart {
    * @param {*} product_id
    * @returns - Объект с полями формы {id: '88', price: '1 750', unit: ''}
    */
-  getProductFormData(control_btn, product_id) {
+  getProductFormData(control_btn = null, product_id) {
     let product_form = this.find_elements.product_form[product_id];
-    if (!product_form) {
+    if (!product_form && control_btn) {
       // Сначала ищем форму по общему родителю с кнопками, сделано для упрощения циклов поиска
       let parent_node = control_btn.parentNode;
       product_form = parent_node.querySelector(
@@ -121,5 +134,32 @@ export default class Cart {
     });
 
     return result;
+  }
+
+  /**
+   * Обновит на странице общее кол-во товаров на странице у элементов с аттрибутом
+   * data-cart-product-total
+   * @param {*} product_total
+   */
+  updateProductTotal(product_total_value) {
+    let product_totals = this.find_elements.product_totals;
+    if (!product_totals.length) {
+      console.log("find");
+
+      product_totals = document.querySelectorAll("[data-cart-product-total]");
+    }
+
+    if (!product_totals.length) {
+      console.warn(
+        "[updateProductTotal] Не найдены элементы для отображения кол-ва товаров в корзине"
+      );
+      return null;
+    }
+
+    this.find_elements.product_totals = product_totals;
+
+    product_totals.forEach((product_total) => {
+      product_total.textContent = product_total_value;
+    });
   }
 }

@@ -18,8 +18,6 @@ class minus extends Main
      */
     public function process($product_data)
     {
-        $output = null;
-
         $cart_items = $this->session->get();
 
         if (!empty($cart_items)) {
@@ -37,7 +35,7 @@ class minus extends Main
                     if ($cart_item['count'] <= 0) {
                         unset($cart_items[$key]);
                     } else {
-                        $output = $cart_item;
+                        $product_data['count'] = $cart_item['count'];
                     }
 
                     break;
@@ -47,6 +45,9 @@ class minus extends Main
 
         $this->session->set($cart_items);
 
-        return $output;
+        return [
+            "product_data" => $product_data,
+            "product_total" => count($cart_items)
+        ];
     }
 }

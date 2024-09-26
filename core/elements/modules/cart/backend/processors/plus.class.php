@@ -18,7 +18,6 @@ class plus extends Main
      */
     public function process($product_data)
     {
-        $output = null;
 
         $cart_items = $this->session->get();
 
@@ -27,8 +26,6 @@ class plus extends Main
 
             $product_data['count'] = 1;
             $cart_items[] = $product_data;
-
-            $output = $product_data;
         } else {
             /**
              * Ищем товар в корзине
@@ -41,7 +38,9 @@ class plus extends Main
                     $cart_item = array_replace($cart_item, $product_data);
 
                     $cart_item['count']++;
-                    $output = $cart_item;
+
+                    $product_data["count"] = $cart_item['count'];
+
                     $item_exist = true;
                     break;
                 }
@@ -51,13 +50,14 @@ class plus extends Main
             if (!$item_exist) {
                 $product_data['count'] = 1;
                 $cart_items[] = $product_data;
-
-                $output = $product_data;
             }
         }
 
         $this->session->set($cart_items);
 
-        return $output;
+        return [
+            "product_data" => $product_data,
+            "product_total" => count($cart_items)
+        ];
     }
 }

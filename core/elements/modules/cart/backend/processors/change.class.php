@@ -18,7 +18,6 @@ class change extends Main
      */
     public function process($product_data)
     {
-        $output = null;
 
         $cart_items = $this->session->get();
 
@@ -26,8 +25,6 @@ class change extends Main
             $cart_items = [];
 
             $cart_items[] = $product_data;
-
-            $output = $product_data;
         } else {
             /**
              * Ищем товар в корзине
@@ -39,7 +36,7 @@ class change extends Main
                 if ($cart_item['id'] == $product_data['id']) {
                     $cart_item = array_replace($cart_item, $product_data);
 
-                    $output = $cart_item;
+                    $product_data['count'] = $cart_item;
                     $item_exist = true;
                     break;
                 }
@@ -48,13 +45,14 @@ class change extends Main
             // Если товара не было в массиве корзины, добавить
             if (!$item_exist) {
                 $cart_items[] = $product_data;
-
-                $output = $product_data;
             }
         }
 
         $this->session->set($cart_items);
 
-        return $output;
+        return [
+            "product_data" => $product_data,
+            "product_total" => count($cart_items)
+        ];
     }
 }
