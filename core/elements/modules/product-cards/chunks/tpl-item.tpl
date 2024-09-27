@@ -54,7 +54,7 @@
             <a class="product-card__controls-cart__main-btn-text" href="cart/">В корзинe</a>
           </button>
     
-          {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"}
+          {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl" product_count=$product_data['count']}
         </div>
       </div>
     </div>
