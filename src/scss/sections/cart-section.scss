@@ -3,6 +3,7 @@
 
   h2 {
     text-align: start;
+    margin-bottom: 16px;
   }
 
   &__top {
@@ -52,6 +53,13 @@
     &-controls {
       position: absolute;
       bottom: 0;
+
+      display: flex;
+      gap: 12px;
+
+      button:hover {
+        color: $main-color;
+      }
     }
 
     &-summ {
@@ -63,6 +71,40 @@
       button {
         padding: 0;
         height: 40px;
+      }
+    }
+
+    &-delete-product {
+      cursor: pointer;
+      color: $muted-color;
+      position: relative;
+      padding-left: 15px;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        width: 12px;
+        height: 1px;
+        background-color: $muted-color;
+        transform-origin: center;
+      }
+
+      &:before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      &:after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:hover {
+        color: $main-color;
+        &:after,
+        &:before {
+          background-color: $main-color;
+        }
       }
     }
   }

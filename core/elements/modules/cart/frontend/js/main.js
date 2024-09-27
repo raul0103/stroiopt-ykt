@@ -61,5 +61,14 @@ export default class Cart {
     clear: async () => {
       await api.response("clear", {});
     },
+    // Удаляет товар из корзины
+    remove: async (product_id) => {
+      let response = await api.response("remove", { id: product_id });
+      if (!response && !response?.success) return;
+
+      update_elements.productTotal(
+        response.data && response.data.product_total
+      );
+    },
   };
 }

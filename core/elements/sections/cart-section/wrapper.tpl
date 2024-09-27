@@ -13,7 +13,8 @@
         {else}
           <div class="cart-section__row-items">
             {foreach $products as $product}
-              <div class="cart-section__item">
+              {set $product_fron_id = "product_fron_id"~$product.id}
+              <div class="cart-section__item" id="{$product_fron_id}">
                     <div class="cart-section__item-image" style="background-image: url('{$product['thumb']}');"></div>
                     <div class="cart-section__item-content">
                       <div class="cart-section__item-content__left">
@@ -25,6 +26,7 @@
                         </div>
                         <div class="cart-section__item-controls">
                             {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$product.id text=true}
+                            <button class="cart-section__item-delete-product" onclick="{$product_fron_id}.remove();cart.second_events.remove({$product.id});">Удалить из корзины</button>
                         </div>
                       </div>
                       <div class="cart-section__item-content__right">

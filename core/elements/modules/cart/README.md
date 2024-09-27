@@ -25,6 +25,7 @@ cart.event("minus", this, PRODUCT_ID);
 cart.event("change", this, PRODUCT_ID);
 
 cart.second_events.clear(); // Полностью очистит корзину
+cart.second_events.remove(PRODUCT_ID); // Удалит товар из корзины
 ```
 
 - Для кнопки кол-ва указать аттрибу. Необходим для изменения кол-ва при кликах на + -
