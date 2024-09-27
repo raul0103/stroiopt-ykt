@@ -45,9 +45,13 @@ class change extends Main
 
         $this->session->set($cart_items);
 
+        $cart_total = $this->getCartTotal($cart_items);
         return [
             "product_data" => $product_data,
-            "product_total" => count($cart_items)
+            "total" => [
+                "count" => $cart_total["count"],
+                "summ" => $cart_total["summ"]
+            ]
         ];
     }
 }

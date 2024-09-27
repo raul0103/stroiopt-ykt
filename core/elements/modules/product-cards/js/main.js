@@ -17,8 +17,6 @@ export default function initProductCart() {
   // Отслеживаем событие корзины для скрытия кнопок + - и вывода большой кнопки
   document.addEventListener("CartEvent", function (event) {
     // Если у товара есть остаток ничего не меняем
-    console.log(event.detail.product_data);
-
     if (
       "count" in event.detail.product_data &&
       +event.detail.product_data.count > 0

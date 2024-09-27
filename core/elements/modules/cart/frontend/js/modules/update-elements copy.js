@@ -2,35 +2,31 @@
 const update_elements = {
   // По ID input будут записаны ссылки на элементы, что-бы повторно не бегать по странице и не искать
   find_elements: {
-    counters: {},
-    total_count: [],
-    total_summ: [],
+    counters: [],
+    total: {
+      count: [],
+      summ: [],
+    },
     product_summs: [],
   },
 
   /**
    * Функция контсруктор для всех остальных
    * @param {*} value - Значение элемента
-   * @param {object} finds - Объект в котором обязательно есть {key:"КЛЮЧ К ПЕРЕМЕННОЙ В ОБЪЕКТЕ",child: "ОПЦИОНАЛЬНО для объектов"}
+   * @param {*} finds - Уже найденные на сранице элементы
    * @param {*} selector - Селектор для поиска элементов
    * @param {*} warn - Предупреждение
    * @param {*} field - Поле для замены
    * @returns
    */
   main(value, finds, selector, warn, field) {
-    let elements = finds.child
-      ? this.find_elements[finds.key][finds.child]
-      : this.find_elements[finds.key];
+    let elements = this.find_elements[finds];
 
     if (!elements || !elements.length) {
-      elements = document.querySelectorAll(selector);
+      console.log("finds", this.find_elements[finds]);
 
-      // Обновляем объект find_elements
-      if (finds.child) {
-        this.find_elements[finds.key][finds.child] = elements;
-      } else {
-        this.find_elements[finds.key] = elements;
-      }
+      elements = document.querySelectorAll(selector);
+      this.find_elements[finds] = elements;
     }
 
     if (elements.length == 0) {
@@ -56,10 +52,7 @@ const update_elements = {
     let selector = `[data-cart-product-count="${product_id}"]`;
     this.main(
       product_count,
-      {
-        key: "counters",
-        child: product_id,
-      },
+      "counters",
       selector,
       `Не найдены input с кол-вом товаров: ${selector}`,
       "value"
@@ -78,9 +71,7 @@ const update_elements = {
     let selector = `[data-cart-product-summ="${product_id}"]`;
     this.main(
       product_summ,
-      {
-        key: "product_summs",
-      },
+      "product_summs",
       selector,
       `Не найдены элементы для обновления суммы товара: ${selector}`,
       "textContent"
@@ -96,9 +87,7 @@ const update_elements = {
     let selector = `[data-cart-total-count]`;
     this.main(
       count,
-      {
-        key: "total_count",
-      },
+      this.find_elements.total.count,
       selector,
       `Не найдены элементы для обновления общего кол-ва товара в корзине: ${selector}`,
       "textContent"
@@ -114,9 +103,7 @@ const update_elements = {
     let selector = `[data-cart-total-summ]`;
     this.main(
       summ,
-      {
-        key: "total_summ",
-      },
+      this.find_elements.total.count,
       selector,
       `Не найдены элементы для обновления общей суммы товаров в корзине: ${selector}`,
       "textContent"

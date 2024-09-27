@@ -1,8 +1,10 @@
+{set $cart_total = $_modx->getPlaceholder('custom-placeholders')['counters']['cart']['total']}
+
 <div class="cart-section section-margin">
   <div class="container">
     <div class="cart-section__top fs-h2">
       <h2>{$_modx->resource.pagetitle}</h2>
-      <div class="muted-color">(<span data-cart-product-total>{$_modx->getPlaceholder('custom-placeholders')['counters']['cart']}</span>)</div>
+      <div class="muted-color">(<span data-cart-total-count>{$cart_total['count']}</span>)</div>
     </div>
     
     <div class="cart-section__row">
@@ -38,6 +40,22 @@
             {/foreach}
           </div>
         {/if}
+
+        <div class="cart-section__side">
+          <div class="cart-section__side-big">
+            <div class="cart-section__side-big__info">
+              <span>Всего позиций</span>
+              <span data-cart-total-count>{$cart_total['count']}</span>
+            </div>
+            <div class="cart-section__side-big__info">
+              <span>Итого</span>
+              <div><span data-cart-total-summ>{$cart_total['summ']}</span> руб.</div>
+            </div>
+          </div>
+          <div class="cart-section__side-small">
+
+          </div>
+        </div>
     </div>
   </div>
 </div>

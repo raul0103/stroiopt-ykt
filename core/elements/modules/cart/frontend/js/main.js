@@ -36,7 +36,8 @@ export default class Cart {
       response.data && response.data.product_data.summ
     );
 
-    update_elements.productTotal(response.data && response.data.product_total);
+    update_elements.cartTotalSumm(response.data && response.data.total.summ);
+    update_elements.cartTotalCount(response.data && response.data.total.count);
 
     // Если событие было по input с кол-ом, то не зачем менять в нем же кол-во
     if (action !== "change") {
@@ -66,8 +67,9 @@ export default class Cart {
       let response = await api.response("remove", { id: product_id });
       if (!response && !response?.success) return;
 
-      update_elements.productTotal(
-        response.data && response.data.product_total
+      update_elements.cartTotalSumm(response.data && response.data.total.summ);
+      update_elements.cartTotalCount(
+        response.data && response.data.total.count
       );
     },
   };

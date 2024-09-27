@@ -13,7 +13,7 @@
           {include "file:modules/favorites/chunks/products/header-counters.tpl"}
         </a>
         <a class="header__navigation-btn btn btn-basic has-icon has-icon-cart" href="cart/">
-          <span class="header-counters" data-cart-product-total>{$_modx->getPlaceholder('custom-placeholders')['counters']['cart']}</span>
+          <span class="header-counters" data-cart-total-count>{$_modx->getPlaceholder('custom-placeholders')['counters']['cart']['total']['count']}</span>
         </a>
       </div>
     </div>

@@ -7,10 +7,15 @@
 $pdoTools = $modx->getService("pdoTools");
 
 try {
-    $product_total = $pdoTools->runSnippet("@FILE modules/cart/backend/snippets/getProductTotal.php");
+    $product_total = $pdoTools->runSnippet("@FILE modules/cart/backend/snippets/getCartTotal.php");
 } catch (Exception $e) {
 }
 
 return [
-    'cart' => $product_total ?: 0 // Кол-во товара в корзине
+    'cart' => [
+        'total' => [
+            'count' => $product_total["count"] ?: 0,
+            'summ' =>  $product_total["summ"] ?: 0
+        ]
+    ]
 ];

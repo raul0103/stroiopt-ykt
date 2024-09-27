@@ -10,6 +10,6 @@ if (!class_exists("Main")) {
 
 $main_cart_class = new Main();
 
-$product_total = $main_cart_class->getProductTotal();
+$cart_total = $main_cart_class->getCartTotal();
 
-return $product_total;
+return $cart_total;

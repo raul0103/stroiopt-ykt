@@ -41,18 +41,31 @@ class Main
             // "summ" => $summ
         ];
     }
+
     /**
      * возвращает общее число товаров в корзине
-     * @return mixed
+     * @param mixed $cart_items - опционально
+     * @return array|int
      */
-    public function getProductTotal()
+    public function getCartTotal($cart_items = null)
     {
 
-        $cart_items = $this->session->get();
+        if (!$cart_items) {
+            $cart_items = $this->session->get();
+        }
 
         if (empty($cart_items)) return 0;
 
-        return count($cart_items);
+        $total_summ = 0;
+        foreach ($cart_items as $cart_item) {
+            $summ = $this->calcSumm($cart_item['count'], $cart_item['price'], false);
+            $total_summ += $summ;
+        }
+
+        return [
+            "count" => count($cart_items),
+            "summ" => $this->helpers->formattedNumber($total_summ)
+        ];
     }
 
     /**
@@ -103,10 +116,13 @@ class Main
     }
 
 
-    public function calcSumm($count, $price)
+    public function calcSumm($count, $price, $formatted = true)
     {
         $summ = (int)$count * $this->helpers->parseNumber($price);
 
-        return $this->helpers->formattedNumber($summ);
+        if ($formatted)
+            return $this->helpers->formattedNumber($summ);
+        else
+            return $summ;
     }
 }
