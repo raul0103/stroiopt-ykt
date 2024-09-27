@@ -3,9 +3,9 @@ const update_elements = {
   // По ID input будут записаны ссылки на элементы, что-бы повторно не бегать по странице и не искать
   find_elements: {
     counters: {},
+    product_summs: {},
     total_count: [],
     total_summ: [],
-    product_summs: [],
   },
 
   /**
@@ -80,6 +80,7 @@ const update_elements = {
       product_summ,
       {
         key: "product_summs",
+        child: product_id,
       },
       selector,
       `Не найдены элементы для обновления суммы товара: ${selector}`,
