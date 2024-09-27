@@ -167,3 +167,16 @@
 .w-100 {
   width: 100%;
 }
+
+// display
+.sm-d-none {
+  @media (max-width: $screen-sm) {
+    display: none !important;
+  }
+}
+
+.sm-d-block {
+  @media (min-width: $screen-sm) {
+    display: none !important;
+  }
+}

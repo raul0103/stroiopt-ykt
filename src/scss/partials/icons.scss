@@ -107,6 +107,13 @@
     width: 43px;
     height: 36px;
   }
+  &-filter:before {
+    background-image: url("/assets/template/icons/filter.svg");
+  }
+  &-sort:before {
+    background-image: url("/assets/template/icons/sort.svg");
+    width: 20px;
+  }
 }
 
 // after

@@ -1,40 +1,44 @@
 <div class="category-listing section-margin" id="mse2_mfilter">
   <div class="container">
     <div class="category-listing__row">
-      <div class="category-listing__filters">
-        <div class="category-listing__filters-title dark-color fs-title-1">
-          Фильтры
-        </div>
-
-        <form
-          class="form category-listing__filters-row"
-          action="{$_modx->resource.id | url}"
-          method="post"
-          id="mse2_filters"
-        >
-          {$filters} {*if $filters}
-          <div class="d-flex justify-content-between">
-            <button class="btn btn-light hidden" type="reset">
-              {'mse2_reset' | lexicon}
-            </button>
-            <button class="btn btn-primary hidden" type="submit">
-              {'mse2_submit' | lexicon}
-            </button>
+      <div class="category-listing__filters" data-filter-window>
+        <div>
+          <div class="category-listing__filters-title dark-color">
+            Фильтры
+            <span class="category-listing__filters-close sm-d-blockxx" data-filter-window-close></span>
           </div>
-          {/if*}
-        </form>
+
+          <form
+            class="form category-listing__filters-row"
+            action="{$_modx->resource.id | url}"
+            method="post"
+            id="mse2_filters"
+          >
+            {$filters} {*if $filters}
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-light hidden" type="reset">
+                {'mse2_reset' | lexicon}
+              </button>
+              <button class="btn btn-primary hidden" type="submit">
+                {'mse2_submit' | lexicon}
+              </button>
+            </div>
+            {/if*}
+          </form>
+        </div>
       </div>
 
       <div class="category-listing__content">
         <div class="category-listing__controls fs-body-1">
           <div class="category-listing__controls-item" id="mse2_sort">
-            <label>Сортировать по:</label>
+            <label class="sm-d-none">Сортировать по:</label>
             <a
               class="category-listing__controls-item-sort-item"
               href="#"
               data-sort="tv|hits_page"
               data-default="desc"
             >
+            <span class="has-icon has-icon-sort sm-d-block"></span>
               Популярности
             </a>
             <a
@@ -46,7 +50,7 @@
               Цене
             </a>
           </div>
-          <div class="category-listing__controls-item">
+          <div class="category-listing__controls-item sm-d-none">
             <label>Показывать по:</label>
             <div class="category-listing__controls-item-select pseudo-arrow pseudo-arrow__down">
                 <select class="fw-600" name="mse_limit" id="mse2_limit" >
@@ -56,6 +60,7 @@
                 </select>
             </div>
           </div>
+          <button class="has-icon has-icon-filter sm-d-block" data-filter-window-open>Фильтр</button>
         </div>
 
         {*
@@ -76,10 +81,8 @@
 
         *}
 
-        <div id="mse2_selected_wrapper">
-          <div id="mse2_selected" style="display: none;">
-            {'mse2_selected' | lexicon}:<span></span>
-          </div>
+        <div class="chips">
+          <div class="chips__row" id="mse2_selected" style="display: none;"></div>
         </div>
 
         <div class="category-listing__products" id="mse2_results">

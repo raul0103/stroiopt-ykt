@@ -3,7 +3,13 @@
 
 .category-listing {
   &__content {
-    width: 100%;
+    width: calc(83% - 32px);
+    @media (max-width: $screen-md) {
+      width: calc(75% - 32px);
+    }
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
   }
 
   fieldset {
@@ -30,7 +36,7 @@
         width: calc(33% - 19px);
       }
       @media (max-width: $screen-md) {
-        width: calc(50% - 19px);
+        width: calc(50% - 4px);
       }
     }
   }
