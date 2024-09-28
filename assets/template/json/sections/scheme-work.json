@@ -1,0 +1,22 @@
+[
+  {
+    "image": "/assets/template/images/sections/scheme-work/1.jpg",
+    "title": "Заявка",
+    "text": "Вы оставляете заявку на сайте или звоните по номеру телефона"
+  },
+  {
+    "image": "/assets/template/images/sections/scheme-work/3.jpg",
+    "title": "Подтверждение",
+    "text": "Менеджер связывается с Вами для обработки и подтверждения заказа."
+  },
+  {
+    "image": "/assets/template/images/sections/scheme-work/2.jpg",
+    "title": "Сроки",
+    "text": "Согласование сроков поставки товара или выполнения услуги."
+  },
+  {
+    "image": "/assets/template/images/sections/scheme-work/4.jpg",
+    "title": "Доставка",
+    "text": "Заказанный товар доставляется на объект или по указанному адресу."
+  }
+]

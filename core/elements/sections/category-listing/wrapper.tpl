@@ -3,11 +3,11 @@
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
     'parents' => $_modx->resource.id
     'filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
-    'tplOuter' => '@FILE sections/category-listing/chunks/tpl-outer.tpl'
-    'tplFilter.outer.ms|price' => '@FILE sections/category-listing/chunks/filters/tpl-filter-slider.tpl'
-    'tplFilter.row.ms|price' => '@FILE sections/category-listing/chunks/filters/tpl-filter-number.tpl'
-    'tplFilter.outer.default' => '@FILE sections/category-listing/chunks/filters/tpl-filter-outer.tpl'
-    'tplFilter.row.default' => '@FILE sections/category-listing/chunks/filters/tpl-filter-row.tpl'
+    'tplOuter' => '@FILE sections/category-listing/tpl-outer.tpl'
+    'tplFilter.outer.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-slider.tpl'
+    'tplFilter.row.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-number.tpl'
+    'tplFilter.outer.default' => '@FILE sections/category-listing/filters/tpl-filter-outer.tpl'
+    'tplFilter.row.default' => '@FILE sections/category-listing/filters/tpl-filter-row.tpl'
     'includeTVs' => 'hits_page,remains'
     'tpls' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
     'ajaxMode' => 'button'
