@@ -49,6 +49,10 @@
   &-delivery-car:before {
     background-image: url("/assets/template/icons/delivery-car.svg");
   }
+  &-delivery-car-v2:before {
+    background-image: url("/assets/template/icons/delivery-car-v2.svg");
+    width: 18px;
+  }
   &-arrow-right:before {
     background-image: url("/assets/template/icons/arrow-right.svg");
     width: 21px;
@@ -79,6 +83,9 @@
     background-image: url("/assets/template/icons/payment.svg");
     width: 27px;
     height: 21px;
+  }
+  &-payment-v2:before {
+    background-image: url("/assets/template/icons/payment-v2.svg");
   }
   &-settings:before {
     background-image: url("/assets/template/icons/settings.svg");
@@ -117,6 +124,16 @@
     background-image: url("/assets/template/icons/sort.svg");
     width: 18px;
     height: 13px;
+  }
+  &-success:before {
+    background-image: url("/assets/template/icons/success.svg");
+  }
+  &-download:before {
+    background-image: url("/assets/template/icons/download.svg");
+    width: 18px;
+  }
+  &-share:before {
+    background-image: url("/assets/template/icons/share.svg");
   }
 }
 

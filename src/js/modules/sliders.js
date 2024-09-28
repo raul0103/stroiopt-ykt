@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Thumbs } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 
 export default function iniSliders() {
   new Swiper('[data-slider="certificates"]', {
-    modules: [Navigation, Autoplay],
+    modules: [Autoplay],
     slidesPerView: "auto",
     loop: false,
     slidesPerView: 6,
@@ -33,15 +33,15 @@ export default function iniSliders() {
         spaceBetween: 8,
       },
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
     direction: "horizontal",
   });
 
   new Swiper('[data-slider="thankful-letters"]', {
-    modules: [Navigation, Autoplay],
+    modules: [Autoplay],
     slidesPerView: "auto",
     loop: false,
     slidesPerView: 5,
@@ -67,10 +67,10 @@ export default function iniSliders() {
         spaceBetween: 8,
       },
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
     direction: "horizontal",
   });
 
@@ -136,5 +136,24 @@ export default function iniSliders() {
         },
       },
     });
+  });
+
+  let product_thumbs = new Swiper('[data-slider="product-gallery-thumbs"]', {
+    modules: [Navigation],
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+    direction: "vertical",
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  new Swiper('[data-slider="product-gallery-preview"]', {
+    modules: [Thumbs],
+
+    thumbs: {
+      swiper: product_thumbs,
+    },
   });
 }

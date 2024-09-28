@@ -1,0 +1,41 @@
+{set $remains = $_modx->resource.remains}
+{set $docs = $_modx->resource.docs}
+
+<div class="product-main__info">
+  <div class="product-main__info-article muted-color fs-body-2">Арт. {$_modx->resource.article}</div>
+  
+  <h1 class="product-main__info-pagetitle fs-h2">{$_modx->resource.pagetitle}</h1>
+  
+  <div class="rating-stars-static">
+    <span class="full"></span>
+    <span class="full"></span>
+    <span class="full"></span>
+    <span class="full"></span>
+    <span class="full"></span>
+  </div>
+
+  <ul class="product-main__info-list fs-body-2">
+    {if $remains}
+      <li class="has-icon has-icon-success success-color">В наличии {$remains} шт.</li>
+    {else}
+      <li class="error-color">Нет в наличии</li>
+    {/if}
+    <li class="has-icon has-icon-delivery-car-v2">Доставка от 1 дня!</li>
+    <li class="has-icon has-icon-payment-v2">Оплата после отгрузки</li>
+  </ul>
+
+  {if $docs}
+  {set $docs = $docs | fromJSON}
+
+  <div class="product-main__info-docs">
+    <div class="product-main__info-docs-title fw-600">Техническая документация:</div>
+    <div class="product-main__info-docs-row">
+      {foreach $docs as $doc}
+      <div class="product-main__info-docs-item">
+        <a class="fs-body-2 has-icon has-icon-download btn btn-bordered" target="_blank" href="/{$doc['file']}">{$doc['name']}</a>
+      </div>
+      {/foreach}
+    </div>
+  </div>
+  {/if}
+</div>

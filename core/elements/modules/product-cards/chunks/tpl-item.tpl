@@ -1,12 +1,10 @@
-{set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' | snippet : [
-  'product_id' => $id
-]}
+{set $product_id = $id}
 
 <div class="product-card">
   <div class="product-card__content">
     <div class="product-card__top">
       {include "file:modules/product-cards/chunks/remains.tpl"}
-      {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$id}
+      {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl"}
     </div>
 
     <div class="product-card__image">
@@ -41,26 +39,6 @@
     </div>
   </div>
 
-  <div class="product-card__controls">
-    <div class="product-card__controls-cart {if $product_data['count'] > 0}active{/if}" data-product-cart-controls="{$id}">
-      <div class="hide-active w-100">
-        <button class="btn btn-basic w-100" onclick="product_card.events.addFirstProductToCart({$id})">В корзину</button>
-      </div>
-    
-      <div class="show-active w-100">
-        <div class="product-card__controls-cart__row">
-          <button class="btn btn-basic product-card__controls-cart__main-btn">
-            <span class="product-card__controls-cart__main-btn-checkmark"></span>
-            <a class="product-card__controls-cart__main-btn-text" href="cart/">В корзинe</a>
-          </button>
-    
-          {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl" product_count=$product_data['count']}
-        </div>
-      </div>
-    </div>
-    
-
-    <button class="btn btn-bordered" data-modal-open="modal-callback">Купить в 1 клик</button>
-  </div>
+  {include "file:modules/product-cards/chunks/cart-controls.tpl"}
 
 </div>
