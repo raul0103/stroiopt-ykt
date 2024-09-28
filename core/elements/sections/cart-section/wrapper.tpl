@@ -41,42 +41,7 @@
           </div>
         {/if}
 
-        <div class="cart-section__side">
-          <div class="cart-section__side-big">
-            <div class="cart-section__side-big__info">
-              <span class="dark-color">Всего позиций</span>
-              <span class="dark-color fw-600" data-cart-total-count>{$cart_total['count']}</span>
-            </div>
-            <div class="cart-section__side-big__info">
-              <span class="fs-title-2 fw-600">Итого</span>
-              <div class="fs-h3 fw-600"><span data-cart-total-summ>{$cart_total['summ']}</span> руб.</div>
-            </div>
-            <div class="cart-section__side-big__controls">
-              <a class="btn btn-primary" href="order/">
-                Оформить заказ
-              </a>
-              <button class="btn btn-bordered" onclick="window.history.back();">
-                Вернуться к покупкам
-              </button>
-            </div>
-          </div>
-          <div class="cart-section__side-small">
-            <div class="fw-600">Другие способы оформления заказа:</div>
-            <div class="cart-section__side-small__social">
-              <a
-                href="{'whatsapp-link'|config}"
-                class="has-icon has-icon-whatsapp"
-              ></a>
-              <a
-                href="{'telegram-link'|config}"
-                class="has-icon has-icon-telegram"
-              ></a>
-            </div>
-            <div class="">
-              <a class="main-color fw-600" href="mailto:{'email' | config}">{'email' | config}</a>
-            </div>
-          </div>
-        </div>
+        {include "file:blocks/side-block/chunks/cart.tpl"}
     </div>
   </div>
 </div>

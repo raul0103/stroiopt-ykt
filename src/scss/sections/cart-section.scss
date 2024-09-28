@@ -24,61 +24,61 @@
     }
   }
 
-  &__side {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  // &__side {
+  //   width: 30%;
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 12px;
 
-    @media (max-width: $screen-sm) {
-      width: 100%;
-      order: 1;
-    }
+  //   @media (max-width: $screen-sm) {
+  //     width: 100%;
+  //     order: 1;
+  //   }
 
-    &-big,
-    &-small {
-      border-radius: 4px;
-      box-shadow: 1px 8px 16px -3px #0000001f;
-      background-color: #fff;
-    }
+  //   &-big,
+  //   &-small {
+  //     border-radius: 4px;
+  //     box-shadow: 1px 8px 16px -3px #0000001f;
+  //     background-color: #fff;
+  //   }
 
-    &-small {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      align-items: center;
-      text-align: center;
+  //   &-small {
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 16px;
+  //     align-items: center;
+  //     text-align: center;
 
-      &__social {
-        display: flex;
-        gap: 16px;
+  //     &__social {
+  //       display: flex;
+  //       gap: 16px;
 
-        .has-icon::before {
-          width: 40px;
-          height: 40px;
-        }
-      }
-    }
+  //       .has-icon::before {
+  //         width: 40px;
+  //         height: 40px;
+  //       }
+  //     }
+  //   }
 
-    &-big {
-      padding: 24px;
-      &__info {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
+  //   &-big {
+  //     padding: 24px;
+  //     &__info {
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: space-between;
+  //     }
 
-      &__controls {
-        margin-top: 16px;
-        display: grid;
-        text-align: center;
-        gap: 12px;
-      }
-    }
-    &-small {
-      padding: 16px 24px;
-    }
-  }
+  //     &__controls {
+  //       margin-top: 16px;
+  //       display: grid;
+  //       text-align: center;
+  //       gap: 12px;
+  //     }
+  //   }
+  //   &-small {
+  //     padding: 16px 24px;
+  //   }
+  // }
 
   &__item {
     padding: 8px 32px 16px;
