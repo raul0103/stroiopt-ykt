@@ -3,7 +3,7 @@
     <h2 class="fs-h2 category-tags__title">Плиты перекрытия</h2>
 
     <div class="category-tags__row" data-opened-element="category-tags">
-        {'pdoResources' | snippet :[
+        {'!pdoResources' | snippet :[
             'tpl' => '@FILE sections/category-tags/tag-item.tpl'
             'includeTVs' => 'main_image'
             'tvPrefix' => ''
