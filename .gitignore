@@ -1,4 +1,9 @@
 *
+
+!/core
+!/core/cron
+!/core/cron/**
+
 !/core
 !/core/elements
 !/core/elements/**
