@@ -4,7 +4,15 @@
     {('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon}
   </div>
 
-  <div class="category-listing__filter-row" data-opened-element="filter-{$key}">
+  <div class="search-by-words has-icon has-icon-search">
+    <input placeholder="Введите значение" type="text" data-search-by-words="{$key}" />
+  </div>
+
+  <div
+    class="category-listing__filter-row"
+    data-opened-element="filter-{$key}"
+    data-search-by-words-container="{$key}"
+  >
     {$rows}
   </div>
 

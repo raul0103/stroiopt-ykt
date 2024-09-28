@@ -7,7 +7,7 @@
   {$_modx->setPlaceholder('category-listing-show-btn-more', false)}
 {/if}
 
-<div class="category-listing__filter-value {$classes}" zzz>
+<div class="category-listing__filter-value {$classes}">
   <label class="{$disabled} custom-checkbox" for="mse2_{$key}_{$idx}">
     <input
       type="checkbox"

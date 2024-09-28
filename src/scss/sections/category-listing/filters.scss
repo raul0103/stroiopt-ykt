@@ -101,9 +101,12 @@
     }
 
     &-title {
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
-
+    .search-by-words {
+      margin-bottom: 8px;
+    }
+    
     &-price-inputs {
       display: flex;
       justify-content: space-between;

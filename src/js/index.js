@@ -8,6 +8,7 @@ import "glightbox/dist/css/glightbox.min.css";
 import initSliders from "./modules/sliders.js";
 import initOpened from "./modules/opened.js";
 import FilterWindow from "./modules/filter-window.js";
+import SearchByWords from "./modules/search-by-words.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -38,13 +39,17 @@ document.addEventListener("DOMContentLoaded", function () {
       class: FilterWindow,
       name: "FilterWindow",
     },
+    {
+      class: SearchByWords,
+      name: "SearchByWords",
+    },
   ];
 
   classes.forEach((_class) => {
     try {
       new _class.class().init();
     } catch (e) {
-      console.error(`Ошибка в функции ${_class.name}: ${e}`);
+      console.error(`Ошибка в классе ${_class.name}: ${e}`);
     }
   });
 

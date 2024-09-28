@@ -72,6 +72,9 @@
     width: 26px;
     height: 26px;
   }
+  &-search:before {
+    background-image: url("/assets/template/icons/search.svg");
+  }
   &-payment:before {
     background-image: url("/assets/template/icons/payment.svg");
     width: 27px;

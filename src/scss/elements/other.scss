@@ -76,3 +76,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background-color: $main-hover-color; /* Изменение цвета при наведении */
 }
+
+.search-by-words {
+  position: relative;
+  &:before {
+    position: absolute;
+    right: 10px;
+  }
+  input {
+    padding-right: 30px;
+  }
+}
