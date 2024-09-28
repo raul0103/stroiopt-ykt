@@ -5,7 +5,7 @@
         <div>
           <div class="category-listing__filters-title dark-color">
             Фильтры
-            <span class="category-listing__filters-close sm-d-blockxx" data-filter-window-close></span>
+            <span class="category-listing__filters-close sm-d-block" data-filter-window-close></span>
           </div>
 
           <form
@@ -25,6 +25,10 @@
             </div>
             {/if*}
           </form>
+        </div>
+        <div class="category-listing__filters__mobile-controls sm-d-block">
+          <button class="btn btn-primary" data-filter-window-close>Применить</button>
+          <button class="btn btn-reset" data-filter-window-close onclick="mSearch2.reset();">Сбросить все фильтры</button>
         </div>
       </div>
 

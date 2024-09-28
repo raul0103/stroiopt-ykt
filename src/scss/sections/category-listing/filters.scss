@@ -15,7 +15,7 @@
 
     @media (max-width: $screen-sm) {
       overflow: auto;
-      height: calc(100vh - 62px);
+      height: calc(100vh - 168px);
 
       visibility: hidden;
       opacity: 0;
@@ -35,6 +35,21 @@
         visibility: visible;
         opacity: 1;
         left: 0;
+      }
+    }
+
+    &__mobile-controls {
+      position: fixed;
+      bottom: 0;
+      padding: 8px 16px;
+      width: 100%;
+      display: grid;
+      gap: 8px;
+      left: 0;
+      background: #fff;
+
+      button.btn-reset {
+        background-color: $neutral-color;
       }
     }
 
@@ -106,7 +121,7 @@
     .search-by-words {
       margin-bottom: 8px;
     }
-    
+
     &-price-inputs {
       display: flex;
       justify-content: space-between;
