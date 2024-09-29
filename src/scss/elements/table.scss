@@ -1,0 +1,35 @@
+.table-container {
+  border: 1px solid $neutral-color;
+  border-radius: 4px;
+  overflow-x: auto;
+  width: 100%;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 20px 16px;
+      @media (max-width: $screen-sm) {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+    th {
+      font-weight: 600;
+      background-color: $neutral-color;
+    }
+    td {
+      color: $dark-color;
+      &:not(:first-child) {
+        text-align: center;
+      }
+    }
+
+    .cart-product-controls {
+      width: max-content;
+      margin: auto;
+    }
+  }
+}

@@ -1,10 +1,10 @@
 .product-main {
-  margin-top: 16px;
-  margin-bottom: 28px;
+  margin-top: 28px;
 
   &__row {
     display: flex;
     gap: 40px;
+    margin-bottom: 28px;
     @media (max-width: $screen-md) {
       gap: 12px;
       flex-wrap: wrap;
@@ -114,12 +114,53 @@
     }
   }
 
+  button.has-icon-share {
+    position: relative;
+  }
+
   .mini-popup-social {
     bottom: -40px;
     .social-icons {
       display: flex;
       align-items: center;
       gap: 8px;
+    }
+  }
+
+  .tabs-section {
+    &__container {
+      width: calc(73% - 40px);
+      @media (max-width: $screen-md) {
+        width: 100%;
+      }
+    }
+  }
+
+  .product-options {
+    max-height: 268px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    @media (max-width: $screen-sm) {
+      flex-wrap: nowrap;
+      max-height: max-content;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: 165px 1fr;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid $stroke-color;
+      // height: 38px;
+
+      // &-title {
+      //   width: calc(30% - 16px);
+      // }
+      // &-value {
+      //   width: 70%;
+      // }
     }
   }
 }

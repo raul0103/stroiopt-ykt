@@ -1,0 +1,47 @@
+.tabs-section {
+  &__controls {
+    width: 100%;
+    overflow-x: auto;
+    background-color: $lightest-color;
+    padding: 4px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+
+    &-row {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+    }
+
+    &-item {
+      width: 186px;
+      padding: 9px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: $light-color;
+      }
+      &.active {
+        background-color: #fff;
+      }
+      @media (max-width: $screen-sm) {
+        width: max-content;
+      }
+    }
+  }
+
+  &__tabs {
+    &-item {
+      display: none;
+      &.opened {
+        display: block;
+      }
+    }
+  }
+
+  .tab-callback-btn {
+    margin: 20px auto 0;
+    display: block;
+    width: max-content;
+  }
+}

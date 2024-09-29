@@ -1,0 +1,28 @@
+{set $data = "@FILE snippets/getJsonData.php" | snippet : [
+    "path" => "/assets/template/json/sections/product/tab-delivery.json"
+]}
+
+{if $data['status'] == 'success'}
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          {foreach $data['message']['header'] as $header}
+          <th>{$header}</th>
+          {/foreach}
+        </tr>
+      </thead>
+      <tbody>
+        {foreach $data['message']['body'] as $items}
+        <tr>
+          {foreach $items as $item}
+          <td>{$item}</td>
+          {/foreach}
+        </tr>
+        {/foreach}
+      </tbody>
+    </table>
+</div>
+<button class="tab-callback-btn sm-d-block btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
+{/if}
+

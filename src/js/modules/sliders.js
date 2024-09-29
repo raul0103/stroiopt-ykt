@@ -156,4 +156,30 @@ export default function iniSliders() {
       swiper: product_thumbs,
     },
   });
+
+  new Swiper('[data-slider="product-interesting"]', {
+    modules: [Navigation],
+    slidesPerView: 5,
+    spaceBetween: 16,
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+      890: {
+        slidesPerView: 3,
+        spaceBetween: 8,
+      },
+      200: {
+        slidesPerView: 2,
+        spaceBetween: 8,
+      },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 }

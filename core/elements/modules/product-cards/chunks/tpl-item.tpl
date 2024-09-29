@@ -1,6 +1,6 @@
 {set $product_id = $id}
 
-<div class="product-card">
+<div class="product-card swiper-slide">
   <div class="product-card__content">
     <div class="product-card__top">
       {include "file:modules/product-cards/chunks/remains.tpl"}
