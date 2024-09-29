@@ -1,6 +1,7 @@
 {set $products = 'msProducts' | snippet :[
-  'parents' => $_modx->resource.parent,
+  'parents' => $parents ?: $_modx->resource.parent,
   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
+  'sortby' => 'RAND()'
   'includeTVs' => 'remains'
   'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-interesting']
 ]}
