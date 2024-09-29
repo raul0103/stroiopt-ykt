@@ -11,4 +11,5 @@ return [
     'category-products' => 12, // Товары в листинге
     'product-pricelist' => 10, // Товары в прайс-листе товара
     'product-reviews' => 6,
+    'product-interesting' => 12
 ];

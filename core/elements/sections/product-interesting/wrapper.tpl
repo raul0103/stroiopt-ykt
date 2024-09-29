@@ -2,6 +2,7 @@
   'parents' => $_modx->resource.parent,
   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
   'includeTVs' => 'remains'
+  'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-interesting']
 ]}
 
 {if $products}
