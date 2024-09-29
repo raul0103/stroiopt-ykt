@@ -87,3 +87,23 @@
     padding-right: 30px;
   }
 }
+
+button.mini-popup-show {
+  position: relative;
+  .mini-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.mini-popup {
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  position: absolute;
+  width: max-content;
+  padding: 5px 10px;
+  background: #fff;
+  border: 1px solid $neutral-color;
+  border-radius: 8px;
+  box-shadow: 1px 8px 16px -3px rgba(0, 0, 0, 0.1215686275);
+}

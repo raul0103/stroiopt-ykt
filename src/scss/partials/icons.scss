@@ -135,6 +135,23 @@
   &-share:before {
     background-image: url("/assets/template/icons/share.svg");
   }
+  &-vk:before {
+    background-image: url("/assets/template/icons/social/vk.svg");
+  }
+  &-tg:before {
+    background-image: url("/assets/template/icons/social/tg.svg");
+  }
+  &-ok:before {
+    background-image: url("/assets/template/icons/social/ok.svg");
+    height: 26px;
+  }
+  &-pn:before {
+    background-image: url("/assets/template/icons/social/pn.svg");
+    height: 21px;
+  }
+  &-ld:before {
+    background-image: url("/assets/template/icons/social/ld.svg");
+  }
 }
 
 // after
