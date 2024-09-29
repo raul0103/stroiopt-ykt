@@ -22,7 +22,7 @@
     gap: 24px;
     position: relative;
 
-    &:before {
+    &.shadow:before {
       content: "";
       position: absolute;
       width: 100%;
