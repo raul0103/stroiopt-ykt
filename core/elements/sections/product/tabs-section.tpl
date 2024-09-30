@@ -64,7 +64,7 @@
       {if $tab_reviews}
         <div class="tabs-section__tabs-item" data-opened-element="reviews">
           {$tab_reviews}
-          <a class="tab-callback-btn btn btn-basic" href="reviews/">Смотреть все отзывы</a>
+          <a class="btn-additional btn btn-basic" href="reviews/">Смотреть все отзывы</a>
         </div>
       {/if}
     </div>

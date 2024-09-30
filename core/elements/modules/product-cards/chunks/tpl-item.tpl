@@ -34,7 +34,7 @@
     <div class="product-card__price">
       <span class="product-card__price-current fs-title-2">{$price} руб.</span>
       {if $old_price?}
-        <span class="product-card__price-old fs-caption error-color">{$old_price} руб.</span>
+        <span class="old-price fs-caption">{$old_price} руб.</span>
       {/if}
     </div>
   </div>

@@ -23,6 +23,6 @@
       </tbody>
     </table>
 </div>
-<button class="tab-callback-btn sm-d-block btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
+<button class="btn-additional sm-d-block btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
 {/if}
 

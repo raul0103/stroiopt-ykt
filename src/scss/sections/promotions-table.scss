@@ -1,0 +1,13 @@
+.promotions-table {
+  td img {
+    max-width: 100px;
+    margin: auto;
+    display: block;
+  }
+
+  &__price-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+}
