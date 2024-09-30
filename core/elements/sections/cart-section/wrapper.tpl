@@ -1,6 +1,6 @@
 {set $cart_total = $_modx->getPlaceholder('custom-placeholders')['counters']['cart']['total']}
 
-<div class="cart-section section-margin">
+<div class="cart-section section-margin section-margin-top">
   <div class="container">
     <div class="cart-section__top fs-h2">
       <h2>{$_modx->resource.pagetitle}</h2>

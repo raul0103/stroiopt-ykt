@@ -9,6 +9,7 @@ import initSliders from "./modules/sliders.js";
 import initOpened from "./modules/opened.js";
 import FilterWindow from "./modules/filter-window.js";
 import SearchByWords from "./modules/search-by-words.js";
+import initCustomUpload from "./modules/custom-upload.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -22,6 +23,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: initOpened,
       name: "initOpened",
+    },
+    {
+      init: initCustomUpload,
+      name: "initCustomUpload",
     },
   ];
 

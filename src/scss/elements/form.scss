@@ -2,6 +2,18 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  &.gap-24 {
+    gap: 24px;
+  }
+
+  &__section {
+    &-title {
+      margin-bottom: 16px;
+    }
+    .form__group:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
 
   &__error {
     &-message {
@@ -13,9 +25,22 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    &-row {
+      display: grid;
+      gap: 12px;
+    }
   }
   &__footer {
     margin-top: 8px;
+    &-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: end;
+      gap: 24px;
+      @media (max-width: $screen-sm) {
+        gap: 12px;
+      }
+    }
   }
 
   button {
@@ -129,6 +154,65 @@
         background: #ababab;
         color: #fff;
       }
+    }
+  }
+
+  .custom-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    label {
+      cursor: pointer;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .radio-mark {
+      position: relative;
+      height: 16px;
+      width: 16px;
+      border: 2px solid #2196f3;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: 0.2s;
+      border: 1px solid $stroke-color;
+    }
+
+    input:hover + .radio-mark,
+    input:focus + .radio-mark {
+      border: 5px solid $stroke-color;
+    }
+
+    input:checked + .radio-mark {
+      border: 5px solid $main-color;
+    }
+  }
+
+  .custom-upload {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    button.has-icon {
+      gap: 8px;
+    }
+    &__file-name {
+      display: none;
+    }
+    input[type="file"] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
     }
   }
 }

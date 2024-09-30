@@ -132,6 +132,9 @@
     background-image: url("/assets/template/icons/download.svg");
     width: 18px;
   }
+  &-upload:before {
+    background-image: url("/assets/template/icons/upload.svg");
+  }
   &-share:before {
     background-image: url("/assets/template/icons/share.svg");
   }

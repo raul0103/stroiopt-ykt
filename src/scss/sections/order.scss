@@ -1,0 +1,41 @@
+.order-section {
+  form {
+    max-width: 600px;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    width: max-content;
+  }
+
+  &__row {
+    display: flex;
+    width: 100%;
+    gap: 32px;
+    @media (max-width: $screen-md) {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+  }
+  &__main {
+    border-radius: 4px;
+    width: calc(70% - 32px);
+    box-shadow: 1px 8px 16px -3px rgba(0, 0, 0, 0.1215686275);
+    background-color: #fff;
+    padding: 24px;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+      padding: 0;
+      box-shadow: none;
+    }
+  }
+
+  .form-section-custom-upload {
+    display: grid;
+    gap: 4px;
+    button {
+      font-size: 14px;
+    }
+  }
+}

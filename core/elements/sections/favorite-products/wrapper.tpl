@@ -1,4 +1,4 @@
-<div class="favorite-products section-margin">
+<div class="favorite-products section-margin section-margin-top">
     <div class="container">
       <h2 class="fs-h2 section-title">{$_modx->resource.pagetitle}</h2>
       <div class="favorite-products__row">
