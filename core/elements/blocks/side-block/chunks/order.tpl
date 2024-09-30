@@ -1,7 +1,6 @@
 {extends "file:blocks/side-block/layouts/base.tpl"}
 
 {block "big-info"}
-{set $products = "@FILE modules/cart/backend/snippets/getProducts.php" | snippet}
      
 <div class="side-block__big-title fs-title-1">Товары в заказе</div>
 

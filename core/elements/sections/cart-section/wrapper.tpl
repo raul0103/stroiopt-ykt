@@ -11,7 +11,9 @@
         {set $products = "@FILE modules/cart/backend/snippets/getProducts.php" | snippet}
         
         {if !$products}
+          <div class="cart-section__items">
             Нет товаров в корзине
+          </div>
         {else}
           <div class="cart-section__items">
             {foreach $products as $product}
