@@ -1,6 +1,8 @@
 {set $product_id = $id}
+{set $classes = $_modx->getPlaceholder('is-swiper-slide') ? 'swiper-slide' : ''}
 
-<div class="product-card swiper-slide">
+<div class="product-card {$classes}">
+  {$test}
   <div class="product-card__content">
     <div class="product-card__top">
       {include "file:modules/product-cards/chunks/remains.tpl"}
