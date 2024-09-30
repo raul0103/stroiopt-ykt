@@ -28,13 +28,15 @@
     </a>
     {/foreach}
 
-  <button
-    class="btn-more pseudo-arrow pseudo-arrow__down fs-body-2 main-color fw-600"
-    data-opened-btn="side-products"
-    data-active-text="Скрыть"
-  >
-    Показать все
-  </button>
+  {if $idx > 5}
+    <button
+      class="btn-more pseudo-arrow pseudo-arrow__down fs-body-2 main-color fw-600"
+      data-opened-btn="side-products"
+      data-active-text="Скрыть"
+    >
+      Показать все
+    </button>
+  {/if}
 </div>
 {/if}
 
