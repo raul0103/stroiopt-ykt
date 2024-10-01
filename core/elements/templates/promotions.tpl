@@ -8,12 +8,11 @@
       {include "file:sections/promotions-table/wrapper.tpl"}
 
       {if $_modx->resource.content}
-        <div class="page-content section-margin">
+        <div class="page-content">
           {$_modx->resource.content}
         </div>
       {/if}
     </div>
-    
-    {include "file:sections/callback-section/wrapper.tpl"}
 </div>
+{include "file:sections/callback-section/wrapper.tpl"}
 {/block}
