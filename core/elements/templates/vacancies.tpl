@@ -25,6 +25,9 @@
               <div class="vacancies-page__item-description">
                 {$vacancy['description']}
               </div>
+              <div class="vacancies-page__item-controls">
+                <button class="btn btn-primary" data-modal-open="modal-callback">Заполнить форму</button>
+              </div>
             </div>
             {/foreach}
           </div>
