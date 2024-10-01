@@ -1,0 +1,29 @@
+.contents-page {
+  .page-container {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__image {
+    width: calc(30% - 24px);
+    height: 200px;
+    background: center / cover no-repeat;
+    border-radius: 8px;
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+  .page-content {
+    width: 70%;
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+  }
+}

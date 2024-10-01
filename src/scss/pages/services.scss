@@ -1,0 +1,50 @@
+.services-page {
+  .page-container {
+    max-width: 1300px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  &__item {
+    width: calc(50% - 12px);
+    box-shadow: 1px 8px 16px -3px #0000001f;
+    background-color: #fff;
+    transition: 0.2s;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 16px;
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
+    &:hover {
+      box-shadow: 0px 40px 32px -12px #0000001c;
+    }
+
+    &-title {
+      margin-bottom: 12px;
+    }
+    &-image {
+      width: calc(30% - 20px);
+      height: 120px;
+      border-radius: 8px;
+      background: center / cover no-repeat;
+      @media (max-width: $screen-sm) {
+        width: 100%;
+      }
+    }
+    &-content {
+      width: 70%;
+      @media (max-width: $screen-sm) {
+        width: 100%;
+      }
+    }
+  }
+}

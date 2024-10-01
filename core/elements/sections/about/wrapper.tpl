@@ -11,7 +11,7 @@
           "
         ></div>
         <div class="about-section__image-title ta-center fw-600">
-          Директор завода ЖБИ «Азбука» Иванов Иван Иванович
+          Директор завода ЖБИ «{'company_name' | config}» Иванов Иван Иванович
         </div>
       </div>
 

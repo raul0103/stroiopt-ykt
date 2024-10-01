@@ -29,6 +29,7 @@
 - phone
 - whatsapp-link
 - telegram-link
+- company_name
 
 ## Хранение глобальных данных
 
