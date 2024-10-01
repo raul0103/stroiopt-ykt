@@ -15,7 +15,7 @@
       <li
         class="header__inform-contact-item header__inform-contact-phone fs-body-2 fw-600"
       >
-        <a href="tel:{'phone'|config}" class="main-color">{'phone'|config}</a>
+        <a href="tel:{'phone'|config}" class="main-color hover-opacity-7">{'phone'|config}</a>
         <a href="{'whatsapp-link'|config}" class="has-icon has-icon-whatsapp"></a>
         <a href="{'telegram-link'|config}" class="has-icon has-icon-telegram"></a>
       </li>
@@ -26,7 +26,7 @@
       </li>
 
       <li class="header__inform-contact-item fs-body-2 fw-600">
-        <a href="mailto:{'email'|config}">{'email'|config}</a>
+        <a class="hover-opacity-7" href="mailto:{'email'|config}">{'email'|config}</a>
       </li>
     </ul>
   </div>

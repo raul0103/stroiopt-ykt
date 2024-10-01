@@ -30,6 +30,7 @@
 - whatsapp-link
 - telegram-link
 - company_name
+- delivery-map
 
 ## Хранение глобальных данных
 

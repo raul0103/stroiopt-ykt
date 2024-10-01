@@ -6,7 +6,7 @@
       type="text/javascript"
       charset="utf-8"
       async
-      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A559ed9e387da80bf58ae9bfe1f25700f4373816fba3a36c1b8ef6312dfeadb2b&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"
+      src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%{'delivery-map' | config}&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"
     ></script>
   </div>
 </div>
