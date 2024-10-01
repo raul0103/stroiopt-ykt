@@ -1,0 +1,23 @@
+.pricelists-page {
+  .page-container {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__intro {
+    margin-bottom: 24px;
+    @media (max-width: $screen-sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .has-icon-download-white {
+    gap: 10px;
+    margin: auto;
+    margin-bottom: 40px;
+    @media (max-width: $screen-sm) {
+      margin-bottom: 16px;
+    }
+  }
+}
