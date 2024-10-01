@@ -1,7 +1,7 @@
 <div class="header__inform">
   <div class="header__inform-left">
     <a href="/" class="header__inform-logo">
-      <img src="/assets/template/images/other/logo.png" />
+      <img src="/assets/template/images/other/logo.svg" />
     </a>
     <div class="fs-caption">{$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}</div>
   </div>

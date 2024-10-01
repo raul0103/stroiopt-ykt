@@ -7,7 +7,7 @@
 
     <div class="header-mobile__logo">
       <a href="/">
-        <img src="/assets/template/images/other/logo.png" />
+        <img src="/assets/template/images/other/logo.svg" />
       </a>
     </div>
   </div>

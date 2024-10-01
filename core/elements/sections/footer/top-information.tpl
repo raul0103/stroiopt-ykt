@@ -1,6 +1,6 @@
 <div class="footer__top-information">
   <a href="/" class="footer__top-logo">
-    <img src="/assets/template/images/other/logo.png">
+    <img src="/assets/template/images/other/logo.svg">
   </a>
 
   <div class="footer__top-descriptor dark-color fs-caption">

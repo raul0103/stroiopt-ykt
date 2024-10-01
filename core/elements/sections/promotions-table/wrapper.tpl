@@ -1,10 +1,8 @@
-{if $_modx->resource.promotion_resources}
-    {set $promotion_products = 'msProducts' | snippet : [
-        'parents' => 0
-        'resources' => $_modx->resource.promotion_resources
-        'tpl' => '@FILE sections/promotions-table/table-item.tpl'
-    ]}
-{/if}
+{set $promotion_products = 'msProducts' | snippet : [
+  'parents' => 0
+  'tpl' => '@FILE sections/promotions-table/table-item.tpl'
+  'where' => '{"Data.old_price:>":"Data.price"}'
+]}
 
 {if $promotion_products}
 <div class="promotions-table section-margin">
