@@ -25,10 +25,10 @@
         class="tabs-section__tabs-item opened"
         data-opened-element="order-physique"
       >
-        {include "file:sections/order/form-physique.tpl"}
+        {include "file:templates/order/form-physique.tpl"}
       </div>
       <div class="tabs-section__tabs-item" data-opened-element="order-yurist">
-        {include "file:sections/order/form-yurist.tpl"}
+        {include "file:templates/order/form-yurist.tpl"}
       </div>
     </div>
   </div>

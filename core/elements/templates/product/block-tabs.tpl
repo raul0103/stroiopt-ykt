@@ -1,6 +1,6 @@
 {set $content = $_modx->resource.content}
-{set $tab_pricelist = "@FILE sections/product/tabs/pricelist/wrapper.tpl" | chunk}
-{set $tab_delivery = "@FILE sections/product/tabs/delivery/wrapper.tpl" | chunk}
+{set $tab_pricelist = "@FILE templates/product/tabs/pricelist/wrapper.tpl" | chunk}
+{set $tab_delivery = "@FILE templates/product/tabs/delivery/wrapper.tpl" | chunk}
 {set $tab_reviews = "@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
   'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',
   'tplOuter' => '@FILE modules/reviews/chunks/review-outer.tpl',
@@ -41,7 +41,7 @@
         data-opened-element="tab-harakt"
       >
           {'msProductOptions' | snippet : [
-            'tpl' => '@FILE sections/product/tabs/options/wrapper.tpl'
+            'tpl' => '@FILE templates/product/tabs/options/wrapper.tpl'
           ]}
       </div>
 
@@ -58,7 +58,7 @@
       {/if}
 
       <div class="tabs-section__tabs-item" data-opened-element="delivery">
-        {$tab_delivery}
+        {include "file:sections/delivery/delivery-table.tpl"}
       </div>
       
       {if $tab_reviews}

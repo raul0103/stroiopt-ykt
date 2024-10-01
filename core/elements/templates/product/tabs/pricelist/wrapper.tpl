@@ -2,7 +2,7 @@
 
 {set $pricelist_products = 'msProducts' | snippet : [
   'parents' => $_modx->resource.parent
-  'tpl' => '@FILE sections/product/tabs/pricelist/tab-pricelist-item.tpl'
+  'tpl' => '@FILE templates/product/tabs/pricelist/tab-pricelist-item.tpl'
   'innerJoin' => '{"Options":{"class":"msProductOption"}}',
   'where' => '{"id:!=":'~$_modx->resource.id~',"Options.key":"dlina-mm", "Options.value:=":"'~$_modx->resource['dlina-mm'][0]~'"}',
   'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-pricelist']

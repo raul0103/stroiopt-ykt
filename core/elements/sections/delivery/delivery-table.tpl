@@ -1,5 +1,5 @@
 {set $data = "@FILE snippets/getJsonData.php" | snippet : [
-    "path" => "/assets/template/json/sections/product/tab-delivery.json"
+    "path" => "/assets/template/json/sections/delivery.json"
 ]}
 
 {if $data['status'] == 'success'}
@@ -23,6 +23,5 @@
       </tbody>
     </table>
 </div>
-<button class="btn-additional sm-d-block btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
+<button class="btn-additional {if !$show_btn_desktop}sm-d-block{/if} btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
 {/if}
-
