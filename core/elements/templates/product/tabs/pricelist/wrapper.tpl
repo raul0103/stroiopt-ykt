@@ -26,5 +26,5 @@
     </tbody>
   </table>
 </div>
-<a class="btn-additional sm-d-block btn btn-basic" href="{$_modx->resource.parent | resource : 'uri'}">Посмотреть все марки</a>
+<a class="btn-additional sm-d-block btn btn-secondary" href="{$_modx->resource.parent | resource : 'uri'}">Посмотреть все марки</a>
 {/if}

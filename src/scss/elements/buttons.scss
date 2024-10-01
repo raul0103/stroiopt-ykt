@@ -23,18 +23,18 @@
     }
   }
 
-  &-basic {
+  &-secondary {
     color: #000;
     background-color: $neutral-color;
     &:hover {
-      background-color: $neutral-light-color;
+      background-color: $lightest-color;
     }
   }
 
   &-bordered {
     border: 1px solid $stroke-color;
     &:hover {
-      background-color: $stroke-color;
+      border-color: $light-color;
     }
   }
 

@@ -11,12 +11,15 @@
       width: 186px;
       padding: 9px;
       border-radius: 4px;
+      color: $muted-color;
 
       &:hover {
         background-color: $light-color;
+        color: #000;
       }
       &.active {
         background-color: #fff;
+        color: #000;
       }
       @media (max-width: $screen-sm) {
         width: max-content;

@@ -9,7 +9,7 @@
       <button data-modal-open="modal-review" class="btn btn-primary">
         Оставить отзыв
       </button>
-      <button data-modal-open="modal-callback" class="btn btn-basic">
+      <button data-modal-open="modal-callback" class="btn btn-secondary">
         Написать директору
       </button>
     </div>
