@@ -8,7 +8,7 @@
       {include 'file:sections/header/desktop/header-menu.tpl'}
 
       <div class="header__navigation-controls">
-        <button class="btn btn-basic has-icon has-icon-delivery-car">Рассчитать доставку</button>
+        <a class="btn btn-basic has-icon has-icon-delivery-car" href="delivery/">Рассчитать доставку</a>
         <a class="header__navigation-btn btn btn-basic has-icon has-icon-favorite" href="favorites/">
           {include "file:modules/favorites/chunks/products/header-counters.tpl"}
         </a>
