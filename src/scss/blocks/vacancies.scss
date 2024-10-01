@@ -1,0 +1,44 @@
+.vacancies-page {
+  .page-container {
+    max-width: 1200px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__row {
+    display: grid;
+    gap: 16px;
+  }
+  &__item {
+    box-shadow: 1px 8px 16px -3px #0000001f;
+    max-height: 58px;
+    overflow: hidden;
+    transition: 0.2s;
+    background-color: #fff;
+    .minus {
+      display: none;
+    }
+
+    &.opened {
+      max-height: max-content;
+
+      .minus {
+        display: block;
+      }
+      .plus {
+        display: none;
+      }
+    }
+
+    &-name {
+      padding: 16px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &-description {
+      padding: 0 24px 16px 24px;
+    }
+  }
+}

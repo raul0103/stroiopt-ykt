@@ -68,9 +68,23 @@ button {
     color: $dark-color;
   }
 
-  ul li {
-    list-style: disc;
-    margin-left: 22px;
+  ul {
+    li {
+      list-style: disc;
+      margin-left: 22px;
+    }
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  ol {
+    li {
+      list-style: decimal;
+      margin-left: 22px;
+    }
+    li:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 
   h3 {
