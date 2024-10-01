@@ -1,0 +1,18 @@
+[
+  {
+    "image": "assets/template/images/sections/payment-methods/1.jpg",
+    "title": "Безналичный расчет для юридических лиц"
+  },
+  {
+    "image": "assets/template/images/sections/payment-methods/2.jpg",
+    "title": "Рассчитайтесь наличными в офисе "
+  },
+  {
+    "image": "assets/template/images/sections/payment-methods/3.jpg",
+    "title": "Оплата на объекте строительства"
+  },
+  {
+    "image": "assets/template/images/sections/payment-methods/4.jpg",
+    "title": "Оплатите картой в офисе"
+  }
+]

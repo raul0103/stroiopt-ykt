@@ -16,7 +16,8 @@
       </div>
     </div>
 </div>
-  
+
+{include "file:sections/payment-methods/wrapper.tpl"} 
 {include "file:sections/advantages/wrapper.tpl"} 
 {include "file:sections/callback-section/wrapper.tpl"}
 
