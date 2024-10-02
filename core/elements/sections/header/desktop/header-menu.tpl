@@ -2,7 +2,7 @@
   {'pdoMenu' | snippet : [ 
     'parents' => 0 
     'tplOuter' => '@INLINE
-      <ul class="header-menu__nav fs-body-2">
+      <ul class="header-menu__nav">
           {$wrapper}
       </ul>'
     'tpl' => '@INLINE

@@ -41,12 +41,23 @@
     }
 
     &-contact-items {
-      display: grid;
-      grid-template-columns: calc(50% + 16px) calc(50%);
-      grid-template-rows: 1fr 1fr;
-      column-gap: 16px;
-      row-gap: 8px;
+      display: flex;
+      flex-wrap: wrap;
+      width: max-content;
+      max-width: 515px;
       text-align: end;
+      li:nth-child(1) {
+        width: 60%;
+      }
+      li:nth-child(2) {
+        width: 40%;
+      }
+      li:nth-child(3) {
+        width: 50%;
+      }
+      li:nth-child(4) {
+        width: 50%;
+      }
     }
     &-contact-item {
       width: max-content;
@@ -127,8 +138,8 @@
         &.has-submenu > a {
           padding-right: 25px;
           &::after {
-            top: 44%;
-            right: 5px;
+            top: 48%;
+            right: 8px;
           }
         }
 

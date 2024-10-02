@@ -8,24 +8,24 @@
   <div class="header__inform-right">
     <ul class="header__inform-contact-items">
       <li
-        class="header__inform-contact-item has-icon has-icon-geo fw-500 fs-caption"
+        class="header__inform-contact-item has-icon has-icon-geo fw-500"
       >
         {'address'|config}
       </li>
       <li
-        class="header__inform-contact-item header__inform-contact-phone fs-body-2 fw-600"
+        class="header__inform-contact-item header__inform-contact-phone fw-600"
       >
         <a href="tel:{'phone'|config}" class="main-color hover-opacity-7">{'phone'|config}</a>
         <a href="{'whatsapp-link'|config}" class="has-icon has-icon-whatsapp"></a>
         <a href="{'telegram-link'|config}" class="has-icon has-icon-telegram"></a>
       </li>
       <li
-        class="header__inform-contact-item has-icon has-icon-clock fw-500 fs-caption"
+        class="header__inform-contact-item has-icon has-icon-clock fw-500"
       >
-        <span class="fs-body-2 fw-600">8:00-19:00</span> без выходных
+        <span class="fw-600">8:00-19:00</span> без выходных
       </li>
 
-      <li class="header__inform-contact-item fs-body-2 fw-600">
+      <li class="header__inform-contact-item fw-600">
         <a class="hover-opacity-7" href="mailto:{'email'|config}">{'email'|config}</a>
       </li>
     </ul>
