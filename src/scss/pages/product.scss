@@ -134,6 +134,16 @@
         width: 100%;
       }
     }
+    &__tabs-controls {
+      margin: 20px auto 0;
+      width: max-content;
+    }
+  }
+
+  .reviews-section__items {
+    @media (max-width: $screen-sm) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .product-options {

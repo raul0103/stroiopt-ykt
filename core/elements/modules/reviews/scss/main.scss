@@ -21,7 +21,9 @@
     overflow: hidden;
     gap: 24px;
     position: relative;
-
+    &.col-2 {
+      grid-template-columns: 1fr 1fr;
+    }
     &.shadow:before {
       content: "";
       position: absolute;

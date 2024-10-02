@@ -3,22 +3,28 @@
 {set $tab_delivery = "@FILE templates/product/tabs/delivery/wrapper.tpl" | chunk}
 {set $tab_reviews = "@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
   'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',
-  'tplOuter' => '@FILE modules/reviews/chunks/review-outer.tpl',
+  'tplOuter' => '@INLINE <div class="reviews-section__items col-2">{$items}</div>',
   'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-reviews']
   'ratingRowClass' => 'rating-stars-static'
+  'resource_id' => $_modx->resource.parent
 ]}
 
 {set $controls = []}
 {set $controls[] = ["title" => "Характеристики", "id" => "tab-harakt", "classes" => "active"]}
+
 {if $content}
   {set $controls[] = ["title" => "Описание", "id" => "description"]}
 {/if}
+
 {if $tab_pricelist}
   {set $controls[] = ["title" => "Прайс-лист", "id" => "price-list"]}
 {/if}
-{set $controls[] = ["title" => "Доставка", "id" => "delivery"]}
-{set $controls[] = ["title" => "Отзывы", "id" => "reviews"]}
 
+{set $controls[] = ["title" => "Доставка", "id" => "delivery"]}
+
+{if $tab_reviews}
+  {set $controls[] = ["title" => "Отзывы", "id" => "reviews"]}
+{/if}
 <div class="tabs-section section-margin">
   <div class="tabs-section__container">
     <div class="tabs-section__controls">
@@ -64,8 +70,15 @@
       {if $tab_reviews}
         <div class="tabs-section__tabs-item" data-opened-element="reviews">
           {$tab_reviews}
-          <a class="btn-additional btn btn-secondary" href="reviews/">Смотреть все отзывы</a>
+
+          <div class="tabs-section__tabs-controls">
+            <button data-modal-open="modal-review" class="btn btn-primary">
+              Оставить отзыв
+            </button>
+            <a class="btn btn-secondary" href="reviews/">Смотреть все отзывы</a>
+          </div>
         </div>
+        {include 'file:modules/reviews/chunks/review-modals.tpl'} 
       {/if}
     </div>
   </div>
