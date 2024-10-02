@@ -1,3 +1,4 @@
+{'@FILE snippets/ajax/ajax.php' | snippet}
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {$_modx->setPlaceholder('custom-placeholders', '@FILE snippets/placeholders/index.php' | snippet)}
 {'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
@@ -22,8 +23,7 @@
     {block 'content'}{/block}
     {include 'file:sections/footer/wrapper.tpl'}
 
-    {include "file:modules/modals/chunks/modal-callback.tpl"}
-    {include "file:modules/modals/chunks/modal-callback-success.tpl"}
+    {include "file:modules/modals/chunks/all.tpl"}
 
     <script
       src="/assets/template/js/main.js?{'file_version' | config}"

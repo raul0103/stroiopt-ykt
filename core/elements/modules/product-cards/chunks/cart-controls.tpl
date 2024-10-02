@@ -29,7 +29,11 @@
     </div>
   </div>
 
-  <button class="btn btn-bordered" data-modal-open="modal-callback">
+  <button
+    class="btn btn-bordered"
+    data-modal-open="modal-buy-click"
+    onclick="product_card.events.buyOneClick({$product_id})"
+  >
     Купить в 1 клик
   </button>
 </div>

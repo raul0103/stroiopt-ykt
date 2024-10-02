@@ -11,6 +11,43 @@ export default function initProductCart() {
 
         changeClassProductCartControls("add", product_id);
       },
+      // Покупка в один клик
+      async buyOneClick(product_id) {
+        if (!product_id) {
+          console.warn("Не передан product_id");
+          return;
+        }
+
+        let buy_click_container = document.getElementById(
+          "buy-click-container"
+        );
+        if (!buy_click_container) {
+          console.warn("Не найден контейнер для товара");
+        }
+
+        buy_click_container.innerHTML = "";
+        buy_click_container.classList.add("loading-block");
+
+        // Запрос на получение данных о товаре
+        const response = await fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/text",
+          },
+          body: JSON.stringify({
+            action: "get-product-data",
+            ajax_connect: true,
+            product_id,
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        buy_click_container.classList.remove("loading-block");
+        buy_click_container.innerHTML = await response.text();
+      },
     },
   };
 

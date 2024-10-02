@@ -55,36 +55,6 @@
     }
   }
 
-  &__products {
-    display: grid;
-    gap: 4px;
-    margin-bottom: 16px;
-
-    &.opened {
-      .side-block__product {
-        display: block !important;
-      }
-    }
-  }
-  &__product {
-    &.hidden {
-      display: none;
-    }
-    &-row {
-      display: flex;
-      gap: 14px;
-    }
-    &-image {
-      width: 64px;
-      height: 56px;
-      background: center / cover no-repeat;
-    }
-
-    &-pagetitle {
-      margin-bottom: 4px;
-    }
-  }
-
   .btn-more {
     width: max-content;
     padding-right: 40px;

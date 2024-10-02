@@ -5,27 +5,12 @@
 <div class="side-block__big-title fs-title-1">Товары в заказе</div>
 
 {if !$products} Пусто {else}
-<div class="side-block__products fs-body-2" data-opened-element="side-products">
+<div class="mini-products fs-body-2" data-opened-element="side-products">
     {set $idx = 0}
     {foreach $products as $product}
-    {set $idx = $idx + 1}
+      {set $idx = $idx + 1}
 
-    <a class="side-block__product {if $idx > 5}hidden{/if}" href="{$product['uri']}">
-      <div class="side-block__product-row">
-        <div
-          class="side-block__product-image"
-          style="background-image: url('{$product['thumb']}')"
-        ></div>
-        <div class="side-block__product-content">
-          <div class="side-block__product-pagetitle fw-600">
-            {$product['pagetitle']}
-          </div>
-          <div class="side-block__product-price muted-color">
-            {$product['count']} x {$product['price']} руб.
-          </div>
-        </div>
-      </div>
-    </a>
+      {include "file:modules/product-cards/chunks/mini-product/item.tpl"}
     {/foreach}
 
   {if $idx > 5}

@@ -1,0 +1,30 @@
+.mini-products {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  &.opened {
+    .mini-product {
+      display: block !important;
+    }
+  }
+}
+.mini-product {
+  &.hidden {
+    display: none;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  &__image {
+    width: 64px;
+    height: 56px;
+    background: center / cover no-repeat;
+  }
+
+  &__pagetitle {
+    margin-bottom: 4px;
+  }
+}
