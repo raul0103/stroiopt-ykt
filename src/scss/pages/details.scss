@@ -1,0 +1,87 @@
+.details-page {
+  .page-container {
+    max-width: 1300px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    @media (max-width: $screen-md) {
+      gap: 16px;
+    }
+  }
+
+  &__details {
+    width: calc(50% - 36px);
+    display: grid;
+    gap: 16px;
+    height: max-content;
+    @media (max-width: $screen-md) {
+      width: 100%;
+    }
+
+    &-group {
+      &-title {
+        margin-bottom: 8px;
+      }
+    }
+    &-item {
+      border-bottom: 1px solid #f2f2f3;
+      display: flex;
+      align-items: center;
+      padding-bottom: 4px;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+      &-title {
+        // width: 210px;
+        width: 50%;
+      }
+      &-value {
+        width: 50%;
+      }
+    }
+  }
+
+  &__right {
+    width: 50%;
+    display: grid;
+    gap: 36px;
+    @media (max-width: $screen-md) {
+      width: 100%;
+      gap: 16px;
+    }
+  }
+
+  &__form {
+    padding: 24px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 40px 32px -12px #0000001c;
+    overflow: hidden;
+
+    @media (min-width: $screen-sm) {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        opacity: 0.3;
+        z-index: -1;
+        background: center / cover no-repeat;
+        background-image: url(/assets/template/images/sections/details/form-bg.jpg);
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .form__group {
+      max-width: 354px;
+    }
+  }
+}
