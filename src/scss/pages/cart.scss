@@ -1,11 +1,11 @@
 .cart-page {
   h2 {
     text-align: start;
-    margin-bottom: 16px;
   }
 
   &__top {
     display: flex;
+    margin-bottom: 16px;
   }
 
   &__row {
@@ -23,7 +23,7 @@
   }
 
   &__item {
-    padding: 8px 32px 16px;
+    padding: 8px 0 16px;
     display: flex;
     gap: 20px;
     border-bottom: 1px solid $stroke-color;
@@ -109,11 +109,20 @@
       }
     }
 
-    &-delete-product {
+    &-delete-btn {
       cursor: pointer;
-      color: $muted-color;
       position: relative;
       padding-left: 15px;
+
+      &.delete-all {
+        margin: auto;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 12px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
 
       &:before,
       &:after {
@@ -123,7 +132,7 @@
         left: 5px;
         width: 12px;
         height: 1px;
-        background-color: $muted-color;
+        background-color: currentColor;
         transform-origin: center;
       }
 
@@ -134,13 +143,13 @@
         transform: translate(-50%, -50%) rotate(-45deg);
       }
 
-      &:hover {
-        color: $main-color;
-        &:after,
-        &:before {
-          background-color: $main-color;
-        }
-      }
+      // &:hover {
+      //   color: $main-color;
+      //   &:after,
+      //   &:before {
+      //     background-color: $main-color;
+      //   }
+      // }
     }
   }
 }

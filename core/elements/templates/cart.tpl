@@ -22,8 +22,12 @@
         <div class="cart-page__items">Пусто</div>
         {else}
         <div class="cart-page__items">
-          {foreach $products as $product} {set $product_fron_id =
-          "product_fron_id"~$product.id}
+          <button class="cart-page__item-delete-btn delete-all error-color" onclick="cart.second_events.clear();setTimeout(()=>{ location.reload() })">
+            Очистить корзину
+          </button>
+
+          {foreach $products as $product} 
+          {set $product_fron_id = "product_fron_id"~$product.id}
           <div class="cart-page__item" id="{$product_fron_id}">
             <div
               class="cart-page__item-image"
@@ -43,7 +47,7 @@
                 <div class="cart-page__item-controls">
                   {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$product.id text=true}
                   <button
-                    class="cart-page__item-delete-product"
+                    class="cart-page__item-delete-btn muted-color"
                     onclick="{$product_fron_id}.remove();cart.second_events.remove({$product.id});"
                   >
                     Удалить из корзины
