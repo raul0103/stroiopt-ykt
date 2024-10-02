@@ -73,8 +73,13 @@ button {
 }
 
 .page-content {
-  p {
+  p,
+  ul,
+  ol {
     margin-bottom: 16px;
+  }
+
+  p {
     color: $dark-color;
   }
 
