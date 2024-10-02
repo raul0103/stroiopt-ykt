@@ -10,9 +10,8 @@
     width: 100%;
     display: flex;
     &-item {
-      //   width: 80px;
       min-height: 80px;
-      background: center / cover no-repeat;
+      background: center / contain no-repeat;
     }
   }
 }
