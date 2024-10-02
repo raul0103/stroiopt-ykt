@@ -161,6 +161,13 @@
   margin-top: 22px;
 }
 
+.h3-margin {
+  margin-bottom: 32px;
+  @media (max-width: $screen-sm) {
+    margin-bottom: 8px;
+  }
+}
+
 // list-style
 .ls-disc li {
   list-style: disc;

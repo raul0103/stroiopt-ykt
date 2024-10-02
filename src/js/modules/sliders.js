@@ -25,11 +25,11 @@ export default function iniSliders() {
         slidesPerView: 4,
       },
       576: {
-        slidesPerView: 3,
+        slidesPerView: 3.1,
         spaceBetween: 8,
       },
       320: {
-        slidesPerView: 3,
+        slidesPerView: 3.1,
         spaceBetween: 8,
       },
     },
@@ -63,7 +63,7 @@ export default function iniSliders() {
         spaceBetween: 8,
       },
       320: {
-        slidesPerView: 3,
+        slidesPerView: 3.1,
         spaceBetween: 8,
       },
     },
@@ -97,7 +97,7 @@ export default function iniSliders() {
         spaceBetween: 8,
       },
       320: {
-        slidesPerView: 2,
+        slidesPerView: 2.1,
         spaceBetween: 8,
       },
     },
@@ -182,4 +182,34 @@ export default function iniSliders() {
       prevEl: ".swiper-button-prev",
     },
   });
+
+  if (window.innerWidth <= 767) {
+    // Если с бэка расставить классы то блок ломается, поэтому ставим только на мобиле
+    ["manufacture", "unloading"].forEach((slider_name) => {
+      let slider = document.querySelector(
+        '[data-slider="' + slider_name + '"]'
+      );
+      console.log(slider);
+
+      if (!slider) return;
+      slider.classList.add("swiper");
+
+      let slider_wrapper = slider.querySelector(
+        '[data-slider-wrapper="' + slider_name + '"]'
+      );
+      slider_wrapper.classList.add("swiper-wrapper");
+
+      let slider_items = slider.querySelectorAll(
+        '[data-slider-item="' + slider_name + '"]'
+      );
+      slider_items.forEach((slider_item) => {
+        slider_item.classList.add("swiper-slide");
+      });
+
+      new Swiper('[data-slider="' + slider_name + '"]', {
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+      });
+    });
+  }
 }

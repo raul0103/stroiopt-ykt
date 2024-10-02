@@ -5,7 +5,7 @@
 {if $data['status'] == 'success'}
 <div class="payment-methods section-margin">
     <div class="container">
-      <h3 class="fs-h3">Вы можете оплатить следующими способами:</h3>
+      <h3 class="fs-h3 h3-margin">Вы можете оплатить следующими способами:</h3>
       <div class="payment-methods__row">
         {foreach $data['message'] as $item}
         <div class="payment-methods__item">
