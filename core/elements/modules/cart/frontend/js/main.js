@@ -6,6 +6,7 @@ import helpers from "./utils/helpers";
 import dispatch from "./utils/dispatch";
 import update_elements from "./modules/update-elements";
 import product_data from "./modules/product-data";
+import notificationService from "./services/notification-service";
 
 export default class Cart {
   /**
@@ -47,6 +48,12 @@ export default class Cart {
       );
     }
 
+    // Уведомление
+    notificationService(
+      action,
+      response.data && response.data.product_data.count
+    );
+
     // Событие что корзина сработала
     dispatch({
       detail: {
@@ -60,12 +67,21 @@ export default class Cart {
   second_events = {
     // Полностью очищает корзину
     clear: async () => {
-      await api.response("clear", {});
+      let action = "clear";
+      await api.response(action, {});
+
+      // Уведомление
+      notificationService(action);
     },
     // Удаляет товар из корзины
     remove: async (product_id) => {
-      let response = await api.response("remove", { id: product_id });
+      let action = "remove";
+
+      let response = await api.response(action, { id: product_id });
       if (!response && !response?.success) return;
+
+      // Уведомление
+      notificationService(action);
 
       update_elements.cartTotalSumm(response.data && response.data.total.summ);
       update_elements.cartTotalCount(

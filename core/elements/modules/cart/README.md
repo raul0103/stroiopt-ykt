@@ -67,3 +67,7 @@ cart.second_events.remove(PRODUCT_ID); // Удалит товар из корз�
 - `cart_module_path` - Путь до модуля корзины
   - По умолчанию `/core/elements/modules/cart/`
   - Можно установить через `console/setOptions.php`
+
+## Зависмости
+
+- Модуль notifications js/modules/notifications.js. Подключается в frontend/js/services/notification-service.js

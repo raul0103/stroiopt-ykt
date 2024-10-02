@@ -22,7 +22,7 @@
         <div class="cart-page__items">Пусто</div>
         {else}
         <div class="cart-page__items">
-          <button class="cart-page__item-delete-btn delete-all error-color" onclick="cart.second_events.clear();setTimeout(()=>{ location.reload() })">
+          <button class="cart-page__item-delete-btn delete-all error-color" onclick="cart.second_events.clear();setTimeout(()=>{ location.reload() }, 3000)">
             Очистить корзину
           </button>
 

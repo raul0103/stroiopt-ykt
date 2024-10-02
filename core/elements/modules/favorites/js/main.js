@@ -38,9 +38,11 @@ export default class Favorites {
     if (favorites.indexOf(resource_id) > -1) {
       favorites = favorites.filter((favorite) => favorite != resource_id);
       target.classList.remove("active");
+      if (notifications) notifications.warning("Товар удален из избранного");
     } else {
       favorites.push(resource_id);
       target.classList.add("active");
+      if (notifications) notifications.success("Товар добавлен в избранное");
     }
 
     this.cookie.set(cookie_key, favorites);

@@ -11,3 +11,7 @@
 ## Особые моменты
 
 - При AJAX подгрузке данных, необходимо снова формировать плейсхолдер с данными через setFavoritesPlaceholder.php. Как вариант в чанке товара проверять если нет плейсхолдера то вызвать setFavoritesPlaceholder.php
+
+## Зависмости
+
+- Модуль notifications js/modules/notifications.js. Подключается в frontend/js/services/notification-service.js
