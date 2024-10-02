@@ -11,6 +11,7 @@ import FilterWindow from "./modules/filter-window.js";
 import SearchByWords from "./modules/search-by-words.js";
 import initCustomUpload from "./modules/custom-upload.js";
 import Notifications from "./modules/notifications.js";
+import initSwapTable from "./modules/swap-table.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -28,6 +29,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: initCustomUpload,
       name: "initCustomUpload",
+    },
+    {
+      init: initSwapTable,
+      name: "initSwapTable",
     },
   ];
 

@@ -7,7 +7,7 @@
 {if $promotion_products}
 <div class="promotions-table section-margin">
   <div class="table-container">
-    <table>
+    <table data-swap-table="1">
       <thead>
         <tr>
           <th>Фото</th>

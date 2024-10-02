@@ -10,14 +10,14 @@
 
 {if $pricelist_products}
 <div class="table-container">
-  <table>
+  <table data-swap-table>
     <thead>
       <tr>
         <th>Изделие</th>
         <th>Длина, мм</th>
         <th>Ширина, мм</th>
         <th>Высота, мм</th>
-        <th>Цена</th>
+        <th>Цена руб.</th>
         <th>Количество</th>
       </tr>
     </thead>
