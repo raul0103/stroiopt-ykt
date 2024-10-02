@@ -19,7 +19,7 @@
         {set $products = "@FILE modules/cart/backend/snippets/getProducts.php" | snippet} 
         
         {if !$products}
-        <div class="cart-page__items">Нет товаров в корзине</div>
+        <div class="cart-page__items">Пусто</div>
         {else}
         <div class="cart-page__items">
           {foreach $products as $product} {set $product_fron_id =

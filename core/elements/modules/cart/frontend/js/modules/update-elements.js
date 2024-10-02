@@ -18,6 +18,8 @@ const update_elements = {
    * @returns
    */
   main(value, finds, selector, warn, field) {
+    if (!value) value = 0;
+
     let elements = finds.child
       ? this.find_elements[finds.key][finds.child]
       : this.find_elements[finds.key];

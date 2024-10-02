@@ -4,7 +4,7 @@
      
 <div class="side-block__big-title fs-title-1">Товары в заказе</div>
 
-{if !$products} Нет товаров в корзине {else}
+{if !$products} Пусто {else}
 <div class="side-block__products fs-body-2" data-opened-element="side-products">
     {set $idx = 0}
     {foreach $products as $product}

@@ -1,4 +1,4 @@
-{'mFilter2' | snippet : [
+{'!mFilter2' | snippet : [
     'element' => 'msProducts'
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
     'parents' => $_modx->resource.id

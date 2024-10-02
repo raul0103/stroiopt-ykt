@@ -1,4 +1,4 @@
-{set $promotion_products = 'msProducts' | snippet : [
+{set $promotion_products = '!msProducts' | snippet : [
   'parents' => 0
   'tpl' => '@FILE sections/promotions-table/table-item.tpl'
   'where' => '{"Data.old_price:>":"Data.price"}'

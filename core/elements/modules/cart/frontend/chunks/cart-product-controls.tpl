@@ -16,7 +16,7 @@
     onchange="cart.event('change',this,{$id})"
     data-cart-product-count="{$id}"
     type="number"
-    value="{$product_count}"
+    value="{$product_count ?: 0}"
   />
   <button class="btn btn-bordered" onclick="cart.event('plus',this,{$id})">
     +

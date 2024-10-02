@@ -9,6 +9,8 @@
 body,
 * {
   font-family: "Manrope", sans-serif;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .container {
@@ -20,6 +22,10 @@ body,
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+select {
   color: #000;
 }
 
@@ -44,6 +50,7 @@ h5 {
 button {
   background: none;
   border: none;
+  color: #000;
 }
 
 .block-scroll {

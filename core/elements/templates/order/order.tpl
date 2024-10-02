@@ -9,7 +9,7 @@
     
     <div class="order-page__row">
       <div class="order-page__main">
-        {if !$products} Нет товаров в корзине {else}
+        {if !$products} Пусто {else}
           {include "file:templates/order/block-main.tpl"}
         {/if}
       </div>
