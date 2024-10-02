@@ -1,0 +1,26 @@
+.gosts-page {
+  .page-container {
+    max-width: 800px;
+    padding: 0 16px;
+    margin: auto;
+  }
+
+  &__row {
+    display: grid;
+    gap: 16px;
+    @media (max-width: $screen-sm) {
+      gap: 12px;
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: 16px;
+    @media (max-width: $screen-sm) {
+      gap: 12px;
+    }
+    .has-icon {
+      gap: 12px;
+    }
+  }
+}

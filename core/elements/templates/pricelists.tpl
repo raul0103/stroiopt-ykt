@@ -23,6 +23,4 @@
 {include "file:sections/advantages/wrapper.tpl"} 
 {include "file:sections/callback-section/wrapper.tpl"}
 
-{include 'file:modules/reviews/chunks/review-modals.tpl'} 
-
 {/block}

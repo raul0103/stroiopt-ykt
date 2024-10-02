@@ -136,8 +136,17 @@
     background-image: url("/assets/template/icons/download-white.svg");
     width: 18px;
   }
+  &-download-blue:before {
+    background-image: url("/assets/template/icons/download-blue.svg");
+    width: 18px;
+  }
   &-upload:before {
     background-image: url("/assets/template/icons/upload.svg");
+  }
+  &-pdf-icon:before {
+    background-image: url("/assets/template/icons/pdf-icon.svg");
+    min-width: 26px;
+    height: 30px;
   }
   &-share:before {
     background-image: url("/assets/template/icons/share.svg");
@@ -158,6 +167,9 @@
   }
   &-ld:before {
     background-image: url("/assets/template/icons/social/ld.svg");
+  }
+  &-open:before {
+    background-image: url("/assets/template/icons/open.svg");
   }
 }
 

@@ -9,8 +9,10 @@
 body,
 * {
   font-family: "Manrope", sans-serif;
-  user-select: none;
-  touch-action: manipulation;
+  @media (max-width: $screen-sm) {
+    user-select: none;
+    touch-action: manipulation;
+  }
 }
 
 .container {
