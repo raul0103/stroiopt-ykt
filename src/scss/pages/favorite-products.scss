@@ -6,5 +6,14 @@
   }
   .product-card {
     width: calc(20% - 20px);
+    @media (max-width: $screen-lg) {
+      width: calc(25% - 20px);
+    }
+    @media (max-width: $screen-md) {
+      width: calc(33% - 13px);
+    }
+    @media (max-width: $screen-sm) {
+      width: calc(50% - 13px);
+    }
   }
 }
