@@ -15,6 +15,7 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
     $output = $modx->runSnippet('pdoMenu', [
         'parents' => $parent_id ?: 0,
         'level' => $level ?: 2,
+        'where' => $where,
         'tplOuter' => '@INLINE [{$wrapper}]',
         'tplInner' => '@INLINE {$wrapper}',
         'tpl' => '@INLINE {
