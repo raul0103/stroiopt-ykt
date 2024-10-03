@@ -4,6 +4,7 @@
         <div class="pop-cat__row">
             {'pdoMenu' | snippet : [
             'level' => 2
+            'where' => '{"class_key":"msCategory"}'
             'parents' => 'catalog_id' | option
             'includeTVs' => 'main_image'
             'tvPrefix' => ''
