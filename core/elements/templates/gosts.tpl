@@ -19,7 +19,7 @@
         {foreach $group['items'] as $item}
         <div class="gosts-page__group-item">
           <div class="gosts-page__group-item-title">
-            <a class="has-icon has-icon-pdf-icon hover-opacity-7" href="{$item['href']}" >{$item['title']}</a>
+            <a class="has-icon has-icon-pdf-icon hover-opacity-7" rel="nofollow" target="_blank" href="{$item['href']}" >{$item['title']}</a>
             {*
             <div class="gosts-page__group-item-controls">
               <button class="has-icon has-icon-download-blue">Скачать</button>

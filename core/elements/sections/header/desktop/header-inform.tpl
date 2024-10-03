@@ -3,7 +3,7 @@
     <a href="/" class="header__inform-logo">
       <img src="/assets/template/images/other/logo.svg" />
     </a>
-    <div class="fs-caption">{$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}</div>
+    {$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}
   </div>
   <div class="header__inform-right">
     <ul class="header__inform-contact-items">

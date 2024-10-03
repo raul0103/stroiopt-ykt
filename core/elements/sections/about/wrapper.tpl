@@ -11,11 +11,11 @@
           "
         ></div>
         <div class="about-section__image-title ta-center fw-600">
-          Директор завода ЖБИ «{'company_name' | config}» Иванов Иван Иванович
+          Директор завода ЖБИ «{'company_name' | config}» Милославин Сергей Ростиславович
         </div>
       </div>
 
-      <div class="about-section__content fs-large dark-color">
+      <div class="about-section__content fs-large page-content dark-color">
         <p>
           Рад приветствовать вас от лица завода железобетонных изделий
           «М-Строй». Наш завод уже более 20 лет производит высококачественные
