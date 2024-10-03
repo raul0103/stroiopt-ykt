@@ -11,7 +11,7 @@ $pdoTools = $modx->getService("pdoTools");
 
 switch ($data['action']) {
     case 'get-product-data':
-        sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
+        // sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
         if (!$data['product_id']) exit("Не передан product_id");
         $product = $modx->getObject('msProduct', $data['product_id']);
         if (!$product) exit("Товар не найден");
