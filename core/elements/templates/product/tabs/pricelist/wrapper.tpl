@@ -1,5 +1,4 @@
 {* Выборка похожих товаров по длине*}
-
 {set $pricelist_products = 'msProducts' | snippet : [
   'parents' => $_modx->resource.parent
   'tpl' => '@FILE templates/product/tabs/pricelist/tab-pricelist-item.tpl'
@@ -7,7 +6,6 @@
   'where' => '{"id:!=":'~$_modx->resource.id~',"Options.key":"dlina-mm", "Options.value:=":"'~$_modx->resource['dlina-mm'][0]~'"}',
   'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-pricelist']
 ]}
-
 {if $pricelist_products}
 <div class="table-container">
   <table data-swap-table>
