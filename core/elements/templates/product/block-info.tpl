@@ -4,14 +4,18 @@
 <div class="product-main__info">
   <div class="product-main__info-article muted-color fs-body-2">Арт. {$_modx->resource.article}</div>
   
-  <h1 class="product-main__info-pagetitle fs-h2">{$_modx->resource.pagetitle}</h1>
+  <h1 class="product-main__info-pagetitle fs-h2" itemprop="name">{$_modx->resource.pagetitle}</h1>
   
-  <div class="rating-stars-static">
+  <div class="rating-stars-static" itemscope itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating">
     <span class="full"></span>
     <span class="full"></span>
     <span class="full"></span>
     <span class="full"></span>
     <span class="full"></span>
+
+    <meta itemprop="bestRating" content="5">
+    <meta itemprop="ratingValue" content="5">
+    <meta itemprop="ratingCount" content="82">
   </div>
 
   <ul class="product-main__info-list fs-body-2">

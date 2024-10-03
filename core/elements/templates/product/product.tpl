@@ -2,7 +2,9 @@
 
 {block 'content'}
     {include "file:blocks/breadcrumbs/wrapper.tpl"}
-    <div class="product-main">
+    <div class="product-main" itemscope itemtype="http://schema.org/Product">
+      <meta itemprop="brand" content="{'company_name' | config}">
+
         <div class="container">
           <div class="product-main__row">
             {include "file:templates/product/block-gallery.tpl"}

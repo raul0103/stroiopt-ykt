@@ -5,6 +5,7 @@
 {set $unit = $_modx->resource.unit[0]}
 
 <div class="side-block__big-info fs-body-2 dark-color">
+  
   {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" text=true}
   <button class="has-icon has-icon-share" onclick="this.classList.toggle('mini-popup-show')">
     Поделиться
@@ -60,8 +61,12 @@
   </button>
 
 </div>
-<div class="side-block__big-info fs-h3">
+<div class="side-block__big-info fs-h3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
   {$_modx->resource.price} руб. {if $unit}/{$unit}{/if}
+
+  <meta itemprop="price" content="{$_modx->resource.price}">
+  <meta itemprop="priceCurrency" content="RUB">
+  <link itemprop="availability" href="http://schema.org/InStock">
 </div>
 <div class="side-block__big-controls">
   {include "file:modules/product-cards/chunks/cart-controls.tpl"}
