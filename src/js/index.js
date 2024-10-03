@@ -12,6 +12,7 @@ import SearchByWords from "./modules/search-by-words.js";
 import initCustomUpload from "./modules/custom-upload.js";
 import Notifications from "./modules/notifications.js";
 import initSwapTable from "./modules/swap-table.js";
+import initWarehouseMap from "./modules/init-warehouse-map.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -71,4 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   window.notifications = new Notifications();
+  window.warehouseMap = initWarehouseMap;
 });
