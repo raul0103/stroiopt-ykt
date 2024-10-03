@@ -6,8 +6,11 @@
         <div class="page-container">
             <h2 class="fs-h2 section-title">{$_modx->resource.pagetitle}</h2>
             <div class="contents-page__row">
-                <div class="contents-page__image" style="background-image: url('{$_modx->resource.main_image}');">
-                </div>
+                
+                {if $_modx->resource.main_image}
+                    <div class="contents-page__image" style="background-image: url('{$_modx->resource.main_image}');"></div>
+                {/if}
+
                 <div class="page-content">
                     {$_modx->resource.content}
                 </div>
