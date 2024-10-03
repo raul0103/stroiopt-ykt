@@ -1,9 +1,10 @@
-<div class="contacts-page__info">
+<div class="contacts-page__info" itemscope itemtype="http://schema.org/LocalBusiness">
   <ul>
     <li>
       <a
         class="fw-600 fs-h3 main-color hover-opacity-7"
         href="tel:{'phone'|config}"
+        itemprop="telephone"
         >{'phone'|config}</a
       >
       <div class="contacts-page__info-social">
@@ -29,6 +30,13 @@
         Прием заявок: круглосуточно
       </div>
     </li>
-    <li>{'address'|config}</li>
+    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{'address'|config}</li>
   </ul>
+
+  <meta itemprop="name" content="{'company_name' | config}">
+  <meta itemprop="priceRange" content="От {"@FILE snippets/getMinPriceProduct.php" | snippet} RUB">
+  <meta itemprop="image" content="/assets/template/favicon/favicon.ico">
+  <time itemprop="openingHours" datetime="Mo-Su 08:00−19:00">
+            
+  </time>
 </div>
