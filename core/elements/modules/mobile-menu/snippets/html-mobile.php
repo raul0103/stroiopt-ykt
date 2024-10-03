@@ -10,6 +10,7 @@ if (!function_exists("generateModal")) {
                             <div class='mobile-menu__back pseudo-arrow-before pseudo-arrow-before__left' data-mobile-modal-back>Назад</div>";
 
         foreach ($data->children as $children) {
+            $menutitle = $children->menutitle ?: $children->pagetitle;
             $open_btn = "";
             if ($children->children) {
                 $open_btn = "<span 
@@ -18,12 +19,12 @@ if (!function_exists("generateModal")) {
                             ></span>";
 
                 $menu_modals .= "<div class='mobile-menu__item'>
-                                    <a href='$children->link'>$children->menutitle</a>
+                                    <a href='$children->link'>$menutitle</a>
                                     $open_btn
                                 </div>";
             } else {
                 $menu_modals .= "<div class='mobile-menu__item'>
-                                    <a href='$children->link'>$children->menutitle</a>
+                                    <a href='$children->link'>$menutitle</a>
                                 </div>";
             }
         }
@@ -44,6 +45,8 @@ $catalog_items = json_decode($catalog_json);
 $menu_items = "";
 $menu_modals = "";
 foreach ($catalog_items as $catalog_item) {
+    $menutitle = $catalog_item->menutitle ?: $catalog_item->pagetitle;
+
     $open_btn = "";
     if ($catalog_item->children) {
         $open_btn = "<span 
@@ -55,7 +58,7 @@ foreach ($catalog_items as $catalog_item) {
     }
 
     $menu_items .= "<div class='mobile-menu__item'>
-                        <a href='$catalog_item->link'>$catalog_item->menutitle</a>
+                        <a href='$catalog_item->link'>$menutitle</a>
                         $open_btn
                     </div>";
 }

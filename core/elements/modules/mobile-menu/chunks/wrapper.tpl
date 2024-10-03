@@ -1,6 +1,6 @@
 {set $menu_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
     "parent_id" => 0,
-    "level" => 2,
+    "level" => 1,
  ]} 
 {set $menu_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
     'data' => $menu_data
@@ -10,7 +10,7 @@
 {if $catalog_id}
   {set $catalog_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
       "parent_id" => $catalog_id,
-      "level" => 5,
+      "level" => 1,
       "where" => '{"class_key":"msCategory"}'
   ]} 
 
