@@ -7,6 +7,7 @@
       <h2 class="fs-h2 section-title">{$_modx->resource.pagetitle}</h2>
       <div class="favorite-products__row">
           {set $favorite_product_ids = $_modx->getPlaceholder('favorite-products')} 
+
           {if $favorite_product_ids && $favorite_product_ids | count}
               {'msProducts' | snippet :[
                   'parents' => 0
