@@ -31,6 +31,7 @@
 - telegram-link
 - company_name
 - delivery-map
+- footer_menu_ids - Перечисляем ID для 3х блоков = [[1,2,3],[6,4,23],[6,9,13,14]]
 
 ## Хранение глобальных данных
 

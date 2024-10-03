@@ -1,10 +1,10 @@
 .footer {
   background-color: $neutral-color;
-  &__container {
-  }
+
   &__top {
     padding: 46px 0;
     display: flex;
+    justify-content: space-between;
     gap: 46px;
     @media (max-width: $screen-md) {
       gap: 32px;
