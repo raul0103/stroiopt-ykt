@@ -7,9 +7,10 @@
 return [
     'filter-values' => 5, // Значения фильтров на странице категорий
     'category-tags' => 7, // Теги в категориях
-    'section-reviews' => 12, // Секция отзывы клиентов 
+    'reviews-section' => 6, // Секция отзывы клиентов 
+    'reviews-product' => 4, // секция в товаре
+    'reviews-page' => 9, // Секция на странице отзывов
     'category-products' => 12, // Товары в листинге
     'product-pricelist' => 10, // Товары в прайс-листе товара
-    'product-reviews' => 6,
     'product-interesting' => 12
 ];

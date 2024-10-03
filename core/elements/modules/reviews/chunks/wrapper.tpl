@@ -4,9 +4,8 @@
 
     {"@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
       'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',
-      'tplOuter' => '@INLINE <div class="reviews-section__items shadow">{$items}</div>
-      ',
-      'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['section-reviews']
+      'tplOuter' => '@INLINE <div class="reviews-section__items shadow">{$items}</div>',
+      'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['reviews-section']
       'ratingRowClass' => 'rating-stars-static'
     ]}
 

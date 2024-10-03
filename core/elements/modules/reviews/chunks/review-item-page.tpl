@@ -1,7 +1,9 @@
-{if $idx > 12}
+{set $review_limit = $_modx->getPlaceholder('custom-placeholders')['limits']['reviews-page']}
+
+{if $idx > $review_limit}
   {$_modx->setPlaceholder('reviews-paginate',true)}
 {/if}
-<div class="reviews-section__item {if $idx > 12}hidden{/if}">
+<div class="reviews-section__item {if $idx > $review_limit}hidden{/if}">
   <div class="reviews-section__item-header">
     <div class="reviews-section__item-author fw-600 ">
       {$user_name}
