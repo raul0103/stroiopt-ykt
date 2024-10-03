@@ -29,8 +29,12 @@ export default class Cart {
       data.count = e.value;
     }
 
+    this.states.loading(e);
+
     let response = await api.response(action, data);
     if (!response && !response?.success) return;
+
+    this.states.completion(e);
 
     update_elements.productSumm(
       product_id,
@@ -87,6 +91,19 @@ export default class Cart {
       update_elements.cartTotalCount(
         response.data && response.data.total.count
       );
+    },
+  };
+
+  states = {
+    loading: (e) => {
+      if (!e) return;
+      e.parentNode.style.opacity = ".5";
+      e.parentNode.style["pointer-events"] = "none";
+    },
+    completion: (e) => {
+      if (!e) return;
+      e.parentNode.style.opacity = "1";
+      e.parentNode.style["pointer-events"] = "all";
     },
   };
 }
