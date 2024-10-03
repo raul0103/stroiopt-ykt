@@ -2,7 +2,8 @@
     'element' => 'msProducts'
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
     'parents' => $_modx->resource.id
-    'filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
+    '-filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
+    'filters' => $_modx->resource.filters
     'tplOuter' => '@FILE sections/category-listing/tpl-outer.tpl'
     'tplFilter.outer.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-slider.tpl'
     'tplFilter.row.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-number.tpl'
