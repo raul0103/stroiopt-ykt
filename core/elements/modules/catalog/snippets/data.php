@@ -17,6 +17,7 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
     $output = $modx->runSnippet('pdoMenu', [
         'parents' => $catalog_id,
         'level' => 2,
+        'where' => '{"class_key":"msCategory"}',
         'tplOuter' => '@INLINE [{$wrapper}]',
         'tplInner' => '@INLINE {$wrapper}',
         'tpl' => '@INLINE {
