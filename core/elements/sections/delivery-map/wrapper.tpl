@@ -1,5 +1,5 @@
 <div class="delivery-map section-margin">
-  <h2 class="fs-h2 section-title">Карта доставки</h2>
+  <h2 class="fs-h2 section-title">Мы осуществляем доставку по Москве и области</h2>
 
   <div class="container">
     <script
