@@ -70,14 +70,14 @@ module.exports = {
     proxy: [
       {
         context: () => true,
-        target: "http://gbi-azbuka",
+        target: "http://mstroy",
         changeOrigin: true,
         secure: false,
       },
     ],
     watchFiles: ["src/**/*", "core/elements/**/*"],
     open: true,
-    host: "gbi-azbuka",
+    host: "mstroy",
     port: 8080,
     hot: true,
     liveReload: true,
