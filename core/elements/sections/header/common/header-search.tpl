@@ -1,9 +1,10 @@
+{set $device = $mobile ? "mobile":"desktop"}
 <div class="header__search">
-  {'SimpleSearchForm' | snippet : [ 'landing' => 2, 'tpl' => '@INLINE
   <form
-    class="header__search-form form fs-body-2,"
-    action="{$landing | url}"
-    method="{$method}"
+    class="header__search-form form fs-body-2 fast-search-form"
+    action="search/"
+    method="get"
+    fast-search-form="{$device}"
   >
     <img
       src="/assets/template/icons/search.svg"
@@ -12,18 +13,18 @@
     <input
       type="text"
       class="header__search-form-input fw-600"
-      name="{$searchIndex}"
-      value="{$searchValue}"
+      name="search"
+      value=""
+      fast-search-input="{$device}"
       placeholder="Поиск по каталогу"
     />
 
-    <input type="hidden" name="id" value="{$landing}" />
+    <input type="hidden" name="id" value="2" />
   </form>
-  ' ]}
 
   {if !$mobile}
-    <button data-modal-open="modal-callback" class="btn btn-primary">
-      Заказать звонок
-    </button>
+  <button data-modal-open="modal-callback" class="btn btn-primary">
+    Заказать звонок
+  </button>
   {/if}
 </div>

@@ -7,6 +7,7 @@ import MltReviewAjaxForm from "./reviews/js/main.js";
 import Favorites from "./favorites/js/main.js";
 import Cart from "./cart/frontend/js/main.js";
 import initProductCart from "./product-cards/js/main.js";
+import FastSearch from "./fast-search/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
@@ -52,6 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       constructor: Favorites,
       name: "Favorites",
+    },
+    {
+      constructor: FastSearch,
+      name: "FastSearch",
     },
   ];
 

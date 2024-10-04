@@ -1,4 +1,5 @@
 {'@FILE snippets/ajax/ajax.php' | snippet}
+{include 'file:modules/fast-search/chunks/init.tpl'}
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {$_modx->setPlaceholder('custom-placeholders', '@FILE snippets/placeholders/index.php' | snippet)}
 {'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
