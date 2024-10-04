@@ -1,7 +1,8 @@
-{set $parents = '0,-'~'catalog_id' | config}
+{if 'header_menu_ids' | config}
 <div class="header-menu">
   {'pdoMenu' | snippet : [ 
-    'parents' => $parents
+    'parents' => 0
+    'resources' => 'header_menu_ids' | config
     'tplOuter' => '@INLINE
       <ul class="header-menu__nav">
           {$wrapper}
@@ -25,3 +26,6 @@
       </li>' 
     ]}
 </div>
+{else}
+Отсуствует конфиг header_menu_ids
+{/if}
