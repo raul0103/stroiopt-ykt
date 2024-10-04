@@ -1,6 +1,7 @@
+{set $parents = '0,-'~'catalog_id' | config}
 <div class="header-menu">
   {'pdoMenu' | snippet : [ 
-    'parents' => 0 
+    'parents' => $parents
     'tplOuter' => '@INLINE
       <ul class="header-menu__nav">
           {$wrapper}
