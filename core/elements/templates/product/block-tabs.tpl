@@ -70,7 +70,7 @@
           {$tab_reviews}
 
           <div class="tabs-section__tabs-controls">
-            <button data-modal-open="modal-review" class="btn btn-primary">
+            <button onclick="modals.events.open('modal-review')" class="btn btn-primary">
               Оставить отзыв
             </button>
             <a class="btn btn-secondary" href="reviews/">Смотреть все отзывы</a>

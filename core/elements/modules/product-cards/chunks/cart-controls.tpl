@@ -1,6 +1,5 @@
-{set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' | snippet : [
-  'product_id' => $product_id
-]}
+{set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' |
+snippet : [ 'product_id' => $product_id ]}
 
 <div
   class="product-cart-controls {if $product_data['count'] > 0}active{/if}"
@@ -31,8 +30,7 @@
 
   <button
     class="btn btn-bordered"
-    data-modal-open="modal-buy-click"
-    onclick="product_card.events.buyOneClick({$product_id})"
+    onclick="product_card.events.buyOneClick({$product_id});modals.events.open('modal-buy-click')"
   >
     Купить в 1 клик
   </button>

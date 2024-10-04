@@ -1,5 +1,5 @@
 // modules
-import ModalsInit from "./modals/js/main.js";
+import Modals from "./modals/js/Modals.js";
 import CatalogInit from "./catalog/js/main.js";
 import MobileMenuInit from "./mobile-menu/js/main.js";
 import popCatInit from "./popular-categories/js/main.js";
@@ -11,10 +11,6 @@ import FastSearch from "./fast-search/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
-    {
-      init: ModalsInit,
-      name: "ModalsInit",
-    },
     {
       init: CatalogInit,
       name: "CatalogInit",
@@ -30,10 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: MltReviewAjaxForm.init,
       name: "MltReviewAjaxForm",
-    },
-    {
-      init: ModalsInit,
-      name: "ModalsInit",
     },
     {
       init: initProductCart,
@@ -73,5 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.cart = new Cart();
   } catch (e) {
     console.error(`Ошибка в классе Cart: ${e}`);
+  }
+
+  try {
+    window.modals = new Modals();
+  } catch (e) {
+    console.error(`Ошибка в классе Modals: ${e}`);
   }
 });

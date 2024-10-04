@@ -25,7 +25,7 @@
           {$vacancy['description']}
         </div>
         <div class="vacancies-page__item-controls">
-          <button class="btn btn-primary" data-modal-open="modal-callback">
+          <button class="btn btn-primary" onclick="modals.events.open('modal-callback')">
             Заполнить форму
           </button>
         </div>

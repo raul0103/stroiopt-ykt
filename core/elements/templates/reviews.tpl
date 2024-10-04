@@ -6,10 +6,10 @@
 
   <div class="page-container">
     <div class="reviews-page__controls">
-      <button data-modal-open="modal-review" class="btn btn-primary">
+      <button onclick="modals.events.open('modal-review')" class="btn btn-primary">
         Оставить отзыв
       </button>
-      <button data-modal-open="modal-callback" class="btn btn-secondary">
+      <button onclick="modals.events.open('modal-callback')" class="btn btn-secondary">
         Написать директору
       </button>
     </div>

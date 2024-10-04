@@ -10,7 +10,7 @@
     ]}
 
     <div class="reviews-section__controls">
-      <button data-modal-open="modal-review" class="btn btn-primary">Оставить отзыв</button>
+      <button onclick="modals.events.open('modal-review')" class="btn btn-primary">Оставить отзыв</button>
       <a href="/reviews/" class="btn btn-secondary">Смотреть все</a>
     </div>
   </div>

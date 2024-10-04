@@ -23,5 +23,5 @@
       </tbody>
     </table>
 </div>
-<button class="btn-additional {if !$show_btn_desktop}sm-d-block{/if} btn btn-primary" data-modal-open="modal-callback">Заказать с доставкой</button>
+<button class="btn-additional {if !$show_btn_desktop}sm-d-block{/if} btn btn-primary" onclick="modals.events.open('modal-callback')">Заказать с доставкой</button>
 {/if}

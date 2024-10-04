@@ -23,7 +23,10 @@
   </form>
 
   {if !$mobile}
-  <button data-modal-open="modal-callback" class="btn btn-primary">
+  <button
+    onclick="modals.events.open('modal-callback')"
+    class="btn btn-primary"
+  >
     Заказать звонок
   </button>
   {/if}
