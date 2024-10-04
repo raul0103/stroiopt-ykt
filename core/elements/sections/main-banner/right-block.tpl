@@ -5,13 +5,7 @@
     </div>
     <div class="form__group">
       <label>Вид продукции</label>
-      <div class="custom-select pseudo-arrow pseudo-arrow__down">
-        <select name="">
-          <option>1П 30-18-30</option>
-          <option>2П 40-13-730</option>
-          <option>3П 50-15-50</option>
-        </select>
-      </div>
+      <input type="text" name="product" />
     </div>
 
     <div class="form__group">
