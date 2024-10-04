@@ -27,7 +27,7 @@
       <input type="checkbox" checked required />
       <span class="checkmark"></span>
       Соглашаюсь на обработку персональных данных, ознакомлен с
-      <a href="" class="btn-link">Политикой конфиденциальности.</a>
+      <a href="{$_modx->makeURL(45956)}" class="btn-link">Политикой конфиденциальности.</a>
     </label>
 
     <div class="form__footer ta-center">

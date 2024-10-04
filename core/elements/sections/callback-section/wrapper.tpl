@@ -19,7 +19,7 @@
           <label class="custom-checkbox">
             <input type="checkbox" checked required />
             <span class="checkmark"></span>
-            Согласен на обработку персональных данных
+            Согласен на обработку <a href="{$_modx->makeURL(45956)}" class="btn-link">персональных данных</a>
           </label>
 
           <div class="form__footer ta-center">

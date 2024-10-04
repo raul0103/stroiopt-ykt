@@ -1,10 +1,11 @@
 <div class="footer__bottom">
   <div class="footer__bottom-information fs-caption muted-color">
     Ⓒ ООО  «{'company_name' | config}». 2010-2024г. Отправляя любую форму на сайте, вы соглашаетесь
-    с политикой конфиденциальности нашего сайта<br />
+    с <a class="btn-link" href="{$_modx->makeURL(45956)}">политикой конфиденциальности</a> нашего сайта
     Сайт носит информационный характер и ни при каких обстоятельствах не
     является публичной офертой, определяемой положениями Статьи 437 (2) ГК РФ.
   </div>
+  {*
   <div class="footer__bottom-devcompany">
     <a
       href="https://digital-senior.ru/"
@@ -15,4 +16,5 @@
       <a href="https://digital-senior.ru/">Digital-senior</a>
     </div>
   </div>
+  *}
 </div>

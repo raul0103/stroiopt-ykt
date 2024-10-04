@@ -124,4 +124,39 @@ button {
       line-height: 22px;
     }
   }
+
+  h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th,
+    td {
+      padding: 20px 16px;
+      @media (max-width: $screen-sm) {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+    th {
+      font-weight: 600;
+      background-color: $neutral-color;
+    }
+    td {
+      color: $dark-color;
+    }
+
+    .cart-product-controls {
+      width: max-content;
+      margin: auto;
+    }
+  }
+
+  .mb-4 {
+    margin-bottom: 12px;
+  }
 }
