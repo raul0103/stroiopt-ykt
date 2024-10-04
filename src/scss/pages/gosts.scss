@@ -22,5 +22,14 @@
     .has-icon {
       gap: 12px;
     }
+
+    &-item-title {
+      span:nth-child(1) {
+        min-width: 150px;
+      }
+      @media (max-width: $screen-md) {
+        flex-wrap: wrap;
+      }
+    }
   }
 }
