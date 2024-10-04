@@ -87,9 +87,12 @@
 
   &__top-menu {
     display: flex;
-    flex-wrap: wrap;
+
     column-gap: 32px;
     row-gap: 16px;
+    @media (max-width: $screen-md) {
+      flex-wrap: wrap;
+    }
     @media (max-width: $screen-sm) {
       flex-direction: column;
       gap: 12px;
@@ -99,11 +102,12 @@
       &-container {
         display: flex;
 
-        flex-wrap: wrap;
         column-gap: 32px;
         row-gap: 16px;
         transition: opacity 0.3s;
-
+        @media (max-width: $screen-md) {
+          flex-wrap: wrap;
+        }
         @media (max-width: $screen-sm) {
           display: none;
           opacity: 0;

@@ -21,10 +21,8 @@
 {/if}
 
 {set $controls[] = ["title" => "Доставка", "id" => "delivery"]}
+{set $controls[] = ["title" => "Отзывы", "id" => "reviews"]}
 
-{if $tab_reviews}
-  {set $controls[] = ["title" => "Отзывы", "id" => "reviews"]}
-{/if}
 <div class="tabs-section section-margin">
   <div class="tabs-section__container">
     <div class="tabs-section__controls">
@@ -67,7 +65,7 @@
         {include "file:sections/delivery/delivery-table.tpl"}
       </div>
       
-      {if $tab_reviews}
+
         <div class="tabs-section__tabs-item" data-opened-element="reviews">
           {$tab_reviews}
 
@@ -79,7 +77,7 @@
           </div>
         </div>
         {include 'file:modules/reviews/chunks/review-modals.tpl'} 
-      {/if}
+
     </div>
   </div>
 </div>
