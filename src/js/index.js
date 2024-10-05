@@ -13,6 +13,8 @@ import initCustomUpload from "./modules/custom-upload.js";
 import Notifications from "./modules/notifications.js";
 import initSwapTable from "./modules/swap-table.js";
 import initWarehouseMap from "./modules/init-warehouse-map.js";
+import initInputMask from "./modules/input-mask.js";
+import fetchItObserve from "./modules/fetchit-observe.js";
 
 // Модули
 import "../../core/elements/modules/all.js";
@@ -34,6 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       init: initSwapTable,
       name: "initSwapTable",
+    },
+    {
+      init: initInputMask,
+      name: "initInputMask",
+    },
+    {
+      init: fetchItObserve,
+      name: "fetchItObserve",
     },
   ];
 

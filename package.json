@@ -31,6 +31,7 @@
   "dependencies": {
     "glightbox": "^3.3.0",
     "group-css-media-queries-loader": "^4.3.0",
+    "imask": "^7.6.1",
     "swiper": "^11.1.14"
   }
 }

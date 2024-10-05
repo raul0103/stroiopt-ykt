@@ -70,14 +70,14 @@ module.exports = {
     proxy: [
       {
         context: () => true,
-        target: "http://mstroy",
+        target: "http://stroiopt-ykt",
         changeOrigin: true,
         secure: false,
       },
     ],
     watchFiles: ["src/**/*", "core/elements/**/*"],
     open: true,
-    host: "mstroy",
+    host: "stroiopt-ykt",
     port: 8080,
     hot: true,
     liveReload: true,
