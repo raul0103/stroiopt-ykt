@@ -1,4 +1,4 @@
-<div class="modal modal-callback" id="modal-buy-click">
+<div class="modal modal-callback" id="modal-buy-click" data-show-body-before="true">
   <div class="modal-overlay" data-modal-close></div>
 
   <div class="modal-container">
