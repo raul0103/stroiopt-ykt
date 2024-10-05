@@ -12,3 +12,5 @@
     </div>
   </div>
 </a>
+
+<input type="hidden" name="product-buy-click" value="{$product['pagetitle']}">
