@@ -7,10 +7,11 @@
     </div>
 
     <div class="modal-callback__body">
+      <div data-modal-body-before>
       {set $email_subject = 'Сообщение со страницы '~$_modx->resource.pagetitle}
       {'!FetchIt' | snippet : [
         'form' => '@INLINE 
-          <form action="" class="fs-body-2 form">
+          <form class="fs-body-2 form" data-modal-id="modal-callback">
             <div class="form__group">
               <label>Ваше имя <span class="error-color">*</span></label>
               <input type="text" name="name" />
@@ -41,12 +42,15 @@
         'customValidators' => 'phone-format'
         'validate' => 'phone:required:phone-format'
       ]}
-
+      <div class="modal-require-info fs-caption muted-color">
+        <span class="error-color">*</span> — обязательные поля
+      </div>
+    </div>
+    <div class="modal__success-window ta-center fw-600 main-color" data-modal-body-after>
+      Ваша заявка принята!
+    </div>
     </div>
 
     <div class="modal-icon-close" data-modal-close></div>
-    <div class="modal-require-info fs-caption muted-color">
-      <span class="error-color">*</span> — обязательные поля
-    </div>
   </div>
 </div>
