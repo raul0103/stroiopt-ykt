@@ -1,5 +1,6 @@
 {'!mFilter2' | snippet : [
     'element' => 'msProducts'
+    'depth' => '3'
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
     'parents' => $_modx->resource.id
     '-filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
