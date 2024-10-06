@@ -5,7 +5,7 @@
   <form data-cart-form="{$id}">
     <input type="hidden" name="id" value="{$id}" />
     <input type="hidden" name="price" value="{$price}" />
-    <input type="hidden" name="unit" value="{$unit ? $unit[0] : ''}" />
+    <input type="hidden" name="unit" value="{$unit}" />
   </form>
 
   <button class="btn btn-bordered" onclick="cart.event('minus',this,{$id})">
