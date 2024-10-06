@@ -1,6 +1,7 @@
+{set $depth = $_modx->resource.depth ?: 3}
 {'!mFilter2' | snippet : [
     'element' => 'msProducts'
-    'depth' => '3'
+    'depth' => $depth
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
     'parents' => $_modx->resource.id
     '-filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
@@ -14,6 +15,7 @@
     'tpls' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0
+    'showEmptyFilters' => 0
     'suggestionsMaxFilters' => 0
     'suggestionsMaxResults' => 0
     'suggestionsSliders' => false
