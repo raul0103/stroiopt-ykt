@@ -12,5 +12,5 @@
     8:00-19:00
     <div class="fs-caption dark-color">Прием заявок: круглосуточно</div>
   </li>
-  <li class="footer__top-contacts__item">Адрес офиса: {'address'|config}</li>
+  <li class="footer__top-contacts__item">Адрес офиса: {$_modx->getPlaceholder('virtual')['address']}</li>
 </ul>

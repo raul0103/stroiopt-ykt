@@ -4,7 +4,7 @@
   </a>
 
   <div class="footer__top-descriptor dark-color fs-caption">
-    {$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}
+    {'descriptor' | config}
   </div>
   <div class="footer__top-payments">
     <div class="footer__top-payments__title fs-body-2">Принимаем к оплате:</div>

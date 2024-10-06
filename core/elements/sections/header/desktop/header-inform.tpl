@@ -3,14 +3,14 @@
     <a href="/" class="header__inform-logo">
       <img src="/assets/template/images/other/logo.svg" />
     </a>
-    {$_modx->getPlaceholder('custom-placeholders')["content"]["descriptor"]}
+    {'descriptor' | config}
   </div>
   <div class="header__inform-right">
     <ul class="header__inform-contact-items">
       <li
         class="header__inform-contact-item has-icon has-icon-geo fw-500"
       >
-        {'address'|config}
+        {$_modx->getPlaceholder('virtual')['address']}
       </li>
       <li
         class="header__inform-contact-item header__inform-contact-phone fw-600"

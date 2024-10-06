@@ -30,7 +30,7 @@
         Прием заявок: круглосуточно
       </div>
     </li>
-    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{'address'|config}</li>
+    <li itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">{$_modx->getPlaceholder('virtual')['address']}</li>
   </ul>
 
   <meta itemprop="name" content="{'company_name' | config}">

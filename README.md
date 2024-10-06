@@ -22,7 +22,6 @@
 
 Основные опции контекста которые используются в проекте
 
-- address
 - catalog_id
 - related-services-id
 - email
@@ -30,9 +29,9 @@
 - whatsapp-link
 - telegram-link
 - company_name
-- delivery-map
 - footer_menu_ids - Перечисляем ID для 3х блоков = [[1,2,3],[6,4,23],[6,9,13,14]]
 - header_menu_ids - Строка с ID ресурсов через запятую '1,2,3,4'
+- descriptor
 
 ## Хранение глобальных данных
 
