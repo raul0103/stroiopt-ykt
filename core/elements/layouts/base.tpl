@@ -22,6 +22,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <meta name="description" content="{$_modx->resource.description}">
+
     <link
       rel="stylesheet"
       href="/assets/template/css/main.css?{'file_version' | config}"
