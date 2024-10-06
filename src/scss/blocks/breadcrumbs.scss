@@ -1,6 +1,7 @@
 .breadcrumb {
   margin: 12px 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 5px;
   @media (max-width: $screen-sm) {
     height: 0;
