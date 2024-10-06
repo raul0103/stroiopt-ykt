@@ -15,5 +15,6 @@
   </div>
 </div>
 
+{include "file:sections/advantages/wrapper.tpl"}
 {include "file:sections/callback-section/wrapper.tpl"}
 {/block}
