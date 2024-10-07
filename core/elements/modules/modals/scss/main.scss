@@ -36,6 +36,21 @@
     .modal-container {
       max-width: 370px;
     }
+
+    &-success {
+      .modal-container {
+        max-width: 290px;
+      }
+      .modal-title {
+        margin-bottom: 8px;
+      }
+
+      text-align: center;
+      &__icon,
+      &__body {
+        margin-bottom: 16px;
+      }
+    }
   }
 
   &-overlay {

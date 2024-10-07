@@ -3,7 +3,7 @@
  * data-show-body-before - Если есть такой аттрибут на модальном окне -
  *                         то закрыть сообщение об успешной отправке и
  *                         открыть основное окно после пторного открытия модалки
- * 
+ *
  * Вторичные элементы
  *  - data-modal-body-before - Блок который отображается до отправки формы
  *  - data-modal-body-after - Блок после отправки формы
@@ -20,7 +20,13 @@ export default class Modals {
   }
 
   events = {
-    open: (modal_id) => {
+    /**
+     *
+     * @param {*} modal_id
+     * @param {Function} close_callback - Передаем открытому окну калбек. Например после оформления заказа, по закрытии модалки произойдет перезагрузка странциы и все товары удалятся
+     * @returns
+     */
+    open: (modal_id, close_callback) => {
       if (!modal_id) return;
 
       let modal = document.getElementById(modal_id);
@@ -31,7 +37,7 @@ export default class Modals {
       // Записали для каких модалок уже была инициализация события
       if (!this.events_init[modal_id]) {
         this.events_init[modal_id] = true;
-        this.events.close(modal);
+        this.events.close(modal, close_callback);
       }
 
       /**
@@ -43,11 +49,15 @@ export default class Modals {
         this.showBodyBefore(modal);
       }
     },
-    close: (modal) => {
+    close: (modal, close_callback) => {
       let modal_close_btns = modal.querySelectorAll(this.selectors.close);
       modal_close_btns.forEach((modal_close_btn) => {
         modal_close_btn.addEventListener("click", () => {
           modal.classList.remove("opened");
+
+          if (close_callback) {
+            close_callback();
+          }
         });
       });
     },

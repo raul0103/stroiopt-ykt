@@ -70,12 +70,12 @@ export default class Cart {
   // Второстепенные события
   second_events = {
     // Полностью очищает корзину
-    clear: async () => {
+    clear: async (notification = true) => {
       let action = "clear";
       await api.response(action, {});
 
       // Уведомление
-      notificationService(action);
+      if (notification) notificationService(action);
     },
     // Удаляет товар из корзины
     remove: async (product_id) => {

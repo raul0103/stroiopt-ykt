@@ -1,7 +1,7 @@
 {set $email_subject = 'Сообщение со страницы '~$_modx->resource.pagetitle}
 {'!FetchIt' | snippet : [
   'form' => '@INLINE 
-  <form class="fs-body-2 form gap-24">
+  <form class="fs-body-2 form gap-24" data-form-id="order-form">
     <input type="hidden" name="order-type" value="Физическое лицо">
 
     <div class="form__section">
