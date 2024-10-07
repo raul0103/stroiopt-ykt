@@ -70,7 +70,7 @@ module.exports = {
     proxy: [
       {
         context: () => true,
-        target: "http://stroiopt-ykt",
+        target: "https://stroiopt-ykt",
         changeOrigin: true,
         secure: false,
       },
