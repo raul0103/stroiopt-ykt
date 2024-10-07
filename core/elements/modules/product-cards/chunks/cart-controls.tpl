@@ -7,20 +7,19 @@ snippet : [ 'product_id' => $product_id ]}
 >
   <div class="hide-active w-100">
     <button
-      class="btn btn-secondary w-100"
+      class="btn btn-secondary w-100 pseudo-cart"
       onclick="product_card.events.addFirstProductToCart({$product_id})"
-    >
-      В корзину
-    </button>
+    ></button>
   </div>
 
   <div class="show-active w-100">
     <div class="product-cart-controls__row">
       <button class="btn btn-secondary product-cart-controls__main-btn">
         <span class="product-cart-controls__main-btn-checkmark"></span>
-        <a class="product-cart-controls__main-btn-text" href="cart/"
-          >В корзинe</a
-        >
+        <a
+          class="product-cart-controls__main-btn-text pseudo-cart-v2"
+          href="cart/"
+        ></a>
       </button>
 
       {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"

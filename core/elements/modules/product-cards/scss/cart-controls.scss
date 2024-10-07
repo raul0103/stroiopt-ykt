@@ -36,6 +36,7 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
+    position: relative;
     @media (max-width: $screen-xs) {
       width: calc(30% - 8px);
     }
@@ -55,7 +56,14 @@
     }
     &-text {
       @media (max-width: $screen-xs) {
-        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        &::before {
+          content: "";
+        }
       }
     }
   }

@@ -152,3 +152,14 @@ button.mini-popup-show {
   gap: 8px;
   justify-content: center;
 }
+
+.pseudo-cart {
+  &:before {
+    content: "В корзину";
+  }
+}
+.pseudo-cart-v2 {
+  &:before {
+    content: "В корзине";
+  }
+}
