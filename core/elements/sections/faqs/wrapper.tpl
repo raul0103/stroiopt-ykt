@@ -13,22 +13,12 @@
             ]}
             {foreach $columns as $index_column => $column_items}
                 <div class="faqs__item-column">
-                    {foreach $column_items as $index => $item}
-                        <div class="faqs__item">
-                            <div class="faqs__item-question fs-title-2 fw-600" data-opened-btn="answer-{$index_column}{$index}">{$item['question']} <span class="plus main-color">+</span><span class="minus main-color">-</span></div>
-                            <div class="faqs__item-answer dark-color" data-opened-element="answer-{$index_column}{$index}">{$item['answer']}</div>
-                        </div>
-                    {/foreach}
+                    {include "file:sections/faqs/outer.tpl" faqs=$column_items}
                 </div>
             {/foreach}
 
         {else}
-            {foreach $data['message'] as $index => $item}
-                <div class="faqs__item">
-                    <div class="faqs__item-question fs-title-2 fw-600" data-opened-btn="answer-{$index}">{$item['question']} <span class="plus main-color">+</span><span class="minus main-color">-</span></div>
-                    <div class="faqs__item-answer dark-color" data-opened-element="answer-{$index}">{$item['answer']}</div>
-                </div>
-            {/foreach}
+            {include "file:sections/faqs/outer.tpl" faqs=$data['message']}
         {/if}
     </div>
 </div>
