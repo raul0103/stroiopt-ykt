@@ -7,12 +7,29 @@
 {if $data['status'] == 'success'}
 <div class="faqs">
     <div class="faqs__row {if $not_columns}not-columns{/if}">
-        {foreach $data['message'] as $index => $item}
-            <div class="faqs__item">
-                <div class="faqs__item-question fs-title-2 fw-600" data-opened-btn="answer-{$index}">{$item['question']} <span class="plus main-color">+</span><span class="minus main-color">-</span></div>
-                <div class="faqs__item-answer dark-color" data-opened-element="answer-{$index}">{$item['answer']}</div>
-            </div>
-        {/foreach}
+        {if $data['message'] | count > 8}
+            {set $columns = '@FILE snippets/splitArray.php' | snippet :[
+                'array' => $data['message']
+            ]}
+            {foreach $columns as $index_column => $column_items}
+                <div class="faqs__item-column">
+                    {foreach $column_items as $index => $item}
+                        <div class="faqs__item">
+                            <div class="faqs__item-question fs-title-2 fw-600" data-opened-btn="answer-{$index_column}{$index}">{$item['question']} <span class="plus main-color">+</span><span class="minus main-color">-</span></div>
+                            <div class="faqs__item-answer dark-color" data-opened-element="answer-{$index_column}{$index}">{$item['answer']}</div>
+                        </div>
+                    {/foreach}
+                </div>
+            {/foreach}
+
+        {else}
+            {foreach $data['message'] as $index => $item}
+                <div class="faqs__item">
+                    <div class="faqs__item-question fs-title-2 fw-600" data-opened-btn="answer-{$index}">{$item['question']} <span class="plus main-color">+</span><span class="minus main-color">-</span></div>
+                    <div class="faqs__item-answer dark-color" data-opened-element="answer-{$index}">{$item['answer']}</div>
+                </div>
+            {/foreach}
+        {/if}
     </div>
 </div>
 {/if}
