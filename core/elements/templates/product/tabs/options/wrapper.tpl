@@ -1,21 +1,16 @@
 <div class="product-options">
-  <div class="product-options__item">
-    <label class="product-options__item-title dark-color">Категория:</label>
-    <div class="product-options__item-value">
-      {$_modx->resource.parent | resource : 'pagetitle'}
-    </div>
-  </div>
 
-    {foreach $options as $option}
-        <div class="product-options__item">
-            <label class="product-options__item-title dark-color">{$option.caption}:</label>
-            <div class="product-options__item-value">
-                {if $option.value is array}
-                    {$option.value | join : ', '}
-                {else}
-                    {$option.value}
-                {/if}
-            </div>
+
+    {if $options | count > 8}
+      {set $option_columns = "@FILE snippets/splitArray.php"|snippet:[
+        'array' => $options
+      ]}
+      {foreach $option_columns as $option_column}
+        <div class="product-options__column">
+          {include "file:templates/product/tabs/options/outer.tpl" options=$option_column}
         </div>
-    {/foreach}
+      {/foreach}
+    {else}
+        {include "file:templates/product/tabs/options/outer.tpl" options=$options}
+    {/if}
 </div>
