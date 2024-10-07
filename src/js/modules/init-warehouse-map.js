@@ -11,7 +11,7 @@ export default function initWarehouseMap() {
     iconImageOffset: [-21, -21], // Смещение левого верхнего угла иконки относительно её "ножки" (точки привязки).
   };
   let options_v2 = Object.assign(structuredClone(options), {
-    iconImageHref: "assets/template/images/sections/delivery-map/tool-2.webp",
+    iconImageHref: "assets/template/images/sections/delivery-map/tool-2.png",
   });
 
   let phone = $('[href^="tel:"]').eq(0).text().trim();
@@ -80,65 +80,65 @@ export default function initWarehouseMap() {
       header: '<div style="text-align: center;">Склад Химки</div>',
       options,
     },
-    // {
-    //   coords: [55.909665, 37.423249],
-    //   header: '<div style="text-align: center;"></div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.578131, 37.609299],
-    //   header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.8836, 37.626627],
-    //   header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.583942, 37.610655],
-    //   header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.701125, 37.700325],
-    //   header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [54.652782, 39.645268],
-    //   header: '<div style="text-align: center;">Все виды ЖБИ</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.73629, 38.226361],
-    //   header:
-    //     '<div style="text-align: center;">Дорожные плиты, ФБС блоки</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.587499, 38.469337],
-    //   header:
-    //     '<div style="text-align: center;">Дорожные плиты, ФБС блоки</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.56308, 37.944353],
-    //   header:
-    //     '<div style="text-align: center;">Аэродромные плиты, дорожные плиты</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.367679, 36.711999],
-    //   header: '<div style="text-align: center;">Аэродромные плиты</div>',
-    //   options: options_v2,
-    // },
-    // {
-    //   coords: [55.833304, 37.156476],
-    //   header:
-    //     '<div style="text-align: center;">Дорожные плиты, ФБС блоки, аэродромные плиты</div>',
-    //   options: options_v2,
-    // },
+    {
+      coords: [55.909665, 37.423249],
+      header: '<div style="text-align: center;"></div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.578131, 37.609299],
+      header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.8836, 37.626627],
+      header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.583942, 37.610655],
+      header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.701125, 37.700325],
+      header: '<div style="text-align: center;">ФБС БЛОКИ</div>',
+      options: options_v2,
+    },
+    {
+      coords: [54.652782, 39.645268],
+      header: '<div style="text-align: center;">Все виды ЖБИ</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.73629, 38.226361],
+      header:
+        '<div style="text-align: center;">Дорожные плиты, ФБС блоки</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.587499, 38.469337],
+      header:
+        '<div style="text-align: center;">Дорожные плиты, ФБС блоки</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.56308, 37.944353],
+      header:
+        '<div style="text-align: center;">Аэродромные плиты, дорожные плиты</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.367679, 36.711999],
+      header: '<div style="text-align: center;">Аэродромные плиты</div>',
+      options: options_v2,
+    },
+    {
+      coords: [55.833304, 37.156476],
+      header:
+        '<div style="text-align: center;">Дорожные плиты, ФБС блоки, аэродромные плиты</div>',
+      options: options_v2,
+    },
   ];
   items.forEach((item) => {
     warehouse.geoObjects.add(
