@@ -8,7 +8,7 @@
     class="category-tags__item-image"
     style="background-image: url('{$main_image}')"
   ></div>
-  <div class="category-tags__item-title fs-body-2">
+  <div class="category-tags__item-title">
     {$menutitle ?: $pagetitle}
   </div>
 </a>

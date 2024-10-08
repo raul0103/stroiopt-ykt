@@ -32,7 +32,8 @@
 - footer_menu_ids - Перечисляем ID для 3х блоков = [[1,2,3],[6,4,23],[6,9,13,14]]
 - header_menu_ids - Строка с ID ресурсов через запятую '1,2,3,4'
 - descriptor
-
+- google_tag_manager
+ 
 ## Хранение глобальных данных
 
 Плейсхолдеры с глобальными данными хранятся в core\elements\snippets\placeholders\index.php
