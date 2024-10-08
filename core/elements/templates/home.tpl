@@ -7,6 +7,7 @@
     {include "file:sections/about/wrapper.tpl"}
     {include "file:sections/certificates/wrapper.tpl"}
     {include "file:sections/thankful-letters/wrapper.tpl"}
+    {include "file:sections/product-popular/wrapper.tpl"}
     {include "file:modules/reviews/chunks/wrapper.tpl"}
     {include "file:sections/works-slider/wrapper.tpl"}
     {include "file:sections/advantages/wrapper.tpl"}

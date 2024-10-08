@@ -157,7 +157,7 @@ export default function iniSliders() {
     },
   });
 
-  new Swiper('[data-slider="product-interesting"]', {
+  new Swiper('[data-slider="products"]', {
     modules: [Navigation],
     slidesPerView: 5,
     spaceBetween: 16,

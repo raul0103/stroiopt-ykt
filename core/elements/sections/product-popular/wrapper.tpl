@@ -1,16 +1,15 @@
 {$_modx->setPlaceholder('is-swiper-slide',true)}
 {set $products = 'msProducts' | snippet :[
-  'parents' => $parents ?: $_modx->resource.parent,
+  'parents' => 0,
+  'resources' => '886,888,1135,1138,6452,6453,6477,6478,6480,6481,6862,7245,7555,7780,8950,9295,9307,29537,33737,44678,44855,44934'
   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
-  'sortby' => 'RAND()'
   'includeTVs' => 'remains'
-  'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-interesting']
 ]}
 
 {if $products}
-<div class="product-interesting section-margin">
+<div class="section-margin">
   <div class="container">
-    <h2 class="fs-h2 section-title">Возможно, вас заинтересует</h2>
+    <h2 class="fs-h2 section-title">Популярные товары</h2>
 
     <div class="swiper" data-slider="products">
       <div class="swiper-wrapper">{$products}</div>
