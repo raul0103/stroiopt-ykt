@@ -60,8 +60,10 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
     }
 
     // Формируем древовидную структуру
-    foreach ($resources as &$resource) {
+    // Фокус. Работаем с конца, так как будем удалять ресурс который нашел родителя
+    $resources = array_reverse($resources);
 
+    foreach ($resources as &$resource) {
         foreach ($resources as $index_resource2 => $resource2) {
             if ($resource['id'] == $resource2['parent']) {
                 $resource['children'][] = $resource2;
@@ -69,6 +71,7 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
             }
         }
     }
+    $resources = array_reverse($resources);
 
     $output = json_encode($resources, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
