@@ -1,8 +1,6 @@
 {extends "file:layouts/base.tpl"} 
 
-
 {block 'content'}
-    
 
 {set $cart_total = $_modx->getPlaceholder('custom-placeholders')['counters']['cart']['total']}
 
@@ -22,7 +20,7 @@
         <div class="cart-page__items">Пусто</div>
         {else}
         <div class="cart-page__items">
-          <button class="cart-page__item-delete-btn delete-all error-color" onclick="cart.second_events.clear();setTimeout(()=>{ location.reload() }, 3000)">
+          <button class="cart-page__item-delete-btn delete-all error-color" onclick="cart.events.clear();setTimeout(()=>{ location.reload() }, 3000)">
             Очистить корзину
           </button>
 
@@ -48,7 +46,7 @@
                   {include "file:modules/favorites/chunks/products/add-favorite-btn.tpl" product_id=$product.id text=true}
                   <button
                     class="cart-page__item-delete-btn muted-color"
-                    onclick="{$product_fron_id}.remove();cart.second_events.remove({$product.id});"
+                    onclick="{$product_fron_id}.remove();cart.events.remove({$product.id});"
                   >
                     Удалить из корзины
                   </button>

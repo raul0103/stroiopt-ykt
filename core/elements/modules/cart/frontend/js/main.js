@@ -2,55 +2,43 @@
  * Класс управления корзиной
  */
 import api from "./services/api";
-import helpers from "./utils/helpers";
 import dispatch from "./utils/dispatch";
 import update_elements from "./modules/update-elements";
-import product_data from "./modules/product-data";
+import formDataSerialize from "./modules/form-data-serialize";
 import notificationService from "./services/notification-service";
 
 export default class Cart {
   /**
-   * @param {*} action [minus,plus,change]
-   * @param {*} e - Кнопка по которой был клик
-   * @param {*} product_id
-   * @returns
+   * Основная фукнция на событие изменения товара в корзине
    */
-  event = async (action, e, product_id) => {
-    let valid_params = helpers.checkParams(`events.${action}`, {
-      product_id,
-    });
-    if (!valid_params) return;
+  submit = async (event) => {
+    event.preventDefault();
 
-    // Получаем данные товара из html формы
-    let data = product_data.getFormData(e, product_id);
+    // Элемент который отправил форму
+    let submitter = event.submitter ?? event.target;
+    let form = submitter.form;
 
+    let data = formDataSerialize(form);
+
+    // [minus|change|plus]
+    let action = submitter.dataset.cartEvent;
     // Если это input с кол-вом тогда устанавливаем кол-во его значение
     if (action == "change") {
-      data.count = e.value;
+      data.count = submitter.value;
     }
 
-    this.states.loading(e);
+    this.states.loading(form);
 
     let response = await api.response(action, data);
     if (!response && !response?.success) return;
 
-    this.states.completion(e);
+    this.states.completion(form);
 
-    update_elements.productSumm(
-      product_id,
-      response.data && response.data.product_data.summ
-    );
-
-    update_elements.cartTotalSumm(response.data && response.data.total.summ);
-    update_elements.cartTotalCount(response.data && response.data.total.count);
-
-    // Если событие было по input с кол-ом, то не зачем менять в нем же кол-во
-    if (action !== "change") {
-      update_elements.productCount(
-        product_id,
-        response.data && response.data.product_data.count
-      );
-    }
+    // Обновляем элементы на странице
+    update_elements.productSumm(response.data);
+    update_elements.cartTotalSumm(response.data);
+    update_elements.cartTotalCount(response.data);
+    update_elements.productCount(response.data);
 
     // Уведомление
     notificationService(
@@ -67,8 +55,7 @@ export default class Cart {
     });
   };
 
-  // Второстепенные события
-  second_events = {
+  events = {
     // Полностью очищает корзину
     clear: async (notification = true) => {
       let action = "clear";
@@ -87,23 +74,21 @@ export default class Cart {
       // Уведомление
       notificationService(action);
 
-      update_elements.cartTotalSumm(response.data && response.data.total.summ);
-      update_elements.cartTotalCount(
-        response.data && response.data.total.count
-      );
+      update_elements.cartTotalSumm(response.data);
+      update_elements.cartTotalCount(response.data);
     },
   };
 
   states = {
     loading: (e) => {
       if (!e) return;
-      e.parentNode.style.opacity = ".5";
-      e.parentNode.style["pointer-events"] = "none";
+      e.style.opacity = ".5";
+      e.style["pointer-events"] = "none";
     },
     completion: (e) => {
       if (!e) return;
-      e.parentNode.style.opacity = "1";
-      e.parentNode.style["pointer-events"] = "all";
+      e.style.opacity = "1";
+      e.style["pointer-events"] = "all";
     },
   };
 }

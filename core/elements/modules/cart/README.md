@@ -5,44 +5,34 @@
   - Решил делать через сниппет `ajax.php` а не через коннектор, так как экземпляр $modx в любом случае будет получен и не ннужно возиться и подключать его.
 - Вся логика расчета в `processors/`
 - Корзина хранится в сессиях
-- Так как JS корзины глобален, можно из любой точки сайта вызвать функцию
-
-```js
-cart.event("plus", null, PRODUCT_ID);
-```
-
-и добавить или удалить товар из корзины
 
 ## FRONTEND
 
 - `frontend/chunks/cart-product-controls.tpl`
   - Кнопки для регулирования товара в корзине
-  - Тут необходимо указать кнопкам глобальные события на onclick и onchange
+  - Каждая кнопка вызывает submit формы в которой находится.
+  - Форма получает необходимые поля и передает на бэк
 
-```js
-cart.event("plus", this, PRODUCT_ID);
-cart.event("minus", this, PRODUCT_ID);
-cart.event("change", this, PRODUCT_ID);
-
-cart.second_events.clear(); // Полностью очистит корзину
-cart.second_events.remove(PRODUCT_ID); // Удалит товар из корзины
+```html
+<input type="hidden" name="id" value="PRODUCT_ID" />
+<input type="hidden" name="price" value="PRODUCT_PRICE" />
+<input type="hidden" name="unit" value="PRODUCT_UNIT" />
 ```
 
-- Для кнопки кол-ва указать аттрибу. Необходим для изменения кол-ва при кликах на + -
-  - `data-cart-product-count="PRODUCT_ID"`
-- Рядом с кнопками расположить форму со скрытыми полями для передачи данных по товару в калькулятор. Желательно рядом с кнопками так как при клике на + - сначала будет поиск формы по общему parentNode для легкости JS
-  - `data-cart-form="PRODUCT_ID"`
-  - ```html
-    <form data-cart-form="PRODUCT_ID">
-      <input type="hidden" name="id" value="PRODUCT_ID" />
-      <input type="hidden" name="price" value="PRODUCT_PRICE" />
-      <input type="hidden" name="unit" value="PRODUCT_UNIT" />
-    </form>
-    ```
-- Для обновления на фронте общего кол-ва в корзине использовать элемент с аттрибутом `data-cart-total-count`
-- С бэка данные о текущем кол-ве товаров и их сумме можно получить сниппетом `backend/snippets/getCartTotal.php`
-- Для обновления суммы по товару установить аттрибут data-cart-product-summ="PRODUCT_ID"
-- Для обвноления общей суммы `data-cart-total-summ`
+- `backend/snippets/getCartTotal.php` - Данные о текущем кол-ве товаров и их сумме можно получить сниппетом
+
+- Обновление данных на фронте
+
+  - `data-cart-total-count` - Обновление общего вол-ва товара в корзине
+  - `data-cart-total-summ` - Для обвноления общей суммы
+  - `data-cart-product-summ="PRODUCT_ID"` - Обновление суммы по товару
+
+- Глобальные события для управления корзиной
+
+```js
+cart.events.clear(); // Полностью очистит корзину
+cart.events.remove(PRODUCT_ID); // Удалит товар из корзины
+```
 
 ## BACKEND
 

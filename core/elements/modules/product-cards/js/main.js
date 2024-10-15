@@ -5,12 +5,6 @@ export default function initProductCart() {
   // Глобально для использования в кнопках на onclick
   window.product_card = {
     events: {
-      // Добавляет первый товар в корзину
-      addFirstProductToCart(product_id) {
-        cart.event("plus", null, product_id); // Глобальный объект корзины
-
-        changeClassProductCartControls("add", product_id);
-      },
       // Покупка в один клик
       async buyOneClick(product_id) {
         if (!product_id) {
@@ -60,19 +54,11 @@ export default function initProductCart() {
     )
       return;
 
-    changeClassProductCartControls("remove", event.detail.product_data.id);
+    let forms = document.querySelectorAll(
+      `[data-cart-form="${event.detail.product_data.id}"]`
+    );
+    forms.forEach((form) => {
+      form.classList.remove("active");
+    });
   });
-}
-
-/**
- * Поиск блока в котором лежат кнопки для присвоения класса
- * @param {*} class_action - [add,remove]
- */
-function changeClassProductCartControls(class_action, product_id) {
-  let product_cart_controls = document.querySelector(
-    `[data-product-cart-controls="${product_id}"]`
-  );
-
-  if (product_cart_controls)
-    product_cart_controls.classList[class_action]("active");
 }

@@ -49,18 +49,18 @@ const update_elements = {
    * Обновит товару его кол-во на странице в input
    * data-cart-product-count="PRODUCT_ID" - Обязательный аттрибут на input кол-ва товара. Будет обновляться по AJAX
    *
-   * @param {*} product_id
-   * @param {*} product_count
+   * @param {*} data
    * @returns
    */
-  productCount(product_id, product_count = 0) {
-    // product_count = product_count ?? 0;
-    let selector = `[data-cart-product-count="${product_id}"]`;
+  productCount(data) {
+    let product_count = data.product_data.count ?? 0;
+
+    let selector = `[data-cart-product-count="${data.product_data.id}"]`;
     this.main(
       product_count,
       {
         key: "counters",
-        child: product_id,
+        child: data.product_data.id,
       },
       selector,
       `Не найдены input с кол-вом товаров: ${selector}`,
@@ -72,17 +72,16 @@ const update_elements = {
    * Обновит товару сумму в найденных элементах по аттрибуту
    * data-cart-product-summ="PRODUCT_ID" - Обязательный аттрибут
    *
-   * @param {*} product_id
-   * @param {*} product_summ
+   * @param {*} data
    * @returns
    */
-  productSumm(product_id, product_summ = 0) {
-    let selector = `[data-cart-product-summ="${product_id}"]`;
+  productSumm(data) {
+    let selector = `[data-cart-product-summ="${data.product_data.id}"]`;
     this.main(
-      product_summ,
+      data.product_data.summ,
       {
         key: "product_summs",
-        child: product_id,
+        child: data.product_data.id,
       },
       selector,
       `Не найдены элементы для обновления суммы товара: ${selector}`,
@@ -93,12 +92,13 @@ const update_elements = {
   /**
    * Обновит на странице общее кол-во товаров на странице у элементов с аттрибутом
    * data-cart-total-count
-   * @param {*} count
+   *
+   * @param {*} data
    */
-  cartTotalCount(count) {
+  cartTotalCount(data) {
     let selector = `[data-cart-total-count]`;
     this.main(
-      count,
+      data.total.count,
       {
         key: "total_count",
       },
@@ -111,12 +111,13 @@ const update_elements = {
   /**
    * Обновит на странице общую сумму товаров в корзине
    * data-cart-total-summ
-   * @param {*} summ
+   *
+   * @param {*} data
    */
-  cartTotalSumm(summ) {
+  cartTotalSumm(data) {
     let selector = `[data-cart-total-summ]`;
     this.main(
-      summ,
+      data.total.summ,
       {
         key: "total_summ",
       },

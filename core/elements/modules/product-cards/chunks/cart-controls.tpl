@@ -1,14 +1,20 @@
 {set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' |
 snippet : [ 'product_id' => $product_id ]}
 
-<div
+<form
   class="product-cart-controls {if $product_data['count'] > 0}active{/if}"
-  data-product-cart-controls="{$product_id}"
+  data-cart-form="{$product_id}"
+  onsubmit="cart.submit(event)"
 >
+  <input type="hidden" name="id" value="{$product_id}" />
+  <input type="hidden" name="price" value="{$price}" />
+  <input type="hidden" name="unit" value="{$unit.0 ?: $unit}" />
+
   <div class="hide-active w-100">
     <button
       class="btn btn-secondary w-100 pseudo-cart"
-      onclick="product_card.events.addFirstProductToCart({$product_id})"
+      data-cart-event="plus"
+      onclick="this.form.classList.add('active')"
     ></button>
   </div>
 
@@ -22,15 +28,26 @@ snippet : [ 'product_id' => $product_id ]}
         ></a>
       </button>
 
-      {include "file:modules/cart/frontend/chunks/cart-product-controls.tpl"
-      product_count=$product_data['count'] id=$product_id}
+      <div class="cart-product-controls">
+        <button class="btn btn-bordered" data-cart-event="minus">-</button>
+        <input
+          class="fs-body-1 fw-600"
+          type="number"
+          value="{$product_data['count'] ?: 1}"
+          onchange="cart.submit(event,this.form);"
+          data-cart-event="change"
+          data-cart-product-count="{$product_id}"
+        />
+        <button class="btn btn-bordered" data-cart-event="plus">+</button>
+      </div>
     </div>
   </div>
 
   <button
     class="btn btn-bordered"
+    type="button"
     onclick="product_card.events.buyOneClick({$product_id});modals.events.open('modal-buy-click')"
   >
     Купить в 1 клик
   </button>
-</div>
+</form>

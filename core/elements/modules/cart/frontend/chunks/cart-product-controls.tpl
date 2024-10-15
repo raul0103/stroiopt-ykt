@@ -1,24 +1,18 @@
 {* $product_count - Вызываю в чанке выше *}
 
-<div class="cart-product-controls">
-  {* Форму лучше расположить рядом с кнопками, в JS сначала поиск формы будет по общему parent *}
-  <form data-cart-form="{$id}">
-    <input type="hidden" name="id" value="{$id}" />
-    <input type="hidden" name="price" value="{$price}" />
-    <input type="hidden" name="unit" value="{$unit}" />
-  </form>
+<form class="cart-product-controls" onsubmit="cart.submit(event)">
+  <input type="hidden" name="id" value="{$id}" />
+  <input type="hidden" name="price" value="{$price}" />
+  <input type="hidden" name="unit" value="{$unit}" />
 
-  <button class="btn btn-bordered" onclick="cart.event('minus',this,{$id})">
-    -
-  </button>
+  <button class="btn btn-bordered" data-cart-event="minus">-</button>
   <input
     class="fs-body-1 fw-600"
-    onchange="cart.event('change',this,{$id})"
-    data-cart-product-count="{$id}"
     type="number"
-    value="{$product_count ?: 0}"
+    value="{$product_count ?: 1}"
+    onchange="cart.submit(event,this.form);"
+    data-cart-event="change"
+    data-cart-product-count="{$id}"
   />
-  <button class="btn btn-bordered" onclick="cart.event('plus',this,{$id})">
-    +
-  </button>
-</div>
+  <button class="btn btn-bordered" data-cart-event="plus">+</button>
+</form>

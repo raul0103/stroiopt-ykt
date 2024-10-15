@@ -23,7 +23,7 @@ export default function fetchItObserve() {
      */
     let form_id = event.detail.form.dataset.formId;
     if (form_id == "order-form") {
-      cart.second_events.clear(false);
+      cart.events.clear(false);
 
       modals.events.open("modal-order-success", () => {
         location.reload();
