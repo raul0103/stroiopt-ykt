@@ -7,7 +7,6 @@
         ["title" => "Длина, мм", "key" => "dlina-mm"],
         ["title" => "Ширина, мм", "key" => "shirina-mm"],
         ["title" => "Высота, мм", "key" => "vysota-mm"],
-        ["title" => "Высота, мм", "key" => "vysota-mm"],
     ]}
     {foreach $options as $option}
         {set $value = $_pls[$option['key']][0]}
