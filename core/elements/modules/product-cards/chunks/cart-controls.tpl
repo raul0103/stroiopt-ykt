@@ -8,7 +8,7 @@ snippet : [ 'product_id' => $product_id ]}
 >
   <input type="hidden" name="id" value="{$product_id}" />
   <input type="hidden" name="price" value="{$price}" />
-  <input type="hidden" name="unit" value="{$unit}" />
+  <input type="hidden" name="unit" value="{$unit | gettype == 'array' ? $unit[0] : $unit}" />
 
   <div class="hide-active w-100">
     <button
