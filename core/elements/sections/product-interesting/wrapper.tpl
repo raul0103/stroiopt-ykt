@@ -1,5 +1,5 @@
 {$_modx->setPlaceholder('is-swiper-slide',true)}
-{set $products = 'msProducts' | snippet :[
+{set $products = '!msProducts' | snippet :[
   'parents' => $parents ?: $_modx->resource.parent,
   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
   'sortby' => 'RAND()'
