@@ -15,3 +15,4 @@
 ## Зависмости
 
 - Модуль notifications js/modules/notifications.js. Подключается в frontend/js/services/notification-service.js
+- "../../../../../src/js/classes/Cookie";
