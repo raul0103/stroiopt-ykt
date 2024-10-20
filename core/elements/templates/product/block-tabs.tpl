@@ -1,4 +1,4 @@
-{*set $content = $_modx->resource.content*}
+{set $content = $_modx->resource.content}
 {set $tab_pricelist = "@FILE templates/product/tabs/pricelist/wrapper.tpl" | chunk}
 {set $tab_delivery = "@FILE templates/product/tabs/delivery/wrapper.tpl" | chunk}
 {set $tab_reviews = "@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
