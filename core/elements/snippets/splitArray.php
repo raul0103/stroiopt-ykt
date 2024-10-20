@@ -4,6 +4,10 @@
  * Разбивает массив на 2 части
  */
 
+foreach ($array as $index => $item) {
+    if (empty($item['value'][0])) unset($array[$index]);
+}
+
 // Получаем количество элементов в массиве
 $total_elems = count($array);
 
