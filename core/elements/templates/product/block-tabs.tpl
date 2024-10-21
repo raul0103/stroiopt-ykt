@@ -50,7 +50,7 @@
       </div>
 
       {if $content}
-        <div class="tabs-section__tabs-item" data-opened-element="description" itemprop="description">
+        <div class="tabs-section__tabs-item page-content" data-opened-element="description" itemprop="description">
           {$content}
         </div>
       {/if}
