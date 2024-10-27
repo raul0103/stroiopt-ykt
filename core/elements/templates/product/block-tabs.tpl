@@ -4,7 +4,7 @@
 {set $tab_reviews = "@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
   'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',
   'tplOuter' => '@INLINE <div class="reviews-section__items col-2">{$items}</div>',
-  'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['reviews-product']
+  '-limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['reviews-product']
   'ratingRowClass' => 'rating-stars-static'
   'resource_id' => $_modx->resource.parent
 ]}

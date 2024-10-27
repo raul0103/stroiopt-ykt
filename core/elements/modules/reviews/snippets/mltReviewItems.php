@@ -42,9 +42,13 @@ if (empty($tplOuter)) {
 
 $user_session = $_REQUEST['PHPSESSID'] ?: $_COOKIE['PHPSESSID'];
 
+if (!empty($where)) {
+    $where = json_decode($where,true);
+}
+
 if ($user_reviews) {
     $where['session'] = $user_session;
-    $where['published'] = 0;
+    // $where['published'] = 0;
 }
 
 if ($resource_id) {

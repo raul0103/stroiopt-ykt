@@ -19,6 +19,7 @@
           'tpl' => '@FILE modules/reviews/chunks/review-item-page.tpl'
           'tplOuter' => '@INLINE {$items}'
           'ratingRowClass' => 'rating-stars-static'
+          'where' => '{"resource_id:is":null}'
       ]}
     </div>
 
