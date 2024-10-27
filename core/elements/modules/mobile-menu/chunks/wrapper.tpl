@@ -1,25 +1,16 @@
-{set $menu_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
-    "parent_id" => 0,
-    "level" => 1,
- ]} 
-{set $menu_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-    'data' => $menu_data
+{set $map_menu = "@FILE modules/map-resources/mapResources.php" | snippet : [
+  'parents' => 0
+  'where' => '{"class_key":"modDocument"}'
+  'depth' => 2
 ]}
 
-{set $catalog_id = "catalog_id" | option}
-{if $catalog_id}
-  {set $catalog_data = "@FILE modules/mobile-menu/snippets/data.php" | snippet: [
-      "parent_id" => $catalog_id,
-      "level" => 1,
-      "where" => '{"class_key":"msCategory"}'
-  ]} 
+{set $menu_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+  'data' => $map_menu
+]}
 
-  {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-      'data' => $catalog_data
-  ]}
-{else}
-  Не найдена опция catalog_id
-{/if}
+{set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+  'data' => $_modx->getPlaceholder('map-catalog')
+]}
 
 <div class="mobile-menu fs-body-2 fw-600" id="mobile-menu">
   {include 'file:sections/header/common/header-search.tpl' mobile=true}

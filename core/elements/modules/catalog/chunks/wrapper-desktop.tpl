@@ -1,3 +1,5 @@
+
+
 <div class="catalog-header">
   <button
     data-catalog-open="catalog-modal-desktop"
@@ -14,7 +16,9 @@
   <div id="catalog-modal-desktop" class="catalog-header__nav">
     <div class="catalog-header__nav-overlay" data-catalog-close></div>
     <div class="catalog-header__nav-container">
-      {"@FILE modules/catalog/snippets/html-desktop.php" | snippet}
+      {"@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
+        'data' => $_modx->getPlaceholder('map-catalog')
+      ]}
     </div>
   </div>
 </div>

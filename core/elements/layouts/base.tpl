@@ -4,6 +4,19 @@
 {$_modx->setPlaceholder('custom-placeholders', '@FILE snippets/placeholders/index.php' | snippet)}
 {'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
 
+{set $catalog_id = "catalog_id" | option}
+{if $catalog_id}
+  {"@FILE modules/map-resources/mapResources.php" | snippet : [
+    'parents' => 'catalog_id' | config
+    'toPlaceholder' => 'map-catalog'
+    'where' => '{"class_key":"msCategory"}'
+    'depth' => 2
+  ]}
+{else}
+  Не найдена опция catalog_id
+{/if}
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
