@@ -8,12 +8,8 @@
   'data' => $map_menu
 ]}
 
-{set $data = "@FILE modules/map-resources/itemsTransfer.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-catalog')
-  'transfer_ids' => [159,138,200,227,396,462,599]
-]}
 {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-  'data' => $data
+  'data' => $_modx->getPlaceholder('map-catalog-transfer')
 ]}
 
 <div class="mobile-menu fs-body-2 fw-600" id="mobile-menu">

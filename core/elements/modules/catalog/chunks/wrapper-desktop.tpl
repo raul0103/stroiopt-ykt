@@ -1,9 +1,5 @@
-{set $data = "@FILE modules/map-resources/itemsTransfer.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-catalog')
-  'transfer_ids' => [159,138,200,227,396,462,599]
-]}
 {set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
-  'data' => $data
+  'data' => $_modx->getPlaceholder('map-catalog-transfer')
 ]}
 
 <div class="catalog-header">
