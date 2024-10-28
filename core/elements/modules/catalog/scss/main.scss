@@ -95,6 +95,10 @@
       gap: 8px;
       max-height: 664px;
       overflow-y: auto;
+      &.opened {
+        display: flex !important;
+        flex-wrap: wrap;
+      }
     }
 
     &-item {

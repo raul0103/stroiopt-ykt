@@ -1,3 +1,7 @@
+{set $gosts = "@FILE snippets/getJsonData.php" | snippet : [
+  "path" => "/assets/template/json/sections/gosts.json"
+]}
+
 <div class="category-listing section-margin" id="mse2_mfilter">
   <div class="container">
     <div class="category-listing__row">
@@ -30,6 +34,24 @@
           <button class="btn btn-primary" data-filter-window-close>Применить</button>
           <button class="btn btn-reset" data-filter-window-close onclick="mSearch2.reset();">Сбросить все фильтры</button>
         </div>
+
+          {if $gosts['status'] == 'success'}
+            <div class="product-main__info-docs">
+              {*<div class="product-main__info-docs-title fw-600">Техническая документация:</div>*}
+              <div class="product-main__info-docs-row">
+                {foreach $gosts['message'] as $doc}
+                  {if $doc['id'] == 'plitdor'}
+                    {foreach $doc['items'] as $item}
+                      <div class="product-main__info-docs-item">
+                        <a class="fs-body-2 has-icon has-icon-download btn btn-bordered" target="_blank" href="/{$item['href']}">{$item['title']}</a>
+                      </div>
+                    {/foreach}
+                  {/if}
+                {/foreach}
+              </div>
+            </div>
+          {/if}
+
       </div>
 
       <div class="category-listing__content">

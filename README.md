@@ -33,7 +33,8 @@
 - header_menu_ids - Строка с ID ресурсов через запятую '1,2,3,4'
 - descriptor
 - google_tag_manager
- 
+- dorplitids - ID категорий дорожных плит [1,2,3]
+
 ## Хранение глобальных данных
 
 Плейсхолдеры с глобальными данными хранятся в core\elements\snippets\placeholders\index.php

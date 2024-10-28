@@ -65,6 +65,37 @@
     ]
   },
   {
+    "id": "plitdor",
+    "title": "Дорожные плиты",
+    "items": [
+      {
+        "href": "assets/documents/gosts/21924.0-84.pdf",
+        "description": "",
+        "title": "ГОСТ 21924.0-84"
+      },
+      {
+        "href": "assets/documents/gosts/21924.1-84.pdf",
+        "description": "",
+        "title": "ГОСТ 21924.1-84"
+      },
+      {
+        "href": "assets/documents/gosts/21924.2-84.pdf",
+        "description": "",
+        "title": "ГОСТ 21924.2-84"
+      },
+      {
+        "href": "assets/documents/gosts/21924.3-84.pdf",
+        "description": "",
+        "title": "ГОСТ 21924.3-84"
+      },
+      {
+        "href": "assets/documents/gosts/P56600-2015.pdf",
+        "description": "",
+        "title": "ГОСТ P56600-2015"
+      }
+    ]
+  },
+  {
     "title": "Элементы зданий и сооружений",
     "items": [
       {

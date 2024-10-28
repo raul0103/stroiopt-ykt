@@ -42,4 +42,27 @@
     </div>
   </div>
   {/if}
+
+  {set $dorplitids = 'dorplitids' | config | fromJSON}
+  {if $dorplitids && $_modx->resource.parent in list $dorplitids}
+    {set $gosts = "@FILE snippets/getJsonData.php" | snippet : [
+      "path" => "/assets/template/json/sections/gosts.json"
+    ]}
+    {if $gosts['status'] == 'success'}
+      <div class="product-main__info-docs">
+        <div class="product-main__info-docs-title fw-600">Техническая документация:</div>
+        <div class="product-main__info-docs-row">
+          {foreach $gosts['message'] as $doc}
+            {if $doc['id'] == 'plitdor'}
+              {foreach $doc['items'] as $item}
+                <div class="product-main__info-docs-item">
+                  <a class="fs-body-2 has-icon has-icon-download btn btn-bordered" target="_blank" href="/{$item['href']}">{$item['title']}</a>
+                </div>
+              {/foreach}
+            {/if}
+          {/foreach}
+        </div>
+      </div>
+    {/if}
+  {/if}
 </div>
