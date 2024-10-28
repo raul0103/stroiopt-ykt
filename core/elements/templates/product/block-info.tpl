@@ -28,41 +28,14 @@
     <li class="has-icon has-icon-payment-v2">Оплата после отгрузки</li>
   </ul>
 
-  {if $docs}
-  {set $docs = $docs | fromJSON}
+  {set $gosts = "@FILE snippets/getResourceTV.php" | snippet : [
+    'id' => $_modx->resource.parent,
+    'tvName' => 'gosts'
+  ]}
 
-  <div class="product-main__info-docs">
-    <div class="product-main__info-docs-title fw-600">Техническая документация:</div>
-    <div class="product-main__info-docs-row">
-      {foreach $docs as $doc}
-      <div class="product-main__info-docs-item">
-        <a class="fs-body-2 has-icon has-icon-download btn btn-bordered" target="_blank" href="/{$doc['file']}">{$doc['name']}</a>
-      </div>
-      {/foreach}
-    </div>
-  </div>
+  {if $gosts}
+    {set $gosts = $gosts | fromJSON}
+    {include "file:blocks/gosts.tpl" gosts=$gosts show_title=true}
   {/if}
 
-  {set $dorplitids = 'dorplitids' | config | fromJSON}
-  {if $dorplitids && $_modx->resource.parent in list $dorplitids}
-    {set $gosts = "@FILE snippets/getJsonData.php" | snippet : [
-      "path" => "/assets/template/json/sections/gosts.json"
-    ]}
-    {if $gosts['status'] == 'success'}
-      <div class="product-main__info-docs">
-        <div class="product-main__info-docs-title fw-600">Техническая документация:</div>
-        <div class="product-main__info-docs-row">
-          {foreach $gosts['message'] as $doc}
-            {if $doc['id'] == 'plitdor'}
-              {foreach $doc['items'] as $item}
-                <div class="product-main__info-docs-item">
-                  <a class="fs-body-2 has-icon has-icon-download btn btn-bordered" target="_blank" href="/{$item['href']}">{$item['title']}</a>
-                </div>
-              {/foreach}
-            {/if}
-          {/foreach}
-        </div>
-      </div>
-    {/if}
-  {/if}
 </div>
