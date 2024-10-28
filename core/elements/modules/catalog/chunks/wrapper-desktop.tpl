@@ -1,4 +1,10 @@
-
+{set $data = "@FILE modules/map-resources/itemsTransfer.php" | snippet : [
+  'data' => $_modx->getPlaceholder('map-catalog')
+  'transfer_ids' => [159,138,200,227,396,462,599]
+]}
+{set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
+  'data' => $data
+]}
 
 <div class="catalog-header">
   <button
@@ -16,9 +22,7 @@
   <div id="catalog-modal-desktop" class="catalog-header__nav">
     <div class="catalog-header__nav-overlay" data-catalog-close></div>
     <div class="catalog-header__nav-container">
-      {"@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
-        'data' => $_modx->getPlaceholder('map-catalog')
-      ]}
+      {$output}
     </div>
   </div>
 </div>
