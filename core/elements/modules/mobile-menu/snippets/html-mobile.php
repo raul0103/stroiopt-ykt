@@ -14,7 +14,7 @@ if (!function_exists("generateModal")) {
             $open_btn = "";
             if ($children['children']) {
                 $open_btn = "<span 
-                            data-mobile-modal-open='mobile-modal-{$children['id']}'\
+                            data-mobile-modal-open='mobile-modal-{$children['id']}'
                             class='pseudo-arrow pseudo-arrow__right'
                             ></span>";
 
@@ -44,18 +44,19 @@ $menu_modals = "";
 foreach ($data as $catalog_item) {
     $menutitle = $catalog_item['menutitle'] ?: $catalog_item['pagetitle'];
 
+    $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
     $open_btn = "";
     if ($catalog_item['children']) {
         $open_btn = "<span 
-                    data-mobile-modal-open='mobile-modal-{$catalog_item['id']}'\
-                    class='pseudo-arrow pseudo-arrow__right'
+                        data-mobile-modal-open='mobile-modal-{$catalog_item['id']}'
+                        class='pseudo-arrow pseudo-arrow__right'
                     ></span>";
 
         generateModal($menu_modals, $catalog_item);
     }
 
     $menu_items .= "<div class='mobile-menu__item'>
-                        <a href='{$catalog_item['link']}'>$menutitle</a>
+                        <a href='{$catalog_item['uri']}' class='d-flex gap-8'>$bestseller $menutitle</a>
                         $open_btn
                     </div>";
 }

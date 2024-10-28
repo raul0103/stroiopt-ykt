@@ -20,8 +20,9 @@ foreach ($data as $catalog_item) {
         }
         $subcat_html .= "</ul>";
 
+        $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
         $cat_html .= "<li class='catalog-header__nav-item has-submenu' data-subcategories-open='catalog-subcat-{$catalog_item['id']}'>
-                              <a href='{$catalog_item['uri']}' class='pseudo-arrow pseudo-arrow__right'>{$catalog_item['menutitle']}</a>
+                              <a href='{$catalog_item['uri']}' class='pseudo-arrow pseudo-arrow__right d-flex gap-8'>$bestseller {$catalog_item['menutitle']}</a>
                           </li>";
     } else {
         $cat_html .= "<li class='catalog-header__nav-item' data-subcategories-open>
