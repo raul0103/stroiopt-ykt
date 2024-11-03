@@ -1,11 +1,14 @@
 .main-banner {
-  background-image: url("/assets/template/images/sections/main-banner/bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  @media (min-width: $screen-sm) {
+    background-image: url("/assets/template/images/sections/main-banner/bg.jpg");
+  }
   @media (max-width: $screen-sm) {
     height: 376px;
     margin-bottom: 435px;
+    background-image: url("/assets/template/images/sections/main-banner/mobile.jpg");
   }
   @media (max-width: $screen-xs) {
     margin-bottom: 410px;
