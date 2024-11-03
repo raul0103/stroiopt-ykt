@@ -26,6 +26,7 @@
 - related-services-id
 - email
 - phone
+- phone-2
 - whatsapp-link
 - telegram-link
 - company_name

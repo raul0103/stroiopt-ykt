@@ -1,12 +1,20 @@
 <div class="contacts-page__info" itemscope itemtype="http://schema.org/LocalBusiness">
   <ul>
     <li>
-      <a
-        class="fw-600 fs-h3 main-color hover-opacity-7"
-        href="tel:{'phone'|config}"
-        itemprop="telephone"
-        >{'phone'|config}</a
-      >
+      <div class="phones">
+        <a
+          class="fw-600 fs-h3 main-color hover-opacity-7"
+          href="tel:{'phone'|config}"
+          itemprop="telephone"
+          >{'phone'|config}</a
+        >
+        <a
+          class="fw-600 fs-h3 main-color hover-opacity-7"
+          href="tel:{'phone'|config}"
+          itemprop="telephone"
+          >{'phones-2'|config}</a
+        >
+      </div>
       <div class="contacts-page__info-social">
         <a
           class="has-icon has-icon-whatsapp"

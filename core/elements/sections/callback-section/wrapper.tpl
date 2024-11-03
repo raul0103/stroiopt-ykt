@@ -48,9 +48,14 @@
             по телефону:
           </div>
 
-          <a href="tel:{'phone'|config}" class="fs-h2 main-color"
-            >{'phone'|config}</a
-          >
+          <div class="phones">
+            <a href="tel:{'phone'|config}" class="fs-h2 main-color">
+              {'phone'|config}
+            </a>
+            <a href="tel:{'phone-2'|config}" class="fs-h2 main-color">
+              {'phone-2'|config}
+            </a>
+          </div>
         </div>
       </div>
     </div>

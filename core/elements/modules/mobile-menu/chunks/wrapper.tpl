@@ -41,7 +41,10 @@
   <div class="mobile-menu__footer">
     <div class="mobile-menu__footer-contacts">
       <div class="mobile-menu__footer-left">
-        <a href="tel:{'phone'|config}" class="main-color fs-body-1 fw-600">{'phone'|config}</a>
+        <div class="phones">
+          <a href="tel:{'phone'|config}" class="main-color fs-body-1 fw-600">{'phone'|config}</a>
+          <a href="tel:{'phone-2'|config}" class="main-color fs-body-1 fw-600">{'phone-2'|config}</a>
+        </div>
         <a
           href="{'whatsapp-link'|config}"
           class="has-icon has-icon-whatsapp"
