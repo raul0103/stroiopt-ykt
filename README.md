@@ -33,6 +33,7 @@
 - header_menu_ids - Строка с ID ресурсов через запятую '1,2,3,4'
 - descriptor
 - google_tag_manager
+- ids_plitperekritiya - Категории плит перекрытия
 
 ## Хранение глобальных данных
 

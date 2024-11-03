@@ -61,12 +61,15 @@
   </button>
 
 </div>
-<div class="side-block__big-info fs-h3" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-  {$_modx->resource.price} руб. {if $unit}/{$unit}{/if}
-
-  <meta itemprop="price" content="{$_modx->resource.price}">
-  <meta itemprop="priceCurrency" content="RUB">
-  <link itemprop="availability" href="http://schema.org/InStock">
+<div class="side-block__big-info fs-h3 d-flex gap-8" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+  <dev class="side-block__product-price">
+    <span data-gost-tu--price>{$_modx->resource.price}</span> руб. {if $unit}/{$unit}{/if}
+    <meta itemprop="price" content="{$_modx->resource.price}" />
+    <meta itemprop="priceCurrency" content="RUB" />
+    <link itemprop="availability" href="http://schema.org/InStock" />
+  </dev>
+  
+  {include "file:blocks/gost-tu--buttons.tpl"}
 </div>
 <div class="side-block__big-controls">
   {include "file:modules/product-cards/chunks/cart-controls.tpl"}

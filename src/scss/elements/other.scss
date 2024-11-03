@@ -163,3 +163,10 @@ button.mini-popup-show {
     content: "В корзине";
   }
 }
+
+.gost-tu--buttons {
+  button.active {
+    background-color: $main-color;
+    color: #fff;
+  }
+}
