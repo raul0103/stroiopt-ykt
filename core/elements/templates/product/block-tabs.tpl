@@ -21,6 +21,7 @@
 {/if}
 
 {set $controls[] = ["title" => "Доставка", "id" => "delivery"]}
+{set $controls[] = ["title" => "Сертификаты", "id" => "certs"]}
 {set $controls[] = ["title" => "Отзывы", "id" => "reviews"]}
 
 <div class="tabs-section section-margin">
@@ -65,6 +66,13 @@
         {include "file:sections/delivery/delivery-table.tpl"}
       </div>
       
+      <div class="tabs-section__tabs-item" data-opened-element="certs">
+        <div class="product-main__certs">
+          <img class="glightbox" src="assets/template/images/sections/certs/1.jpg" />
+          <img class="glightbox" src="assets/template/images/sections/certs/2.jpg" />
+          <img class="glightbox" src="assets/template/images/sections/certs/3.jpg" />
+        </div>
+      </div>
 
         <div class="tabs-section__tabs-item" data-opened-element="reviews">
           {$tab_reviews}

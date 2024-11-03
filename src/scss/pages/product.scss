@@ -162,4 +162,19 @@
       border-bottom: 1px solid $stroke-color;
     }
   }
+
+  &__certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-x: auto;
+    img {
+      width: 100%;
+      max-width: 200px;
+      cursor: pointer;
+      @media (max-width: $screen-sm) {
+        width: calc(50% - 4px);
+      }
+    }
+  }
 }
