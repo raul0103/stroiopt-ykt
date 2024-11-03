@@ -170,3 +170,9 @@ button.mini-popup-show {
     color: #fff;
   }
 }
+
+.pseudo-text-back{
+  &:after{
+    content: "Назад";
+  }
+}

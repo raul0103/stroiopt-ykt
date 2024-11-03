@@ -12,7 +12,7 @@
     <div class="product-card__image">
       <a href="{$id | url}">
         {if $thumb?}
-        <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}" />
+        <img src="{$thumb}" alt="{$pagetitle}" title="{$pagetitle}" loading="lazy"/>
         {else}
         <div class="product-card__image-empty"></div>
         {/if}

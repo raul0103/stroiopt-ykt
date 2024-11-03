@@ -7,7 +7,7 @@ if (!function_exists("generateModal")) {
     {
         $menu_modals .= "<div class='mobile-menu__modal' data-mobile-modal='mobile-modal-{$data['id']}'>
                             <div class='mobile-menu__items'>
-                            <div class='mobile-menu__back pseudo-arrow-before pseudo-arrow-before__left' data-mobile-modal-back>Назад</div>";
+                            <div class='mobile-menu__back pseudo-arrow-before pseudo-arrow-before__left pseudo-text-back' data-mobile-modal-back></div>";
 
         foreach ($data['children'] as $children) {
             $menutitle = $children['menutitle'] ?: $children['pagetitle'];

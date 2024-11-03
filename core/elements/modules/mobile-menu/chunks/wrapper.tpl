@@ -33,7 +33,7 @@
   
   <div class="mobile-menu__modal" data-mobile-modal="mobile-modal-catalog">
     <div class="mobile-menu__items">
-      <div class="mobile-menu__back  pseudo-arrow-before pseudo-arrow-before__left" data-mobile-modal-back>Назад</div>
+      <div class="mobile-menu__back  pseudo-arrow-before pseudo-arrow-before__left pseudo-text-back" data-mobile-modal-back></div>
       {$catalog_html["menu-items"]}
     </div>
   </div>
