@@ -14,13 +14,9 @@
   
     <div class="container">
       <div class="section-margin">
-        {$_modx->resource.introtext}
-      </div>
-      {if $_modx->resource.parent_tags}
-      <div class="section-margin">
         <div class="manufacture-page__categories">
           {'pdoResources' | snippet : [ 
-              'parents' => $_modx->resource.parent_tags
+              'parents' => $_modx->resource.id
               'tpl' => '@INLINE
               <a class="manufacture-page__categories-item fw-600 hover-opacity-7" href="{$uri}">
                 {$menutitle ?: $pagetitle}
@@ -29,17 +25,6 @@
           ]}
         </div>
       </div>
-      {/if}
-
-      <div class="section-margin page-content">
-        {$_modx->resource.content}
-      </div>
-
-      <div class="section-margin">
-        <h2 class="fs-h2 section-title">Стоимость доставки</h2>
-        {include "file:sections/delivery/delivery-table.tpl" show_btn_desktop=true}
-      </div>
-      
       {if $photos_manufacture['status'] == 'success'}
       <div class="manufacture-page__photos section-margin" data-slider="manufacture">
         <h3 class="fs-h3 h3-margin">Фото производства</h3>

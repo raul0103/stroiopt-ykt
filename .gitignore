@@ -32,3 +32,5 @@
 
 !/README.md
 !/.gitignore
+
+!/.htaccess

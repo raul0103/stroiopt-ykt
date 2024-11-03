@@ -5,5 +5,6 @@
     'tplHome' => '@FILE blocks/breadcrumbs/tpl-home.tpl'
     'showHome' => 1
     'exclude' => 'catalog_id' | config
+    'where' => '{"template:!=":0}'
     'outputSeparator' => '<li class="breadcrumb-item">→</li>'
 ]}
