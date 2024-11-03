@@ -12,7 +12,8 @@
     'tplFilter.row.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-number.tpl'
     'tplFilter.outer.default' => '@FILE sections/category-listing/filters/tpl-filter-outer.tpl'
     'tplFilter.row.default' => '@FILE sections/category-listing/filters/tpl-filter-row.tpl'
-    'includeTVs' => 'hits_page,remains'
+    'includeTVs' => 'hits_page,remains,priority'
+    'sort' => 'tv|priority:asc',
     'tpls' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0
