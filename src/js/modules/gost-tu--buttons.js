@@ -2,7 +2,7 @@ let gost_tu__price = document.querySelector("[data-gost-tu--price]");
 
 if (gost_tu__price) {
   let price_gost = gost_tu__price.textContent?.replace(/\D/g, "");
-  let price_tu = price_gost - (price_gost * 20) / 100; // ниже на 20%
+  let price_tu = Math.round(price_gost - (price_gost * 20) / 100); // ниже на 20%
 
   let active_btn = document.querySelector("button.active[data-gost-tu--btn]");
   document.querySelectorAll("[data-gost-tu--btn]").forEach((btn) => {

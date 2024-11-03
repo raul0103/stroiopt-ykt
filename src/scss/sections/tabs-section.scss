@@ -8,7 +8,8 @@
     margin-bottom: 24px;
 
     &-item {
-      width: 186px;
+      min-width: max-content;
+      flex-grow: 1;
       padding: 9px;
       border-radius: 4px;
       color: $muted-color;
@@ -29,7 +30,7 @@
     &-row {
       display: flex;
       gap: 12px;
-      width: max-content;
+      width: 100%;
 
       &.half {
         width: 100%;

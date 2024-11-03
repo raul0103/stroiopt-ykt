@@ -165,14 +165,15 @@ button.mini-popup-show {
 }
 
 .gost-tu--buttons {
+  width: 100%;
   button.active {
     background-color: $main-color;
     color: #fff;
   }
 }
 
-.pseudo-text-back{
-  &:after{
+.pseudo-text-back {
+  &:after {
     content: "Назад";
   }
 }
