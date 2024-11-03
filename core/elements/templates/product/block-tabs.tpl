@@ -68,9 +68,9 @@
       
       <div class="tabs-section__tabs-item" data-opened-element="certs">
         <div class="product-main__certs">
-          <img class="glightbox" loading="lazy" src="assets/template/images/sections/certs/1.jpg" />
-          <img class="glightbox" loading="lazy" src="assets/template/images/sections/certs/2.jpg" />
-          <img class="glightbox" loading="lazy" src="assets/template/images/sections/certs/3.jpg" />
+          <img class="glightbox hover-opacity-7" loading="lazy" src="assets/template/images/sections/certs/1.jpg" />
+          <img class="glightbox hover-opacity-7" loading="lazy" src="assets/template/images/sections/certs/2.jpg" />
+          <img class="glightbox hover-opacity-7" loading="lazy" src="assets/template/images/sections/certs/3.jpg" />
         </div>
       </div>
 
