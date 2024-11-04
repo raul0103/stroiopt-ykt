@@ -15,6 +15,7 @@ snippet : [ 'product_id' => $product_id ]}
       class="btn btn-secondary w-100 pseudo-cart"
       data-cart-event="plus"
       onclick="this.form.classList.add('active')"
+      aria-label="cart-add"
     ></button>
   </div>
 
@@ -38,7 +39,7 @@ snippet : [ 'product_id' => $product_id ]}
           data-cart-event="change"
           data-cart-product-count="{$product_id}"
         />
-        <button class="btn btn-bordered" data-cart-event="plus">+</button>
+        <button class="btn btn-bordered" data-cart-event="plus" aria-label="cart-add">+</button>
       </div>
     </div>
   </div>

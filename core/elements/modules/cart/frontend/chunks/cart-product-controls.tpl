@@ -14,5 +14,5 @@
     data-cart-event="change"
     data-cart-product-count="{$id}"
   />
-  <button class="btn btn-bordered" data-cart-event="plus">+</button>
+  <button class="btn btn-bordered" data-cart-event="plus" aria-label="cart-add">+</button>
 </form>
