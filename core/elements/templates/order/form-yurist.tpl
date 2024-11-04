@@ -21,17 +21,17 @@
       <div class="form__section-title fs-title-2 fw-600">Адрес доставки</div>
       <div class="form__group">
         <label>Город</label>
-        <input type="text" name="city" />
+        <input type="text" name="city" aria-label="user-city"/>
       </div>
   
       <div class="form__group">
         <label>Улица</label>
-        <input type="text" name="street" />
+        <input type="text" name="street" aria-label="user-street" />
       </div>
   
       <div class="form__group">
         <label>Коментарий</label>
-        <input type="text" name="comment" />
+        <input type="text" name="comment" aria-label="user-comment"/>
       </div>
     </div>
   
@@ -39,33 +39,33 @@
       <div class="form__section-title fs-title-2 fw-600">Покупатель</div>
       <div class="form__group">
         <label>Контактное лицо</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" aria-label="user-name"/>
       </div>
   
       <div class="form__group">
         <label>Телефон <span class="error-color">*</span></label>
-        <input type="text" name="phone" required />
+        <input type="text" name="phone" required aria-label="user-phone"/>
         <span class="error-color fs-caption" data-error="phone" style="display: none;"></span>
       </div>
   
       <div class="form__group">
         <label>Email</label>
-        <input type="text" name="email" />
+        <input type="text" name="email" aria-label="user-email"/>
       </div>
   
       <div class="form__group">
         <label>Название компании</label>
-        <input type="text" name="company_name" />
+        <input type="text" name="company_name" aria-label="company-name"/>
       </div>
   
       <div class="form__group">
         <label>Юрилический адрес</label>
-        <input type="text" name="yur-address" />
+        <input type="text" name="yur-address" aria-label="company-address"/>
       </div>
   
       <div class="form__group">
         <label>ИНН/КПП</label>
-        <input type="text" name="innkpp" />
+        <input type="text" name="innkpp" aria-label="company-inn"/>
       </div>
     </div>
   

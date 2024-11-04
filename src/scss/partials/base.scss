@@ -73,6 +73,14 @@ button {
 }
 
 .page-content {
+  a {
+    color: $main-color;
+    text-decoration: underline;
+    font-weight: bold;
+    &:hover {
+      color: $main-hover-color;
+    }
+  }
   p,
   ul,
   ol {

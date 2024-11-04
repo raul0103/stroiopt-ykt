@@ -8,17 +8,17 @@
       <form action="" class="fs-body-2 form">
         <div class="form__group">
           <label>Ваше имя <span class="error-color">*</span></label>
-          <input type="text" name="name" />
+          <input type="text" name="name" aria-label="user-name"/>
         </div>
     
         <div class="form__group">
           <label>Телефон <span class="error-color">*</span></label>
-          <input type="text" name="phone" required/>
+          <input type="text" name="phone" required aria-label="user-phone"/>
           <span class="error-color fs-caption" data-error="phone" style="display: none;"></span>
         </div>
     
         <label class="custom-checkbox">
-          <input type="checkbox" checked required />
+          <input type="checkbox" checked required aria-label="policy"/>
           <span class="checkmark"></span>
           Я согласен на обработку <a href="{$_modx->makeURL(45956)}" class="btn-link">персональных данных</a>
         </label>

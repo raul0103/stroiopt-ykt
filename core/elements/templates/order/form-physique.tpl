@@ -9,18 +9,18 @@
       <div class="form__group">
         <label>Ваше имя <span class="error-color">*</span></label>
         <input type="text" name="name" required />
-        <span class="error-color fs-caption" data-error="name" style="display: none;"></span>
+        <span class="error-color fs-caption" data-error="name" aria-label="user-name" style="display: none;"></span>
       </div>
   
       <div class="form__group">
         <label>Телефон <span class="error-color">*</span></label>
-        <input type="text" name="phone" required />
+        <input type="text" name="phone" required aria-label="user-phone"/>
         <span class="error-color fs-caption" data-error="phone" style="display: none;"></span>
       </div>
   
       <div class="form__group">
         <label>Email</label>
-        <input type="text" name="email" />
+        <input type="text" name="email" aria-label="user-email"/>
       </div>
     </div>
   
@@ -28,17 +28,17 @@
       <div class="form__section-title fs-title-2 fw-600">Адрес доставки</div>
       <div class="form__group">
         <label>Город</label>
-        <input type="text" name="city" />
+        <input type="text" name="city" aria-label="user-city"/>
       </div>
   
       <div class="form__group">
         <label>Улица</label>
-        <input type="text" name="street" />
+        <input type="text" name="street" aria-label="user-street"/>
       </div>
   
       <div class="form__group">
         <label>Коментарий</label>
-        <input type="text" name="comment" />
+        <input type="text" name="comment" aria-label="user-comment"/>
       </div>
     </div>
   

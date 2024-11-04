@@ -1,13 +1,13 @@
 <form action="[[+action]]" id="review-form" class="fs-body-2 form">
   <div class="form__group">
     <label>Ваше имя <span class="error-color">*</span></label>
-    <input type="text" name="user_name" />
+    <input type="text" name="user_name" aria-label="user-name"/>
     <div data-error-message="user_name" class="form__error-message"></div>
   </div>
 
   <div class="form__group">
     <label>Отзыв <span class="error-color">*</span></label>
-    <textarea name="content" rows="7"></textarea>
+    <textarea name="content" rows="7" aria-label="review"></textarea>
     <div data-error-message="content" class="form__error-message"></div>
   </div>
 

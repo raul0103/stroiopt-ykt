@@ -8,21 +8,21 @@
       </div>
       <div class="form__group">
         <label>Вид продукции</label>
-        <input type="text" name="product" />
+        <input type="text" name="product" aria-label="product"/>
       </div>
   
       <div class="form__group">
         <label>Имя</label>
-        <input type="text" name="name" />
+        <input type="text" name="name" aria-label="user-name"/>
       </div>
       <div class="form__group">
         <label>Телефон</label>
-        <input type="text" name="phone" />
+        <input type="text" name="phone" aria-label="user-phone"/>
         <span class="error-color fs-caption" data-error="phone" style="display: none;"></span>
       </div>
   
       <label class="custom-checkbox">
-        <input type="checkbox" checked required />
+        <input type="checkbox" checked required aria-label="policy"/>
         <span class="checkmark"></span>
         Соглашаюсь на обработку персональных данных, ознакомлен с
         <a href="{$_modx->makeURL(45956)}" class="btn-link">Политикой конфиденциальности.</a>
