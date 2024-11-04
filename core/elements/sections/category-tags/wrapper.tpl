@@ -1,4 +1,4 @@
-{set $tags = '!pdoResources' | snippet :[
+{set $params = [
   'tpl' => '@FILE sections/category-tags/tag-item.tpl'
   'where' => '{"class_key":"msCategory"}'
   'includeTVs' => 'main_image'
@@ -6,6 +6,13 @@
   'limit' => 0
   'depth' => 0
 ]}
+
+{if $_modx->resource.custom_tags}
+  {set $params['parents'] = 0}
+  {set $params['resources'] = $_modx->resource.custom_tags}
+{/if}
+
+{set $tags = '!pdoResources' | snippet : $params}
 
 <div class="category-tags">
   <div class="container">
