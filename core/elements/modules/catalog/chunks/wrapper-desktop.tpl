@@ -12,7 +12,7 @@
       <span></span>
       <span></span>
     </div>
-    <span class="catalog-header__btn-title">Каталог</span>
+    <span>Каталог</span>
   </button>
 
   <div id="catalog-modal-desktop" class="catalog-header__nav">

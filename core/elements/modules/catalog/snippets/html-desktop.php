@@ -7,18 +7,19 @@ foreach ($data as $catalog_item) {
     // Идем по категориям
     if ($catalog_item['children'] && $catalog_item['id']) {
         // HTML подкатегорий
-        $subcat_html .= "<ul class='catalog-header__nav-items' id='catalog-subcat-{$catalog_item['id']}'>";
-        // Тайтл категории
-        $subcat_html .= "<li class='catalog-header__nav-title fs-title-1'>
+        $subcat_html .= "<div class='catalog-header__nav-items' id='catalog-subcat-{$catalog_item['id']}'>
+                            <div class='catalog-header__nav-items-title fs-title-1'>
                                 {$catalog_item['menutitle']}
-                             </li>";
+                            </div>
+                            <ul class='catalog-header__nav-items-row'>";
+
         // Идем по подкатегориям
         foreach ($catalog_item['children'] as $subcat) {
             $subcat_html .= "<li class='catalog-header__nav-item'>
                                      <a href='{$subcat['uri']}'>{$subcat['menutitle']}</a>
                                  </li>";
         }
-        $subcat_html .= "</ul>";
+        $subcat_html .= "</ul></div>";
 
         $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
         $cat_html .= "<li class='catalog-header__nav-item has-submenu' data-subcategories-open='catalog-subcat-{$catalog_item['id']}'>
