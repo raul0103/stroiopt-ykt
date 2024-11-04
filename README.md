@@ -35,6 +35,7 @@
 - descriptor
 - google_tag_manager
 - ids_plitperekritiya - Категории плит перекрытия
+- ids_plitdorozh - Категории плит дорожных
 
 ## Хранение глобальных данных
 
