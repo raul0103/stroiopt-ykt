@@ -12,7 +12,7 @@
       >
         <span
           class="pop-cat__item-image-small"
-          style="background-image: url(\'{$main_image}\')"
+          style="background-image: url('{$thumb}')"
         ></span>
         <h3>{$menutitle}</h3>
       </a>

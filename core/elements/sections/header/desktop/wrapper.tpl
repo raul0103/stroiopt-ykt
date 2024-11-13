@@ -5,7 +5,7 @@
   </div>
 </header>
 
-<div class="header__navigation">
+<div class="header__navigation sm-d-none">
   <div class="container">
     {include 'file:modules/catalog/chunks/wrapper-desktop.tpl'} 
     {include 'file:sections/header/desktop/header-menu.tpl'}
