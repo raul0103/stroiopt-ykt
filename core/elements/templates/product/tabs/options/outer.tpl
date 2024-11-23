@@ -1,10 +1,3 @@
-<div class="product-options__item">
-  <label class="product-options__item-title dark-color">Категория:</label>
-  <div class="product-options__item-value">
-    {$_modx->resource.parent | resource : 'pagetitle'}
-  </div>
-</div>
-
 {foreach $options as $option}
   {if $option.value is array}
       {set $value = $option.value | join : ', '}
