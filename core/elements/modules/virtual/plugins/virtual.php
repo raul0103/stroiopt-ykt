@@ -27,6 +27,7 @@ foreach ($json_data_path as $key => $path) {
 
 // Объеденяем данные поддомена с дефолтными
 if (!empty($json_data["current"])) {
+    $json_data["current"]["subdomain"] = $subdomain;
     $json_data = array_replace_recursive($json_data["default"], $json_data["current"]);
 } else {
     $json_data = $json_data['default'];
