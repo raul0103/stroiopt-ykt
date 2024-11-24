@@ -15,7 +15,8 @@ import initSwapTable from "./modules/swap-table.js";
 import initWarehouseMap from "./modules/init-warehouse-map.js";
 import initInputMask from "./modules/input-mask.js";
 import fetchItObserve from "./modules/fetchit-observe.js";
-import "../js/modules/gost-tu--buttons.js";
+import "./modules/gost-tu--buttons.js";
+import "./modules/copy-text.js";
 
 // Модули
 import "../../core/elements/modules/all.js";

@@ -8,10 +8,9 @@
       <a href="{'whatsapp-link'|config}" class="has-icon has-icon-whatsapp"></a>
       <a href="{'telegram-link'|config}" class="has-icon has-icon-telegram"></a>
     </div>
-    <div class="">
-      <a class="main-color fw-600" href="mailto:{'email' | config}">
-        {'email' | config}
-      </a>
-    </div>
+    <a class="mail-button fw-600 btn btn-primary" href="mailto:{'email' | config}">
+      {'email' | config}
+      <span class="has-icon has-icon-copy mail-button__copy" onclick="copyText(event,'{'email' | config}')"></span>
+    </a>
   </div>
 </div>
