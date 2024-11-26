@@ -14,6 +14,7 @@
           {include "file:templates/product/block-tabs.tpl"}
         </div>
     </div>
+    {include "file:sections/category-interesting/wrapper.tpl"}
     {include "file:sections/product-interesting/wrapper.tpl"}
     {include "file:sections/advantages/wrapper.tpl"}
     {include "file:sections/partners-logo/wrapper.tpl"}
