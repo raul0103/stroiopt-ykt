@@ -1,6 +1,9 @@
+{set $ids = "@FILE snippets/interestingProducts.php" | snippet}
+
 {$_modx->setPlaceholder('is-swiper-slide',true)}
 {set $products = '!msProducts' | snippet :[
   'parents' => $parents ?: $_modx->resource.parent,
+  'resources' => $ids
   'tpl' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
   'sortby' => 'RAND()'
   'includeTVs' => 'remains'
