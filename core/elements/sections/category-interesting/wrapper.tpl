@@ -7,7 +7,7 @@
     'parents' => $grandfather
     'depth' => 1
     'resources' => $res
-    'tpl' => '@INLINE <a class="category-interesting__item" href="{$uri}">#{$pagetitle}</a>'
+    'tpl' => '@INLINE <a class="category-interesting__item" href="{$uri}">{$pagetitle}</a>'
     'limit' => 4
     'sortby' => 'RAND()'
     'where' => '{"class_key":"msCategory"}'
