@@ -8,9 +8,9 @@
   'data' => $map_menu
 ]}
 
-{set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+{*set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
   'data' => $_modx->getPlaceholder('map-catalog-transfer')
-]}
+]*}
 
 <div class="mobile-menu fs-body-2 fw-600" id="mobile-menu">
   {include 'file:sections/header/common/header-search.tpl' mobile=true}
@@ -22,6 +22,7 @@
         <button
           data-mobile-modal-open="mobile-modal-catalog"
           class="btn btn-primary pseudo-arrow pseudo-arrow__right mobile-menu__catalog-btn"
+          onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','mobile')"
         >
           Каталог
         </button>
@@ -34,7 +35,7 @@
   <div class="mobile-menu__modal" data-mobile-modal="mobile-modal-catalog">
     <div class="mobile-menu__items">
       <div class="mobile-menu__back  pseudo-arrow-before pseudo-arrow-before__left pseudo-text-back" data-mobile-modal-back></div>
-      {$catalog_html["menu-items"]}
+      <div id="catalog-menu-items">{*$catalog_html["menu-items"]*}</div>
     </div>
   </div>
   
@@ -64,5 +65,5 @@
   </div>
 
   {$menu_html["menu-modals"]}
-  {$catalog_html["menu-modals"]}
+  <div id="catalog-menu-modals">{*$catalog_html["menu-modals"]*}</div>
 </div>

@@ -13,9 +13,11 @@ export default class Catalog {
     };
     this.events = this.events();
     this.events_init = {};
+    this.catalog_api_ready = false;
   }
   init() {
     this.events.open();
+    window.catalog = this;
   }
   events() {
     return {
@@ -28,6 +30,8 @@ export default class Catalog {
 
             let catalog = document.getElementById(catalog_id);
             if (!catalog) return;
+
+            this.catalog = catalog;
 
             let menu = new Menu(catalog);
             menu.init();
@@ -56,4 +60,54 @@ export default class Catalog {
       },
     };
   }
+  api = {
+    getCatalog: async (cache_name, device) => {
+      if (this.catalog_api_ready) return;
+
+      try {
+        const response = await fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            action: "get-catalog",
+            device,
+            ajax_connect: true,
+            cache_name,
+          }),
+        });
+        if (!response.ok) {
+          throw new Error(`Response status: ${response.status}`);
+        }
+
+        if (device == "desktop") {
+          let catalog_menu_desktop = document.getElementById(
+            "catalog-menu-desktop"
+          );
+          catalog_menu_desktop.innerHTML = await response.text();
+        } else if (device == "mobile") {
+          let data = await response.json();
+          let catalog_menu_items =
+            document.getElementById("catalog-menu-items");
+          catalog_menu_items.innerHTML = data["menu-items"];
+
+          let catalog_menu_modals = document.getElementById(
+            "catalog-menu-modals"
+          );
+          catalog_menu_modals.innerHTML = data["menu-modals"];
+
+          window.mobile_menu.events.openModal();
+          window.mobile_menu.events.backModal();
+        }
+
+        this.catalog_api_ready = true;
+
+        let menu = new Menu(this.catalog);
+        menu.init();
+      } catch (error) {
+        console.error(error.message);
+      }
+    },
+  };
 }

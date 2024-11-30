@@ -21,4 +21,23 @@ switch ($data['action']) {
         ]);
 
         exit($outer);
+    case 'get-catalog':
+        $cache_options = [
+            xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',
+        ];
+
+        if ($cache_data = $modx->cacheManager->get($data['cache_name'], $cache_options)) {
+            if ($data['device'] == 'desktop') {
+                $output = $pdoTools->runSnippet("@FILE modules/catalog/snippets/html-desktop.php", [
+                    'data' => $cache_data
+                ]);
+            } elseif ($data['device'] == 'mobile') {
+                $output = $pdoTools->runSnippet("@FILE modules/mobile-menu/snippets/html-mobile.php", [
+                    'data' => $cache_data
+                ]);
+                $output = json_encode($output);
+            }
+
+            exit($output);
+        }
 }

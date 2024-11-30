@@ -3,6 +3,12 @@
 if (!isset($parents)) return false;
 
 $cache_name = md5(serialize($scriptProperties));
+
+if ($save_cache_name) {
+    // Плейсхолдер используется для передачи названия в api и получения данных для каталога
+    $modx->setPlaceholder('catalog_cache_name', $cache_name);
+}
+
 $cache_options = [
     xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->resource->context_key . '/',
 ];
