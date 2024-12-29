@@ -11,6 +11,6 @@ return [
     'reviews-product' => 4, // секция в товаре
     'reviews-page' => 9, // Секция на странице отзывов
     'category-products' => 48, // Товары в листинге
-    'product-pricelist' => 10, // Товары в прайс-листе товара
+    'product-pricelist' => 30, // Товары в прайс-листе товара
     'product-interesting' => 12
 ];

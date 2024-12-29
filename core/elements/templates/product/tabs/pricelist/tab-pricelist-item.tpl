@@ -2,7 +2,7 @@
     'product_id' => $id
 ]}
 <tr>
-    <td><a href="{$uri}">{$pagetitle}</a></td>
+    <td><a href="{$uri}">{$_pls["marka"][0] ?: $pagetitle}</a></td>
     <td>{$_pls["dlina-mm"][0]}</td>
     <td>{$_pls["shirina-mm"][0]}</td>
     <td>{$_pls["vysota-mm"][0]}</td>

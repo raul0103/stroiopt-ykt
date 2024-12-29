@@ -47,6 +47,16 @@
       &.opened {
         display: block;
       }
+
+      .table-container {
+        max-height: 600px;
+        table {
+          thead {
+            position: sticky;
+            top: 0;
+          }
+        }
+      }
     }
 
     &-controls {

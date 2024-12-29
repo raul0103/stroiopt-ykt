@@ -3,7 +3,8 @@
   'parents' => $_modx->resource.parent
   'tpl' => '@FILE templates/product/tabs/pricelist/tab-pricelist-item.tpl'
   'innerJoin' => '{"Options":{"class":"msProductOption"}}',
-  'where' => '{"id:!=":'~$_modx->resource.id~',"Options.key":"dlina-mm", "Options.value:=":"'~$_modx->resource['dlina-mm'][0]~'"}',
+  '-where' => '{"id:!=":'~$_modx->resource.id~',"Options.key":"dlina-mm", "Options.value:=":"'~$_modx->resource['dlina-mm'][0]~'"}',
+  'where' => '{"id:!=":'~$_modx->resource.id~',"Options.key":"marka", "Options.value:!=":null}',
   'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['product-pricelist']
 ]}
 {if $pricelist_products}
