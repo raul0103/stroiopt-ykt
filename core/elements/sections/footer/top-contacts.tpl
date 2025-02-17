@@ -5,8 +5,18 @@
       <a href="tel:{'phone'|config}" class="main-color">{'phone'|config}</a>
       <a href="tel:{'phone-2'|config}" class="main-color">{'phone-2'|config}</a>
     </div>
-    <a href="{'whatsapp-link'|config}" class="has-icon has-icon-whatsapp"></a>
-    <a href="{'telegram-link'|config}" class="has-icon has-icon-telegram"></a>
+    <div class="social-wrap">
+      <a
+        href="{'whatsapp-link'|config}"
+        class="btn btn-primary"
+        rel="noindex"
+      >Заказать WhatsApp</a>
+      <a
+        href="{'telegram-link'|config}"
+        class="btn btn-primary"
+        rel="noindex"
+      >Заказать Telegram</a>
+    </div>
   </li>
   <li class="footer__top-contacts__item">
     <a href="mailto:{'email'|config}" class="dark-color">{'email'|config}</a>

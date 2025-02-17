@@ -16,14 +16,18 @@
         >
       </div>
       <div class="contacts-page__info-social">
-        <a
-          class="has-icon has-icon-whatsapp"
-          href="{'whatsapp-link'|config}"
-        ></a>
-        <a
-          class="has-icon has-icon-telegram"
-          href="{'telegram-link'|config}"
-        ></a>
+        <div class="social-wrap">
+          <a
+            href="{'whatsapp-link'|config}"
+            class="btn btn-secondary"
+            rel="noindex"
+          >Заказать WhatsApp</a>
+          <a
+            href="{'telegram-link'|config}"
+            class="btn btn-secondary"
+            rel="noindex"
+          >Заказать Telegram</a>
+        </div>
       </div>
     </li>
     <li class="fs-large dark-color">
