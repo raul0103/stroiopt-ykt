@@ -5,17 +5,16 @@
       <a href="tel:{'phone'|config}" class="main-color">{'phone'|config}</a>
       <a href="tel:{'phone-2'|config}" class="main-color">{'phone-2'|config}</a>
     </div>
-    <div class="social-wrap">
+    <div class="d-flex gap-8">
       <a
         href="{'whatsapp-link'|config}"
-        class="btn btn-primary"
+        class="btn btn-green"
         rel="noindex"
       >Заказать WhatsApp</a>
       <a
         href="{'telegram-link'|config}"
-        class="btn btn-primary"
-        rel="noindex"
-      >Заказать Telegram</a>
+        class="has-icon has-icon-telegram big"
+      ></a>
     </div>
   </li>
   <li class="footer__top-contacts__item">

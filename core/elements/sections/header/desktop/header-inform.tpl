@@ -26,17 +26,16 @@
             >{'phone-2'|config}</a
           >
         </div>
-        <div class="social-wrap">
+        <div class="d-flex gap-8">
           <a
             href="{'whatsapp-link'|config}"
-            class="btn btn-secondary"
+            class="btn btn-green"
             rel="noindex"
           >Заказать WhatsApp</a>
           <a
             href="{'telegram-link'|config}"
-            class="btn btn-secondary"
-            rel="noindex"
-          >Заказать Telegram</a>
+            class="has-icon has-icon-telegram big"
+          ></a>
         </div>
       </li>
 

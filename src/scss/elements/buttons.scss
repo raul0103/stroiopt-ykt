@@ -34,6 +34,14 @@
     }
   }
 
+  &-green {
+    background-color: #25d366;
+    color: #fff;
+    &:hover {
+      background-color: #5aed91;
+    }
+  }
+
   &-bordered {
     border: 1px solid $stroke-color;
     &:hover {

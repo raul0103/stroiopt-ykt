@@ -19,7 +19,7 @@
         <div class="social-wrap">
           <a
             href="{'whatsapp-link'|config}"
-            class="btn btn-secondary"
+            class="btn btn-green"
             rel="noindex"
           >Заказать WhatsApp</a>
           <a

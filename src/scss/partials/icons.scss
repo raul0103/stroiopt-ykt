@@ -36,10 +36,16 @@
     width: 20px;
     height: 20px;
   }
-  &-telegram:before {
-    background-image: url("/assets/template/icons/telegram.svg");
-    width: 20px;
-    height: 20px;
+  &-telegram {
+    &:before {
+      background-image: url("/assets/template/icons/telegram.svg");
+      width: 20px;
+      height: 20px;
+    }
+    &.big:before {
+      width: 30px;
+      height: 30px;
+    }
   }
   &-favorite:before {
     background-image: url("/assets/template/icons/favorite.svg");
