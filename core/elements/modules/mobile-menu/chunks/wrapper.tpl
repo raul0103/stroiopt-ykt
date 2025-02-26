@@ -8,7 +8,7 @@
   'data' => $map_menu
 ]}
 
-{if $_modx->resource.id != 200}
+{if $_modx->resource.template == 1}
   {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
     'data' => $_modx->getPlaceholder('map-catalog-transfer')
   ]}
@@ -24,7 +24,7 @@
         <button
           data-mobile-modal-open="mobile-modal-catalog"
           class="btn btn-primary pseudo-arrow pseudo-arrow__right mobile-menu__catalog-btn"
-          {if $_modx->resource.id == 200}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','mobile')"{/if}
+          {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','mobile')"{/if}
         >
           Каталог
         </button>

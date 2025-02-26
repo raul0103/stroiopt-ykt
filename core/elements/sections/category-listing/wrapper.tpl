@@ -17,7 +17,7 @@
     'tpls' => '@FILE modules/product-cards/chunks/tpl-item.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0
-    'showEmptyFilters' => 0
+    'showEmptyFilters' => 1
     'suggestionsMaxFilters' => 0
     'suggestionsMaxResults' => 0
     'suggestionsSliders' => false
