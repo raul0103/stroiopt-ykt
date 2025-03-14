@@ -7,7 +7,7 @@
 {if $data['status'] == 'success'}
 <div class="faqs">
     <div class="faqs__row {if $not_columns}not-columns{/if}">
-        {if $data['message'] | count > 8}
+        {*if $data['message'] | count > 8}
             {set $columns = '@FILE snippets/splitArray.php' | snippet :[
                 'array' => $data['message']
             ]}
@@ -19,7 +19,9 @@
 
         {else}
             {include "file:sections/faqs/outer.tpl" faqs=$data['message']}
-        {/if}
+        {/if*}
+
+        {include "file:sections/faqs/outer.tpl" faqs=$data['message']}
     </div>
 </div>
 {/if}
