@@ -20,6 +20,14 @@
   Не найдена опция catalog_id
 {/if}
 
+{"@FILE modules/map-resources/mapResources.php" | snippet : [
+  'parents' => 'catalog_id' | config
+  'toPlaceholder' => 'map-categories'
+  'includeTVs' => 'main_image'
+  'where' => '{"class_key":"msCategory"}'
+  'depth' => 10
+  'save_cache_name' => true
+]}
 
 <!DOCTYPE html>
 <html lang="en">

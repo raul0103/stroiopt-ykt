@@ -16,7 +16,7 @@ $cache_options = [
 if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
 
     $depth = isset($depth) ? $depth : 0;
-    $fields = ["id", "pagetitle", "menutitle", "parent", "alias", "uri"]; // Поля получаемые у товаров
+    $fields = ["id", "pagetitle", "menutitle", "parent", "alias", "uri", "template"]; // Поля получаемые у товаров
     $table_prefix = $modx->getOption('table_prefix');
 
     // Формируем параметр $where

@@ -1,38 +1,101 @@
-{set $params = [
-  'tpl' => '@FILE sections/category-tags/tag-item.tpl'
-  'where' => '{"class_key":"msCategory"}'
-  'includeTVs' => 'main_image'
-  'tvPrefix' => ''
-  'limit' => 0
-  'depth' => 0
+{set $items = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [
+  'data' => $_modx->getPlaceholder('map-categories'),
+  'where' => '{"parent":'~$_modx->resource.id~',"template":4}'
 ]}
 
-{if $_modx->resource.custom_tags}
-  {set $params['parents'] = 0}
-  {set $params['resources'] = $_modx->resource.custom_tags}
+{if $items}
+  {set $limit = 7}
+  <div class="category-tags">
+    <div class="container">
+      <h2 class="fs-h2 category-tags__title">{$_modx->resource.pagetitle}</h2>
+
+      <div class="category-tags__row" data-opened-element="category-tags">
+          {foreach $items as $idx => $item}
+            {if $idx > $limit}
+              {set $hide_class = "hidden"}
+              {set $show_more = true}
+            {else}
+              {set $hide_class = ""}
+              {set $show_more = false}
+            {/if}
+
+            {set $thumb = 'phpthumbof' | snippet : [
+              'input' => "{$item['menutitle']}",
+              'options' => '&w=50&zc=1'
+            ]}
+          
+            <a class="category-tags__item {$hide_class}" href="{$item['uri']}">
+              <div
+                class="category-tags__item-image"
+                style="background-image: url('{$thumb}')"
+              ></div>
+              <div class="category-tags__item-title">{$item['menutitle'] ?: $item['pagetitle']}</div>
+            </a>
+
+          {/foreach}
+            
+          {if $show_more}
+            <div
+              class="category-tags__item show-more"
+              data-opened-btn="category-tags"
+              data-active-text="Скрыть"
+            >
+              Показать еще
+            </div>
+          {/if}
+      </div>
+
+    </div>
+  </div>
 {/if}
 
-{set $tags = '!pdoResources' | snippet : $params}
 
-<div class="category-tags">
-  <div class="container">
-    <h2 class="fs-h2 category-tags__title">{$_modx->resource.pagetitle}</h2>
+{foreach [
+  ['template'=>26,'title'=>'Длина','limit' => 7],
+  ['template'=>27,'title'=>'Ширина','limit' => 7],
+  ['template'=>28,'title'=>'Высота','limit' => 7],
+  ]
+as $condition}
 
-    {if $tags}
-    <div class="category-tags__row" data-opened-element="category-tags">
-        {$tags}
-        
-        {* Плейсхолдер записывается в чанке sections/category-tags/tag-item.tpl*}
-        {if $_modx->getPlaceholder('category-tags-show-btn-more')}
-          <div
-            class="category-tags__item show-more"
-            data-opened-btn="category-tags"
-            data-active-text="Скрыть"
-          >
-            Показать еще
-          </div>
-        {/if}
+  {set $items = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [
+    'data' => $_modx->getPlaceholder('map-categories'),
+    'where' => '{"parent":'~$_modx->resource.id~',"template":'~$condition['template']~'}'
+  ]}
+
+  {if $items}
+    <div class="category-tags">
+      <div class="container">
+        <div class="category-tags__title"><b>{$condition['title']}</b></div>
+
+        <div class="category-tags__row" data-opened-element="category-tags-{$condition['template']}">
+            {foreach $items as $idx => $item}
+              {if $idx > $condition['limit']}
+                {set $hide_class = "hidden"}
+                {set $show_more = true}
+              {else}
+                {set $hide_class = ""}
+                {set $show_more = false}
+              {/if}
+
+              <a class="category-tags__item {$hide_class}" style="width: max-content;" href="{$item['uri']}">
+                <div class="category-tags__item-title">{$item['menutitle'] ?: $item['pagetitle']}</div>
+              </a>
+
+            {/foreach}
+              
+            {if $show_more}
+              <div
+                class="category-tags__item show-more"
+                data-opened-btn="category-tags-{$condition['template']}"
+                data-active-text="Скрыть"
+              >
+                Показать еще
+              </div>
+            {/if}
+        </div>
+
+      </div>
     </div>
-    {/if}
-  </div>
-</div>
+  {/if}
+
+{/foreach}
