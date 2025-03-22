@@ -63,9 +63,10 @@ as $condition}
   {if $items}
     <div class="category-tags">
       <div class="container">
-        <div class="category-tags__title"><b>{$condition['title']}</b></div>
 
-        <div class="category-tags__row" data-opened-element="category-tags-{$condition['template']}">
+        <div class="category-tags__row d-flex" data-opened-element="category-tags-{$condition['template']}">
+            <b>{$condition['title']}</b>
+
             {foreach $items as $idx => $item}
               {if $idx > $condition['limit']}
                 {set $hide_class = "hidden"}
