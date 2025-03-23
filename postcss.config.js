@@ -1,3 +1,9 @@
 module.exports = {
-  plugins: [require("autoprefixer")("cover 95%")],
+  plugins: [
+    require("postcss-sort-media-queries")({
+      sort: "mobile-first",
+    }),
+    require("autoprefixer")("cover 95%"),
+    // require("cssnano"),
+  ],
 };
