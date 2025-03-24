@@ -26,7 +26,6 @@
   'includeTVs' => 'main_image'
   'where' => '{"class_key":"msCategory"}'
   'depth' => 10
-  'save_cache_name' => true
 ]}
 
 <!DOCTYPE html>
