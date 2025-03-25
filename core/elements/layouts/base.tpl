@@ -14,7 +14,7 @@
     'sortby' => [159,138,200,227,462]
     'where' => '{"class_key":"msCategory"}'
     'depth' => 3
-    'save_cache_name' => true
+    'save_cache_name' => 'cache-name--map-catalog-transfer'
   ]}
 {else}
   Не найдена опция catalog_id

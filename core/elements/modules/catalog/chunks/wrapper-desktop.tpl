@@ -8,7 +8,7 @@
   <button
     data-catalog-open="catalog-modal-desktop"
     class="btn btn-primary catalog-header__btn"
-    {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','desktop')"{/if}
+    {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('cache-name--map-catalog-transfer')}','desktop')"{/if}
   >
     <div class="catalog-header__btn-icon">
       <span></span>

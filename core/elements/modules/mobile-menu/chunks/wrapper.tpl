@@ -24,7 +24,7 @@
         <button
           data-mobile-modal-open="mobile-modal-catalog"
           class="btn btn-primary pseudo-arrow pseudo-arrow__right mobile-menu__catalog-btn"
-          {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','mobile')"{/if}
+          {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('cache-name--map-catalog-transfer')}','mobile')"{/if}
         >
           Каталог
         </button>
