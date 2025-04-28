@@ -55,8 +55,13 @@ foreach ($data as $catalog_item) {
         generateModal($menu_modals, $catalog_item);
     }
 
+    if ($catalog_item['template'] == 0) {
+        $uri = "";
+    } else {
+        $uri = "href='{$catalog_item['uri']}'";
+    }
     $menu_items .= "<div class='mobile-menu__item'>
-                        <a href='{$catalog_item['uri']}' class='d-flex gap-8'>$bestseller $menutitle</a>
+                        <a $uri class='d-flex gap-8'>$bestseller $menutitle</a>
                         $open_btn
                     </div>";
 }
