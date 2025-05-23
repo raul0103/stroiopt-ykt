@@ -1,6 +1,7 @@
 {set $depth = $_modx->resource.depth ?: 3}
 {set $filters = 'ms|price:number,'~$_modx->resource.filters}
-{'!mFilter2' | snippet : [
+
+{set $params = [
     'element' => 'msProducts'
     'depth' => $depth
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
@@ -24,4 +25,14 @@
     'filterOptions' => '{ 
         "more_tpl" : "<button class=\"category-listing__btn-more btn_more\" type=\"button\">Показать еще</button>"
     }'
+
+
 ]}
+
+{'!msPCS' | snippet}
+{if $_modx->getPlaceholder('mspcs.option') || $_modx->getPlaceholder('mspcs.where')}
+    {set $params['optionFilters'] = $_modx->getPlaceholder('mspcs.option')}
+    {set $params['where'] = $_modx->getPlaceholder('mspcs.where')}
+{/if}
+
+{'!mFilter2' | snippet : $params}
