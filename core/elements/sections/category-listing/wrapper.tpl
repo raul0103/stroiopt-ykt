@@ -5,7 +5,6 @@
     'element' => 'msProducts'
     'depth' => $depth
     'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['category-products']
-    'parents' => $_modx->resource.id
     '-filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
     'filters' => $filters
     'tplOuter' => '@FILE sections/category-listing/tpl-outer.tpl'
@@ -33,6 +32,9 @@
 {if $_modx->getPlaceholder('mspcs.option') || $_modx->getPlaceholder('mspcs.where')}
     {set $params['optionFilters'] = $_modx->getPlaceholder('mspcs.option')}
     {set $params['where'] = $_modx->getPlaceholder('mspcs.where')}
+    {set $params['parents'] = 0}
+{else}
+    {set $params['parents'] = $_modx->resource.id}
 {/if}
 
 {'!mFilter2' | snippet : $params}
