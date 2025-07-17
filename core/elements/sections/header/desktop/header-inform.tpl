@@ -22,27 +22,24 @@
           <a href="tel:{'phone'|config}" class="main-color hover-opacity-7"
             >{'phone'|config}</a
           >
-          <a href="tel:{'phone-2'|config}" class="main-color hover-opacity-7"
+{*
+            <a href="tel:{'phone-2'|config}" class="main-color hover-opacity-7"
             >{'phone-2'|config}</a
+          >
+  *}
+          <a class="hover-opacity-7" href="mailto:{'email'|config}"
+            >{'email'|config}</a
           >
         </div>
         <div class="d-flex gap-8">
-          <a
-            href="{'whatsapp-link'|config}"
-            class="btn btn-green"
-            rel="noindex"
-          >Заказать WhatsApp</a>
+          <a href="{'whatsapp-link'|config}" class="btn btn-green" rel="noindex"
+            >Заказать WhatsApp</a
+          >
           <a
             href="{'telegram-link'|config}"
             class="has-icon has-icon-telegram big"
           ></a>
         </div>
-      </li>
-
-      <li class="header__inform-contact-item fw-600">
-        <a class="hover-opacity-7" href="mailto:{'email'|config}"
-          >{'email'|config}</a
-        >
       </li>
     </ul>
   </div>
